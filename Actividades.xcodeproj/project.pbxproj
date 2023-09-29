@@ -13,6 +13,7 @@
 		5BA9D9F82AC2578200894329 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BA9D9F62AC2578200894329 /* Main.storyboard */; };
 		5BA9D9FA2AC2578400894329 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BA9D9F92AC2578400894329 /* Assets.xcassets */; };
 		5BA9D9FD2AC2578400894329 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BA9D9FB2AC2578400894329 /* LaunchScreen.storyboard */; };
+		842512F62AC671CA0071CFBE /* CutionarioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842512F52AC671CA0071CFBE /* CutionarioViewController.swift */; };
 		848756E22AC63FDE00E4E9CA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848756E12AC63FDE00E4E9CA /* LoginViewController.swift */; };
 		848756E42AC64BF100E4E9CA /* RegistroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848756E32AC64BF100E4E9CA /* RegistroViewController.swift */; };
 /* End PBXBuildFile section */
@@ -26,6 +27,7 @@
 		5BA9D9F92AC2578400894329 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5BA9D9FC2AC2578400894329 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5BA9D9FE2AC2578400894329 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		842512F52AC671CA0071CFBE /* CutionarioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CutionarioViewController.swift; sourceTree = "<group>"; };
 		848756E12AC63FDE00E4E9CA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		848756E32AC64BF100E4E9CA /* RegistroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistroViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -63,6 +65,7 @@
 				5BA9D9F02AC2578200894329 /* AppDelegate.swift */,
 				5BA9D9F22AC2578200894329 /* SceneDelegate.swift */,
 				5BA9D9F42AC2578200894329 /* ViewController.swift */,
+				842512F52AC671CA0071CFBE /* CutionarioViewController.swift */,
 				5BA9D9F62AC2578200894329 /* Main.storyboard */,
 				848756E32AC64BF100E4E9CA /* RegistroViewController.swift */,
 				848756E12AC63FDE00E4E9CA /* LoginViewController.swift */,
@@ -147,6 +150,7 @@
 				848756E22AC63FDE00E4E9CA /* LoginViewController.swift in Sources */,
 				5BA9D9F52AC2578200894329 /* ViewController.swift in Sources */,
 				5BA9D9F12AC2578200894329 /* AppDelegate.swift in Sources */,
+				842512F62AC671CA0071CFBE /* CutionarioViewController.swift in Sources */,
 				848756E42AC64BF100E4E9CA /* RegistroViewController.swift in Sources */,
 				5BA9D9F32AC2578200894329 /* SceneDelegate.swift in Sources */,
 			);

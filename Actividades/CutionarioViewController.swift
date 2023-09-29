@@ -1,5 +1,5 @@
 //
-//  LoginViewController.swift
+//  CutionarioViewController.swift
 //  Actividades
 //
 //  Created by Usuario on 28/09/23.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class CutionarioViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +24,6 @@ class LoginViewController: UIViewController {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
     }
-     */
+    */
 
 }

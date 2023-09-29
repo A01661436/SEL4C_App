@@ -277,20 +277,100 @@
             </objects>
             <point key="canvasLocation" x="2510.6870229007632" y="-321.12676056338029"/>
         </scene>
-        <!--View Controller-->
+        <!--Cutionario View Controller-->
         <scene sceneID="9xk-qG-SG6">
             <objects>
-                <viewController id="yEw-q2-M8c" sceneMemberID="viewController">
+                <viewController id="yEw-q2-M8c" customClass="CutionarioViewController" customModule="Actividades" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VYx-T3-cJZ">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2tW-P2-Boc">
+                                <rect key="frame" x="0.0" y="68" width="393" height="782.33333333333337"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="48" translatesAutoresizingMaskIntoConstraints="NO" id="VW2-5l-ZZR">
+                                        <rect key="frame" x="64" y="317" width="265.33333333333331" height="363.66666666666674"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yag-ex-0P5">
+                                                <rect key="frame" x="0.0" y="0.0" width="265.33333333333331" height="34.333333333333336"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Nada de acuerdo"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Nada de acuerdo"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y8Z-KS-CDi">
+                                                <rect key="frame" x="0.0" y="82.333333333333314" width="265.33333333333331" height="34.333333333333343"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Poco de acuerdo"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bBW-Bn-Kqx">
+                                                <rect key="frame" x="0.0" y="164.66666666666666" width="265.33333333333331" height="34.333333333333343"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Ni de acuerdo ni en desacuerdo"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j6A-eY-Wa7">
+                                                <rect key="frame" x="0.0" y="247.00000000000003" width="265.33333333333331" height="34.333333333333343"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="De acuerdo"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Ek-3Q-cPB">
+                                                <rect key="frame" x="0.0" y="329.33333333333331" width="265.33333333333331" height="34.333333333333314"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Muy de acuerdo"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Enx-uw-14k">
+                                        <rect key="frame" x="121" y="724" width="150" height="4"/>
+                                    </progressView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" distribution="equalCentering" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="MHR-cM-DTg">
+                                        <rect key="frame" x="176" y="125.00000000000003" width="41.333333333333343" height="20.333333333333343"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xvG-H7-7bg">
+                                                <rect key="frame" x="0.0" y="0.0" width="41.333333333333336" height="20.333333333333332"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Perfil del emprendedor social" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ccy-Sq-Z7a">
+                                        <rect key="frame" x="85" y="8" width="223" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="VW2-5l-ZZR" firstAttribute="centerX" secondItem="Enx-uw-14k" secondAttribute="centerX" id="2DJ-yW-EGj"/>
+                                    <constraint firstAttribute="bottom" secondItem="Enx-uw-14k" secondAttribute="bottom" constant="31" id="Dxe-Jg-sN2"/>
+                                    <constraint firstItem="nq7-6x-c8j" firstAttribute="bottom" secondItem="Enx-uw-14k" secondAttribute="bottom" constant="31" id="LMK-gE-vu3"/>
+                                    <constraint firstItem="VW2-5l-ZZR" firstAttribute="leading" secondItem="nq7-6x-c8j" secondAttribute="leading" constant="64" id="WJD-yc-Rja"/>
+                                    <constraint firstAttribute="trailing" secondItem="VW2-5l-ZZR" secondAttribute="trailing" constant="63.666666666666686" id="dCg-M1-eEf"/>
+                                    <constraint firstItem="Enx-uw-14k" firstAttribute="leading" secondItem="nq7-6x-c8j" secondAttribute="leading" constant="121" id="fjr-NP-IbX"/>
+                                    <constraint firstItem="Enx-uw-14k" firstAttribute="top" secondItem="VW2-5l-ZZR" secondAttribute="bottom" constant="43.333333333333258" id="qGg-z1-5Wi"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="Ocb-rT-XJH"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="nq7-6x-c8j"/>
+                            </scrollView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="pBj-cn-Z31"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="2tW-P2-Boc" firstAttribute="top" secondItem="pBj-cn-Z31" secondAttribute="top" constant="9" id="BnA-UP-hLG"/>
+                            <constraint firstItem="2tW-P2-Boc" firstAttribute="centerX" secondItem="VYx-T3-cJZ" secondAttribute="centerX" id="Br1-pv-tOn"/>
+                            <constraint firstItem="2tW-P2-Boc" firstAttribute="leading" secondItem="pBj-cn-Z31" secondAttribute="leading" id="cie-GZ-Mvr"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8DU-GO-hbK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="11372" y="-254"/>
+            <point key="canvasLocation" x="11370.229007633587" y="-253.52112676056339"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="S0e-RP-LlA">
