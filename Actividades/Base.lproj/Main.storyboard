@@ -49,14 +49,14 @@
         <scene sceneID="rUY-Vy-pLc">
             <objects>
                 <viewController id="Izb-T4-J8F" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Qgz-Tp-0Oh">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="Qgz-Tp-0Oh">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I4a-ZF-Xil">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I4a-ZF-Xil">
                                 <rect key="frame" x="0.0" y="103" width="393" height="715"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9UU-kB-ne0">
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9UU-kB-ne0">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="1700"/>
                                         <subviews>
                                             <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jWO-Xz-LrM">
@@ -281,14 +281,14 @@
         <scene sceneID="S0e-RP-LlA">
             <objects>
                 <viewController id="Lff-cN-hHP" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="9M0-aL-Jxk">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="9M0-aL-Jxk">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nqc-j7-Kwl">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nqc-j7-Kwl">
                                 <rect key="frame" x="0.0" y="103" width="393" height="715"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gf3-7W-R4p">
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gf3-7W-R4p">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="1000"/>
                                         <subviews>
                                             <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cmz-TM-Dt8">
@@ -573,7 +573,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="asM-aC-Xh7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="826.71755725190837" y="716.90140845070425"/>
+            <point key="canvasLocation" x="-9459" y="-310"/>
         </scene>
         <!--Registro View Controller-->
         <scene sceneID="cVK-FT-pS1">
@@ -672,6 +672,13 @@
                                         <rect key="frame" x="26" y="18" width="310" height="97"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9mo-x7-WeJ">
+                                        <rect key="frame" x="8" y="246" width="42" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="secondarySystemFillColor"/>
                             </view>
@@ -688,7 +695,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iN7-4k-kCP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1643.5114503816794" y="723.94366197183103"/>
+            <point key="canvasLocation" x="-8630" y="-310"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="6KZ-b2-4XF">
+            <objects>
+                <viewController id="3pj-h2-dyn" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yQ3-h0-wA2">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="neY-73-qTc"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GTD-Nw-U6J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-7873" y="-311"/>
         </scene>
     </scenes>
     <resources>
