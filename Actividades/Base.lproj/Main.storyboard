@@ -49,14 +49,14 @@
         <scene sceneID="rUY-Vy-pLc">
             <objects>
                 <viewController id="Izb-T4-J8F" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="Qgz-Tp-0Oh">
+                    <view key="view" contentMode="scaleToFill" id="Qgz-Tp-0Oh">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I4a-ZF-Xil">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I4a-ZF-Xil">
                                 <rect key="frame" x="0.0" y="103" width="393" height="715"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9UU-kB-ne0">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9UU-kB-ne0">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="1700"/>
                                         <subviews>
                                             <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jWO-Xz-LrM">
@@ -328,7 +328,7 @@
                                         <rect key="frame" x="121" y="724" width="150" height="4"/>
                                     </progressView>
                                     <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" distribution="equalCentering" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="MHR-cM-DTg">
-                                        <rect key="frame" x="176" y="125.00000000000003" width="41.333333333333343" height="20.333333333333343"/>
+                                        <rect key="frame" x="176" y="125.00000000000001" width="41.333333333333343" height="20.333333333333329"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xvG-H7-7bg">
                                                 <rect key="frame" x="0.0" y="0.0" width="41.333333333333336" height="20.333333333333332"/>
@@ -376,14 +376,14 @@
         <scene sceneID="S0e-RP-LlA">
             <objects>
                 <viewController id="Lff-cN-hHP" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="9M0-aL-Jxk">
+                    <view key="view" contentMode="scaleToFill" id="9M0-aL-Jxk">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nqc-j7-Kwl">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nqc-j7-Kwl">
                                 <rect key="frame" x="0.0" y="103" width="393" height="715"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gf3-7W-R4p">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gf3-7W-R4p">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="1000"/>
                                         <subviews>
                                             <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cmz-TM-Dt8">
@@ -671,7 +671,7 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="tad-U1-TpR"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="h03-40-4XH" firstAttribute="leading" secondItem="tad-U1-TpR" secondAttribute="leading" constant="15" id="YNS-1C-Uib"/>
                             <constraint firstItem="h03-40-4XH" firstAttribute="top" secondItem="tad-U1-TpR" secondAttribute="top" constant="45" id="Z0w-4r-MLw"/>
@@ -782,7 +782,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="secondarySystemFillColor"/>
+                                <color key="backgroundColor" red="0.47058823529411764" green="0.47058823529411764" blue="0.50196078431372548" alpha="0.16" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="2ow-Gk-s4z" secondAttribute="trailing" constant="30" id="39r-Pk-6Ny"/>
                                     <constraint firstItem="2ow-Gk-s4z" firstAttribute="leading" secondItem="QL8-Do-pyw" secondAttribute="leading" constant="30" id="fPB-7W-wjK"/>

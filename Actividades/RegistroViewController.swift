@@ -279,7 +279,20 @@ class RegistroViewController: UIViewController {
     }
     
     @IBAction func registroAction(_ sender: Any) {
-        resetForm()
+        //resetForm()
+        
+        var datosUsuario: [String: Any] = [
+            "nombre": usuarioTextField.text ?? "",
+            "correo": emailTextField.text ?? "",
+            "contrasena": contrasenaTextField.text ?? ""
+        ]
+        
+        //Realizar la solicitud de registro usando RegistroManager
+        
+        
+        
+        
+        
     }
 }
 
