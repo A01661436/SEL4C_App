@@ -283,8 +283,17 @@ class RegistroViewController: UIViewController {
         
         let datosUsuario: [String: Any] = [
             "usuario": usuarioTextField.text!,
+            "contrasenia": contrasenaTextField.text!,
             "correo": emailTextField.text!,
-            "contrasena": contrasenaTextField.text!
+            "avance": 0,
+            "genero": "Femenino",
+            "edad": 17,
+            "pais": "México",
+            "institucion": "TEC",
+            "grado": "prepa",
+            "disciplina": "Humanidades"
+            
+            
         ]
         
         DispatchQueue.main.async {

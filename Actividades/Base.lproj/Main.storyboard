@@ -574,7 +574,7 @@
                                         </constraints>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="secondarySystemFillColor"/>
+                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="EXE-cL-eiE" firstAttribute="centerX" secondItem="EmX-aj-jnb" secondAttribute="centerX" id="1VG-xh-QD4"/>
                                     <constraint firstItem="2sy-oH-6YX" firstAttribute="leading" secondItem="h03-40-4XH" secondAttribute="leading" id="3b0-wI-KjK"/>
@@ -1877,9 +1877,6 @@ Para realizar esta entrevista, se debe tener claridad de lo que se compartirá p
         </namedColor>
         <systemColor name="secondarySystemBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="secondarySystemFillColor">
-            <color red="0.47058823529411764" green="0.47058823529411764" blue="0.50196078431372548" alpha="0.16" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
