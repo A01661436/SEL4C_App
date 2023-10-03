@@ -15,14 +15,23 @@ final class RegistroManager {
     
     public func registraUsuario(with datosUsuario: [String: Any], completion: @escaping ((Bool)-> Void))
     {
-        let urlRegistro = URL(string: "")!
+        let urlRegistro = URL(string: "http://18.216.246.120/api/users")!
         
-        //Completar los componentes de la URL para hacer la llamada
-        var components = URLComponents()
+        // Convertir los datos del usuario a JSON
+        guard let jsonData = try? JSONSerialization.data(withJSONObject: datosUsuario, options: []) else {
+            completion(false)
+            return
+        }
+        
         
         
         var request = URLRequest(url: urlRegistro)
         request.httpMethod = "POST"
+        request.httpBody = jsonData
+        
+        // Establecer el encabezado para indicar que estamos enviando datos JSON
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        
         
         let task = URLSession.shared.dataTask(with: request) { data, _, error in
             guard let data = data, error == nil else {

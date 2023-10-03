@@ -281,11 +281,25 @@ class RegistroViewController: UIViewController {
     @IBAction func registroAction(_ sender: Any) {
         //resetForm()
         
-        var datosUsuario: [String: Any] = [
-            "nombre": usuarioTextField.text ?? "",
-            "correo": emailTextField.text ?? "",
-            "contrasena": contrasenaTextField.text ?? ""
+        let datosUsuario: [String: Any] = [
+            "usuario": usuarioTextField.text!,
+            "correo": emailTextField.text!,
+            "contrasena": contrasenaTextField.text!
         ]
+        
+        DispatchQueue.main.async {
+            RegistroManager.shared.registraUsuario(with: datosUsuario) { success in
+                if success {
+                    // Registro exitoso, puedes hacer algo aquí si es necesario
+                    print("Registro exitoso")
+                } else {
+                    // Fallo en el registro, puedes hacer algo aquí si es necesario
+                    print("Fallo en el registro")
+                }
+            }
+        }
+        
+        print(datosUsuario)
         
         //Realizar la solicitud de registro usando RegistroManager
         
