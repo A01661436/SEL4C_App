@@ -18,6 +18,11 @@
 		848756E42AC64BF100E4E9CA /* RegistroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848756E32AC64BF100E4E9CA /* RegistroViewController.swift */; };
 		84A9A34B2AC8BC6600B4424A /* RegistroManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A9A34A2AC8BC6600B4424A /* RegistroManager.swift */; };
 		84A9A34D2AC8C1BE00B4424A /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A9A34C2AC8C1BE00B4424A /* AuthManager.swift */; };
+		84EB1A0B2ACCCDAE00E278AD /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EB1A0A2ACCCDAE00E278AD /* Question.swift */; };
+		84EB1A0D2ACCCDD400E278AD /* EcomplexityEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EB1A0C2ACCCDD400E278AD /* EcomplexityEngine.swift */; };
+		84EB1A0F2ACCCDEB00E278AD /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EB1A0E2ACCCDEB00E278AD /* Answer.swift */; };
+		84EB1A112ACCCE0800E278AD /* UserResponses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EB1A102ACCCE0800E278AD /* UserResponses.swift */; };
+		84EB1A132ACCCE1900E278AD /* UserResponsesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EB1A122ACCCE1900E278AD /* UserResponsesController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +39,11 @@
 		848756E32AC64BF100E4E9CA /* RegistroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistroViewController.swift; sourceTree = "<group>"; };
 		84A9A34A2AC8BC6600B4424A /* RegistroManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistroManager.swift; sourceTree = "<group>"; };
 		84A9A34C2AC8C1BE00B4424A /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+		84EB1A0A2ACCCDAE00E278AD /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		84EB1A0C2ACCCDD400E278AD /* EcomplexityEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EcomplexityEngine.swift; sourceTree = "<group>"; };
+		84EB1A0E2ACCCDEB00E278AD /* Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
+		84EB1A102ACCCE0800E278AD /* UserResponses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResponses.swift; sourceTree = "<group>"; };
+		84EB1A122ACCCE1900E278AD /* UserResponsesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResponsesController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +81,7 @@
 				5BA9D9F22AC2578200894329 /* SceneDelegate.swift */,
 				5BA9D9F42AC2578200894329 /* ViewController.swift */,
 				842512F52AC671CA0071CFBE /* CutionarioViewController.swift */,
+				84EB1A072ACCCD6D00E278AD /* Model */,
 				5BA9D9F62AC2578200894329 /* Main.storyboard */,
 				848756E32AC64BF100E4E9CA /* RegistroViewController.swift */,
 				848756E12AC63FDE00E4E9CA /* LoginViewController.swift */,
@@ -88,6 +99,18 @@
 				84A9A34C2AC8C1BE00B4424A /* AuthManager.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		84EB1A072ACCCD6D00E278AD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				84EB1A0A2ACCCDAE00E278AD /* Question.swift */,
+				84EB1A0C2ACCCDD400E278AD /* EcomplexityEngine.swift */,
+				84EB1A0E2ACCCDEB00E278AD /* Answer.swift */,
+				84EB1A102ACCCE0800E278AD /* UserResponses.swift */,
+				84EB1A122ACCCE1900E278AD /* UserResponsesController.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,14 +184,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84EB1A132ACCCE1900E278AD /* UserResponsesController.swift in Sources */,
 				848756E22AC63FDE00E4E9CA /* LoginViewController.swift in Sources */,
 				84A9A34D2AC8C1BE00B4424A /* AuthManager.swift in Sources */,
 				5BA9D9F52AC2578200894329 /* ViewController.swift in Sources */,
+				84EB1A0B2ACCCDAE00E278AD /* Question.swift in Sources */,
 				84A9A34B2AC8BC6600B4424A /* RegistroManager.swift in Sources */,
+				84EB1A0F2ACCCDEB00E278AD /* Answer.swift in Sources */,
+				84EB1A0D2ACCCDD400E278AD /* EcomplexityEngine.swift in Sources */,
 				5BA9D9F12AC2578200894329 /* AppDelegate.swift in Sources */,
 				842512F62AC671CA0071CFBE /* CutionarioViewController.swift in Sources */,
 				848756E42AC64BF100E4E9CA /* RegistroViewController.swift in Sources */,
 				5BA9D9F32AC2578200894329 /* SceneDelegate.swift in Sources */,
+				84EB1A112ACCCE0800E278AD /* UserResponses.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
