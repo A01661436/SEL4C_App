@@ -282,16 +282,16 @@ class RegistroViewController: UIViewController {
         //resetForm()
         
         let datosUsuario: [String: Any] = [
-            "usuario": usuarioTextField.text!,
+            "nombre": usuarioTextField.text!,
             "contrasenia": contrasenaTextField.text!,
-            "correo": emailTextField.text!,
+            "email": emailTextField.text!,
             "avance": 0,
             "genero": "Femenino",
             "edad": 17,
             "pais": "México",
             "institucion": "TEC",
             "grado": "prepa",
-            "disciplina": "Humanidades"
+            "diciplina": "Humanidades"
             
             
         ]

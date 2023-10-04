@@ -15,7 +15,7 @@ final class RegistroManager {
     
     public func registraUsuario(with datosUsuario: [String: Any], completion: @escaping ((Bool)-> Void))
     {
-        let urlRegistro = URL(string: "http://18.216.246.120/api/users")!
+        let urlRegistro = URL(string: "http://18.222.144.45:8000/api/api/users/")!
         
         // Convertir los datos del usuario a JSON
         guard let jsonData = try? JSONSerialization.data(withJSONObject: datosUsuario, options: []) else {

@@ -13,7 +13,7 @@ enum UserResponsesError: Error, LocalizedError{
     case itemNotFound
 }
 class UserResponsesController{
-    let baseString = "http://18.216.246.120/api/cuestionario_inicial"
+    let baseString = "http://18.222.144.45:8000/api/cuestionario_inicial"
     func insertUserResponses(newUserResponses:UserResponses)async throws->Void{
         let insertURL = URL(string: baseString)!
         var request = URLRequest(url: insertURL)
