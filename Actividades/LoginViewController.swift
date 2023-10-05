@@ -29,6 +29,28 @@ class LoginViewController: UIViewController {
             return
         }
         
+        let datosUsuario: [String: Any] = [
+            "username": usuario,
+            "password": contrasena
+            
+        ]
+        
+        DispatchQueue.main.async {
+            AuthManager.shared.loginUsuario(with: datosUsuario) { success in
+                if success {
+                    // Registro exitoso, puedes hacer algo aquí si es necesario
+                    print("Login exitoso")
+                } else {
+                    // Fallo en el registro, puedes hacer algo aquí si es necesario
+                    print("Fallo en el login")
+                }
+            }
+        }
+        
+        print(datosUsuario)
+        
+        
+        
         
     }
 }
