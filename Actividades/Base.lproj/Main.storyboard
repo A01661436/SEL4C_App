@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nZB-Kn-X5K">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uLv-F2-Q7S">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
@@ -261,6 +261,9 @@
                                                     </backgroundConfiguration>
                                                     <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="18"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <segue destination="ytY-fC-CPm" kind="show" id="Ya9-11-wZc"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -294,6 +297,31 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hyr-Ve-eAP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2510.6870229007632" y="-321.12676056338029"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="2ak-4Z-SRg">
+            <objects>
+                <viewController id="ytY-fC-CPm" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hH6-5t-AUe">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="------------- Instrucciones -------------" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HLd-hl-Y4f">
+                                <rect key="frame" x="8" y="183" width="377" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <color key="textColor" red="0.18823529780000001" green="0.2941176593" blue="0.49019610879999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Gen-6H-oal"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="aev-Wx-qcj"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zhv-7r-V5u" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3477" y="353"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="S0e-RP-LlA">
@@ -385,6 +413,9 @@
                                                     </backgroundConfiguration>
                                                     <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="18"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <segue destination="ytY-fC-CPm" kind="show" id="1Hp-4w-jx2"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="--------- ¿Qué debes entregar? ---------" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J7e-yt-gC5">
                                                 <rect key="frame" x="10" y="670" width="373" height="24"/>
@@ -1430,6 +1461,9 @@
                                                     </backgroundConfiguration>
                                                     <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="18"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <segue destination="ytY-fC-CPm" kind="show" id="V6J-dr-rKf"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1601,6 +1635,9 @@ Para realizar esta entrevista, se debe tener claridad de lo que se compartirá p
                                                     </backgroundConfiguration>
                                                     <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="18"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <segue destination="ytY-fC-CPm" kind="show" id="dfm-v2-Myy"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1871,6 +1908,9 @@ Para realizar esta entrevista, se debe tener claridad de lo que se compartirá p
             <point key="canvasLocation" x="11370.229007633587" y="-253.52112676056339"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="dfm-v2-Myy"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="Actividad1" width="296.33334350585938" height="296"/>
         <image name="Actividad2" width="325.33334350585938" height="207.33332824707031"/>
