@@ -1,14 +1,31 @@
 //
-//  CutionarioViewController.swift
+//  CuestionarioFinalViewController.swift
 //  Actividades
 //
-//  Created by Usuario on 28/09/23.
+//  Created by Usuario on 04/10/23.
 //
 
 import UIKit
 
-class CutionarioViewController: UIViewController {
+class CuestionarioFinalViewController: UIViewController {
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        rectangle1.layer.cornerRadius = 8
+        
+        Task {
+            do{
+                let questions = try await Question.fetchQuestions()
+                updateUI(with: questions)
+            }catch{
+                displayError(QuestionError.itemNotFound, title: "No gusto acceder a las preguntas")
+            }
+        }
+        // Do any additional setup after loading the view.
+
+        // Do any additional setup after loading the view.
+    }
+    
     @IBOutlet weak var NadaDeAcuerdo: UIButton!
     
     @IBOutlet weak var PocoDeAcuerdo: UIButton!
@@ -29,35 +46,12 @@ class CutionarioViewController: UIViewController {
     
     var userResponsesController = UserResponsesController()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        rectangle1.layer.cornerRadius = 8
-        
-        Task {
-            do{
-                let questions = try await Question.fetchQuestions()
-                updateUI(with: questions)
-            }catch{
-                displayError(QuestionError.itemNotFound, title: "No gusto acceder a las preguntas")
-            }
-        }
-        // Do any additional setup after loading the view.
-    }
-    
     func updateUI(with questions:Questions){
         DispatchQueue.main.async {
             self.engine.initialize(q: questions)
             self.progressB.progress = self.engine.getProgress()
             self.textQuestion.text = self.engine.getTextQuestion()
             self.userResponses.user = "user@tec.mx"
-        }
-    }
-    
-    func checkProgress(){
-        let progress = self.engine.getProgress()
-        if progress == 1
-        {
-            
         }
     }
     
@@ -140,10 +134,7 @@ class CutionarioViewController: UIViewController {
     
     @IBOutlet weak var rectangle1: UIView!
     
-   
-    
-    
-    
+
     /*
     // MARK: - Navigation
 
