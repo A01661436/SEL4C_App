@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="na7-DJ-hwp">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nZB-Kn-X5K">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
@@ -566,6 +566,9 @@
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Iniciar Sesión"/>
+                                        <connections>
+                                            <action selector="loginAction:" destination="HG4-ej-xzC" eventType="touchUpInside" id="mQ9-o4-YXn"/>
+                                        </connections>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sel4c_header" translatesAutoresizingMaskIntoConstraints="NO" id="EXE-cL-eiE">
                                         <rect key="frame" x="0.0" y="24" width="363" height="97"/>
@@ -602,6 +605,11 @@
                             <constraint firstItem="tad-U1-TpR" firstAttribute="bottom" secondItem="h03-40-4XH" secondAttribute="bottom" constant="45" id="vZs-ah-mPa"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="contrasenaTextField" destination="I3m-Jr-HE8" id="buw-FI-4ck"/>
+                        <outlet property="loginButton" destination="EmX-aj-jnb" id="xJl-LR-Ybu"/>
+                        <outlet property="usuarioTextField" destination="gsT-L4-3xS" id="VIk-5F-dv9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="asM-aC-Xh7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -647,7 +655,7 @@
                                                 <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" textContentType="password"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Confirmar contraseña" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Elc-j1-yrn">
                                                 <rect key="frame" x="0.0" y="88" width="303" height="34"/>

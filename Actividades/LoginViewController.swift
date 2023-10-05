@@ -10,6 +10,11 @@ import UIKit
 class LoginViewController: UIViewController {
 
    
+    @IBOutlet weak var loginButton: UIButton!
+    
+    @IBOutlet weak var usuarioTextField: UITextField!
+    @IBOutlet weak var contrasenaTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -17,4 +22,13 @@ class LoginViewController: UIViewController {
     }
     
 
+    @IBAction func loginAction(_ sender: Any) {
+        // Obtener el texto ingresado en los campos de texto
+        guard let usuario = usuarioTextField.text, let contrasena = contrasenaTextField.text else
+        {
+            return
+        }
+        
+        
+    }
 }
