@@ -261,9 +261,6 @@
                                                     </backgroundConfiguration>
                                                     <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="18"/>
                                                 </buttonConfiguration>
-                                                <connections>
-                                                    <segue destination="ytY-fC-CPm" kind="show" id="Ya9-11-wZc"/>
-                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -306,13 +303,53 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="------------- Instrucciones -------------" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HLd-hl-Y4f">
-                                <rect key="frame" x="8" y="183" width="377" height="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="------------- Multimedia -------------" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HLd-hl-Y4f">
+                                <rect key="frame" x="8" y="103" width="377" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                 <color key="textColor" red="0.18823529780000001" green="0.2941176593" blue="0.49019610879999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S2t-fo-E1l">
+                                <rect key="frame" x="20" y="136" width="172" height="172"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="">
+                                    <backgroundConfiguration key="background" cornerRadius="10">
+                                        <color key="backgroundColor" red="0.18823529780000001" green="0.2941176593" blue="0.49019610879999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </backgroundConfiguration>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2bt-8H-987">
+                                <rect key="frame" x="200" y="135" width="172" height="172"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="">
+                                    <backgroundConfiguration key="background" cornerRadius="10">
+                                        <color key="backgroundColor" red="0.18823529780000001" green="0.2941176593" blue="0.49019610879999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </backgroundConfiguration>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Rx-Em-rJQ">
+                                <rect key="frame" x="20" y="316" width="172" height="172"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="">
+                                    <backgroundConfiguration key="background" cornerRadius="10">
+                                        <color key="backgroundColor" red="0.18823529780000001" green="0.2941176593" blue="0.49019610879999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </backgroundConfiguration>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DFa-Gh-kOa">
+                                <rect key="frame" x="200" y="315" width="172" height="172"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="">
+                                    <backgroundConfiguration key="background" cornerRadius="10">
+                                        <color key="backgroundColor" red="0.18823529780000001" green="0.2941176593" blue="0.49019610879999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </backgroundConfiguration>
+                                </buttonConfiguration>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Gen-6H-oal"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -321,7 +358,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zhv-7r-V5u" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3477" y="353"/>
+            <point key="canvasLocation" x="3431" y="-1015"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="S0e-RP-LlA">
@@ -490,6 +527,15 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aCO-Xk-2eV">
+                                                <rect key="frame" x="28" y="727" width="336" height="67"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <string key="text">1. Un video de conclusión donde hables acerca de la reflexión inicial, de la entrevista y lo que observaste en tu colonia.
+2. Una visión del mapa con el recorrido realizado.</string>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="12"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
@@ -526,7 +572,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6ZC-hX-hMg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2512" y="-1015"/>
+            <point key="canvasLocation" x="2510.6870229007632" y="-1015.492957746479"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="4uI-xy-adb">
@@ -1461,9 +1507,6 @@
                                                     </backgroundConfiguration>
                                                     <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="18"/>
                                                 </buttonConfiguration>
-                                                <connections>
-                                                    <segue destination="ytY-fC-CPm" kind="show" id="V6J-dr-rKf"/>
-                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1635,9 +1678,6 @@ Para realizar esta entrevista, se debe tener claridad de lo que se compartirá p
                                                     </backgroundConfiguration>
                                                     <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="18"/>
                                                 </buttonConfiguration>
-                                                <connections>
-                                                    <segue destination="ytY-fC-CPm" kind="show" id="dfm-v2-Myy"/>
-                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1908,9 +1948,6 @@ Para realizar esta entrevista, se debe tener claridad de lo que se compartirá p
             <point key="canvasLocation" x="11370.229007633587" y="-253.52112676056339"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="dfm-v2-Myy"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="Actividad1" width="296.33334350585938" height="296"/>
         <image name="Actividad2" width="325.33334350585938" height="207.33332824707031"/>
