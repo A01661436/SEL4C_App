@@ -8,11 +8,7 @@
 import Foundation
 
 class RegistroManager {
-    
-    static let shared = RegistroManager()
-    
-    public init() {}
-    
+
     public func registraUsuario(with datosUsuario: [String: Any], completion: @escaping ((Bool)-> Void))
     {
         let urlRegistro = URL(string: "http://18.222.144.45:8000/api/api/users/")!
