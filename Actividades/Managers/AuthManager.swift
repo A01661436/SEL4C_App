@@ -9,7 +9,7 @@ import Foundation
 
 final class AuthManager {
     static let shared = AuthManager()
-    private init() {}
+    public init() {}
     
     var isSignedIn: Bool {
         return true
