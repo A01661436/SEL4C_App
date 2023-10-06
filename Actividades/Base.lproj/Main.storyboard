@@ -2515,7 +2515,7 @@ Para realizar esta entrevista, se debe tener claridad de lo que se compartirá p
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aEM-Bx-Xlq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3430" y="-320"/>
+            <point key="canvasLocation" x="3430" y="-322"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="0hc-mh-Bsf">

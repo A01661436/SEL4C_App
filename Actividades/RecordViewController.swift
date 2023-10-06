@@ -29,8 +29,34 @@ class RecordViewController: UIViewController, UIImagePickerControllerDelegate,UI
             
             let videoPicker = UIImagePickerController()
             videoPicker.delegate =  self
-            videoPicker
+            videoPicker.sourceType = .camera
+            videoPicker.mediaTypes = [kUTTypeMovie as String]
+            videoPicker.allowsEditing = false
+            
+            self.present(videoPicker,animated:true, completion: nil)
+        }else{
+            print("La camara no esta disponible")
         }
+    }
+    
+    var myPicketVideo: NSURL! = NSURL()
+    
+    var VideoToPass:Data!
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey:Any]){
+        dismiss(animated: true, completion: nil)
+        
+        guard
+            let mediaType = info[UIImagePickerController.InfoKey.mediaType] as? String, mediaType ==  (kUTTypeMovie as String), let url = info[UIImagePickerController.InfoKey.mediaURL] as? URL, UIVideoAtPathIsCompatibleWithSavedPhotosAlbum(url.path)
+        else{
+            return
+        }
+        
+        if let picketVideo: NSURL = (info [UIImagePickerController.InfoKey.mediaURL] as? NSURL){
+            
+            //Aqui obtenemos la url del video en string 
+        }
+        
     }
     
 
