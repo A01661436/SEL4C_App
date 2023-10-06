@@ -1,21 +1,23 @@
 //
-//  RegistroManager.swift
+//  AuthManager.swift
 //  Actividades
 //
-//  Created by Usuario on 30/09/23.
+//  Created by Diego Martell on 05/10/23.
 //
 
 import Foundation
 
-final class RegistroManager {
-    
-    static let shared = RegistroManager()
-    
+final class AuthManager {
+    static let shared = AuthManager()
     private init() {}
     
-    public func registraUsuario(with datosUsuario: [String: Any], completion: @escaping ((Bool)-> Void))
+    var isSignedIn: Bool {
+        return true
+    }
+    
+    public func loginUsuario(with datosUsuario: [String: Any], completion: @escaping ((Bool)-> Void))
     {
-        let urlRegistro = URL(string: "http://18.222.144.45:8000/api/api/users/")!
+        let url = URL(string: "http://18.222.144.45:8000/api/existe_usuario")!
         
         // Convertir los datos del usuario a JSON
         guard let jsonData = try? JSONSerialization.data(withJSONObject: datosUsuario, options: []) else {
@@ -25,7 +27,8 @@ final class RegistroManager {
         
         
         
-        var request = URLRequest(url: urlRegistro)
+        
+        var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.httpBody = jsonData
         

@@ -9,7 +9,7 @@ import XCTest
 @testable import Actividades
 
 final class ActividadesTests: XCTestCase {
-    func testCP_01 () throws {
+    func testCP_01_LogIn_Success () throws {
         
     }
 
