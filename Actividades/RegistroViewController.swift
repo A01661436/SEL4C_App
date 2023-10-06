@@ -296,8 +296,10 @@ class RegistroViewController: UIViewController {
             
         ]
         
+        let rm = RegistroManager()
+        
         DispatchQueue.main.async {
-            RegistroManager.shared.registraUsuario(with: datosUsuario) { success in
+            rm.registraUsuario(with: datosUsuario) { success in
                 if success {
                     // Registro exitoso, puedes hacer algo aquí si es necesario
                     print("Registro exitoso")

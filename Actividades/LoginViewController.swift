@@ -35,8 +35,9 @@ class LoginViewController: UIViewController {
             
         ]
         
+        let am = AuthManager()
         DispatchQueue.main.async {
-            AuthManager.shared.loginUsuario(with: datosUsuario) { success in
+            am.loginUsuario(with: datosUsuario) { success in
                 if success {
                     // Registro exitoso, puedes hacer algo aquí si es necesario
                     print("Login exitoso")
