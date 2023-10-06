@@ -11,7 +11,7 @@ class RegistroManager {
     
     static let shared = RegistroManager()
     
-    private init() {}
+    public init() {}
     
     public func registraUsuario(with datosUsuario: [String: Any], completion: @escaping ((Bool)-> Void))
     {
