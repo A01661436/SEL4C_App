@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class RegistroManager {
+class RegistroManager {
     
     static let shared = RegistroManager()
     
