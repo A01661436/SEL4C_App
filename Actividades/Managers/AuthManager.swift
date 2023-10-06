@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class AuthManager {
+class AuthManager {
     static let shared = AuthManager()
     public init() {}
     
