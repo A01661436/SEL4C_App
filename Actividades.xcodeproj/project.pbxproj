@@ -24,6 +24,8 @@
 		84E3B6E82ACE53CB0059D42E /* DiagFinalScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E3B6E72ACE53CB0059D42E /* DiagFinalScene.swift */; };
 		84E3B6EA2ACE55020059D42E /* CuestionarioFinalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E3B6E92ACE55020059D42E /* CuestionarioFinalViewController.swift */; };
 		84E3B7142ACF9BA80059D42E /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E3B7132ACF9BA80059D42E /* RecordViewController.swift */; };
+		84E3B7182ACFAA7A0059D42E /* MultipartRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E3B7172ACFAA7A0059D42E /* MultipartRequest.swift */; };
+		84E3B71A2ACFAAD30059D42E /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E3B7192ACFAAD30059D42E /* Data.swift */; };
 		84EB1A0B2ACCCDAE00E278AD /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EB1A0A2ACCCDAE00E278AD /* Question.swift */; };
 		84EB1A0D2ACCCDD400E278AD /* EcomplexityEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EB1A0C2ACCCDD400E278AD /* EcomplexityEngine.swift */; };
 		84EB1A0F2ACCCDEB00E278AD /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EB1A0E2ACCCDEB00E278AD /* Answer.swift */; };
@@ -60,6 +62,8 @@
 		84E3B6E72ACE53CB0059D42E /* DiagFinalScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagFinalScene.swift; sourceTree = "<group>"; };
 		84E3B6E92ACE55020059D42E /* CuestionarioFinalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CuestionarioFinalViewController.swift; sourceTree = "<group>"; };
 		84E3B7132ACF9BA80059D42E /* RecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
+		84E3B7172ACFAA7A0059D42E /* MultipartRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipartRequest.swift; sourceTree = "<group>"; };
+		84E3B7192ACFAAD30059D42E /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		84EB1A0A2ACCCDAE00E278AD /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		84EB1A0C2ACCCDD400E278AD /* EcomplexityEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EcomplexityEngine.swift; sourceTree = "<group>"; };
 		84EB1A0E2ACCCDEB00E278AD /* Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
@@ -98,6 +102,7 @@
 			children = (
 				5B71BF1D2ACFA07100783C4E /* RegistroManager.swift */,
 				5B71BF202ACFA08000783C4E /* AuthManager.swift */,
+				84E3B7172ACFAA7A0059D42E /* MultipartRequest.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -150,6 +155,7 @@
 				84EB1A0E2ACCCDEB00E278AD /* Answer.swift */,
 				84EB1A102ACCCE0800E278AD /* UserResponses.swift */,
 				84EB1A122ACCCE1900E278AD /* UserResponsesController.swift */,
+				84E3B7192ACFAAD30059D42E /* Data.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -272,11 +278,13 @@
 				84E3B7142ACF9BA80059D42E /* RecordViewController.swift in Sources */,
 				5BA9D9F52AC2578200894329 /* ViewController.swift in Sources */,
 				84EB1A0B2ACCCDAE00E278AD /* Question.swift in Sources */,
+				84E3B71A2ACFAAD30059D42E /* Data.swift in Sources */,
 				84EB1A0F2ACCCDEB00E278AD /* Answer.swift in Sources */,
 				84EB1A0D2ACCCDD400E278AD /* EcomplexityEngine.swift in Sources */,
 				5BA9D9F12AC2578200894329 /* AppDelegate.swift in Sources */,
 				842512F62AC671CA0071CFBE /* CutionarioViewController.swift in Sources */,
 				84E3B6E82ACE53CB0059D42E /* DiagFinalScene.swift in Sources */,
+				84E3B7182ACFAA7A0059D42E /* MultipartRequest.swift in Sources */,
 				84E3B6EA2ACE55020059D42E /* CuestionarioFinalViewController.swift in Sources */,
 				848756E42AC64BF100E4E9CA /* RegistroViewController.swift in Sources */,
 				5BA9D9F32AC2578200894329 /* SceneDelegate.swift in Sources */,

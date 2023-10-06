@@ -385,14 +385,14 @@
         <scene sceneID="S0e-RP-LlA">
             <objects>
                 <viewController id="Lff-cN-hHP" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="9M0-aL-Jxk">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="9M0-aL-Jxk">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nqc-j7-Kwl">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nqc-j7-Kwl">
                                 <rect key="frame" x="0.0" y="103" width="393" height="715"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gf3-7W-R4p">
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gf3-7W-R4p">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="1000"/>
                                         <subviews>
                                             <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cmz-TM-Dt8">
@@ -1530,14 +1530,14 @@
         <scene sceneID="okT-HR-f0J">
             <objects>
                 <viewController id="NQT-Mb-2YW" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="q7X-a1-8wA">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="q7X-a1-8wA">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ftv-zY-fLM">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ftv-zY-fLM">
                                 <rect key="frame" x="0.0" y="103" width="393" height="715"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="12y-9l-6lT">
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="12y-9l-6lT">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="1000"/>
                                         <subviews>
                                             <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WXg-8v-zgA">
@@ -2474,6 +2474,9 @@ Para realizar esta entrevista, se debe tener claridad de lo que se compartirá p
                                         <color key="backgroundColor" red="0.18823529780000001" green="0.2941176593" blue="0.49019610879999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </backgroundConfiguration>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="onRecordVideo:" destination="ler-KC-vOb" eventType="touchUpInside" id="qDa-eL-XzR"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Video" translatesAutoresizingMaskIntoConstraints="NO" id="5Mf-Zr-sZ0">
                                 <rect key="frame" x="43" y="142" width="126" height="130"/>

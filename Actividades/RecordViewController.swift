@@ -17,6 +17,7 @@ class RecordViewController: UIViewController, UIImagePickerControllerDelegate,UI
 
     override func viewDidLoad() {
         super.viewDidLoad()
+    
 
         // Do any additional setup after loading the view.
     }
@@ -54,9 +55,39 @@ class RecordViewController: UIViewController, UIImagePickerControllerDelegate,UI
         
         if let picketVideo: NSURL = (info [UIImagePickerController.InfoKey.mediaURL] as? NSURL){
             
-            //Aqui obtenemos la url del video en string 
+            
+            //Aqui obtenemos la url del video en string
+            self.myPicketVideo = picketVideo
+            
+            do {
+                try? VideoToPass = Data(contentsOf: picketVideo as URL)
+                let paths =  NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
+                let documentsDirectory = paths[0]
+                let tempPath = documentsDirectory.appendingFormat("/vid.mp4")
+                let url = URL(fileURLWithPath: tempPath)
+                do {
+                    try? VideoToPass.write(to:url, options: []) //Aqui se escribe el video
+                    MultipartRequest.sendImage(usuarioID: <#T##String#>, entregable: <#T##String#>, fileName: "Video", fileData: VideoToPass)
+                }
+
+            }
         }
+        //Soportar movie capture
+        UISaveVideoAtPathToSavedPhotosAlbum(url.path, self, #selector(video(_:didFinishSavingWithError:contextInfo:)), nil)
         
+    }
+    
+    @objc func video(_ videoPath: String, didFinishSavingWithError error: Error?, contextInfo info: AnyObject){
+        
+        let title = (error == nil) ? "Bien" : "Error"
+        let message = (error == nil) ? "El video fue guardado" : "El video no fue guardado"
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.cancel, handler:nil))
+        present(alert, animated:true, completion:nil)
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        self.dismiss(animated:true, completion: nil)
     }
     
 
