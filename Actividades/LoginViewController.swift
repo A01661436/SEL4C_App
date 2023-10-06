@@ -30,8 +30,8 @@ class LoginViewController: UIViewController {
         }
         
         let datosUsuario: [String: Any] = [
-            "username": usuario,
-            "password": contrasena
+            "username": usuarioTextField.text!,
+            "password": contrasenaTextField.text!
             
         ]
         
