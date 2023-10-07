@@ -65,7 +65,7 @@ public struct MultipartRequest {
         return bodyData
     }
 }
-
+/*
 extension MultipartRequest{
     
     static func sendActivity(nombre: Int, estatus: Int, usuarioID:Int, entregable: Data ) async throws->Data{
@@ -74,7 +74,7 @@ extension MultipartRequest{
         
         let nombreString = String(nombre)
         multipart.add(key:"nombreString", value: nombreString)
-        //let entregableString = Text("/entregable")
+        let entregableString = Text("/entregable")
         multipart.add(key:"entregable", value: entregableString)
         
         
@@ -82,7 +82,7 @@ extension MultipartRequest{
             "usuarioID_": usuarioID,
             "estatus": estatus,
         ] {
-            //multipart.add(key: field.key, value: field.value)
+            multipart.add(key: field.key, value: field.value)
         }
         
         if let videoData = FileManager.default.contents(atPath: entregableString){
@@ -111,4 +111,4 @@ extension MultipartRequest{
         print(String(data: data, encoding: .utf8)!)
         return data
     }
-}
+}*/
