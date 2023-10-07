@@ -67,7 +67,7 @@ class RecordViewController: UIViewController, UIImagePickerControllerDelegate,UI
                 let url = URL(fileURLWithPath: tempPath)
                 do {
                     try? VideoToPass.write(to:url, options: []) //Aqui se escribe el video
-                    MultipartRequest.sendImage(usuarioID: <#T##String#>, entregable: <#T##String#>, fileName: "Video", fileData: VideoToPass)
+                    //MultipartRequest.sendImage(usuarioID: <#T##String#>, entregable: <#T##String#>, fileName: "Video", fileData: VideoToPass)
                 }
 
             }
