@@ -1198,6 +1198,15 @@
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="faI-dq-cb0">
                                                 <rect key="frame" x="15" y="790" width="363" height="132"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Realiza el pitch de cierre" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j8t-SZ-yxg">
+                                                        <rect key="frame" x="18" y="26" width="177" height="48"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </label>
+                                                </subviews>
                                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IHM-cA-rhg">
@@ -1330,7 +1339,7 @@
                                                         <color key="progressTintColor" red="0.1494098693" green="0.91976243260000001" blue="0.085518770169999994" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     </progressView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tu progreso" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4iK-RY-CY3">
-                                                        <rect key="frame" x="8" y="66" width="215" height="48"/>
+                                                        <rect key="frame" x="8" y="48" width="215" height="48"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1406,6 +1415,8 @@
                     <navigationItem key="navigationItem" id="Obm-bf-cCy"/>
                     <size key="freeformSize" width="393" height="1300"/>
                     <connections>
+                        <outlet property="avanceBar" destination="SoH-tF-H7a" id="tEv-oE-Qe0"/>
+                        <outlet property="progresoLabel" destination="b5Z-83-e6V" id="Y62-mo-3IB"/>
                         <segue destination="y3q-re-bw5" kind="presentation" identifier="showDiagInicial" modalPresentationStyle="currentContext" id="S9Z-fm-hFE"/>
                     </connections>
                 </viewController>
@@ -1725,7 +1736,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a8G-8i-dOG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4880" y="-202"/>
+            <point key="canvasLocation" x="-4753" y="16"/>
         </scene>
         <!--Contrasena View Controller-->
         <scene sceneID="KCN-vv-a8M">

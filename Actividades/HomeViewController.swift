@@ -9,9 +9,26 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
+    
+    @IBOutlet weak var avanceBar: UIProgressView!
+    @IBOutlet weak var progresoLabel: UILabel!
+    var avance = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        if let progreso = UserDefaults.standard.string(forKey: "avance") {
+            progresoLabel.text = "Actividad \(progreso) de 4 completadas"
+            avance = Int(progreso)!
+        } else {
+            progresoLabel.text = "Actividad 0 de 4 completadas"
+        }
+        
+        Task {
+            updateUI(avance:avance)
+        }
+        
+        
         // Do any additional setup after loading the view.
     }
     
@@ -26,14 +43,11 @@ class HomeViewController: UIViewController {
         }
         //performSegue(withIdentifier: "showDiagInicial", sender: nil)
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    func updateUI(avance: Int){
+        DispatchQueue.main.async {
+            self.avanceBar.progress = Float(avance)/4
+        }
     }
-    */
-
+ 
 }
