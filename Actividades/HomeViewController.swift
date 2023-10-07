@@ -16,9 +16,15 @@ class HomeViewController: UIViewController {
     }
     
 
-    @IBAction func onClickDiagnosticoInicial(_ sender: Any) {
+
+    @IBAction func onClickDiagIncial(_ sender: UITapGestureRecognizer) {
         
-        performSegue(withIdentifier: "showDiagnosticoInicial", sender: nil)
+        let vistaDestino = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "diagnosticoInicial")
+        vistaDestino.hidesBottomBarWhenPushed = true
+        if let navigationController = self.navigationController {
+            navigationController.pushViewController(vistaDestino, animated: true)
+        }
+        //performSegue(withIdentifier: "showDiagInicial", sender: nil)
     }
     /*
     // MARK: - Navigation

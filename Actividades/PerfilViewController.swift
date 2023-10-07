@@ -9,6 +9,8 @@ import UIKit
 
 class PerfilViewController: UIViewController{
     
+    @IBOutlet weak var emailLabel: UILabel!
+    @IBOutlet weak var contrasenaLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -16,6 +18,18 @@ class PerfilViewController: UIViewController{
             nombreLabel.text = nombre
         } else {
             nombreLabel.text = "Desconocido"
+        }
+        
+        if let email = UserDefaults.standard.string(forKey: "email") {
+            emailLabel.text = email
+        } else {
+            emailLabel.text = "Desconocido"
+        }
+        
+        if let contrasena = UserDefaults.standard.string(forKey: "nombre") {
+            contrasenaLabel.text = "*********"
+        } else {
+            contrasenaLabel.text = "Desconocido"
         }
     }
     

@@ -312,7 +312,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hyr-Ve-eAP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2510.6870229007632" y="-321.12676056338029"/>
+            <point key="canvasLocation" x="3437.4045801526718" y="-321.12676056338029"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="2ak-4Z-SRg">
@@ -379,7 +379,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zhv-7r-V5u" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3429.770992366412" y="-1015.492957746479"/>
+            <point key="canvasLocation" x="4356.4885496183206" y="-1015.492957746479"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="S0e-RP-LlA">
@@ -593,7 +593,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6ZC-hX-hMg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2510.6870229007632" y="-1015.492957746479"/>
+            <point key="canvasLocation" x="3437.4045801526718" y="-1015.492957746479"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="4uI-xy-adb">
@@ -1141,21 +1141,21 @@
             </objects>
             <point key="canvasLocation" x="-7616" y="520"/>
         </scene>
-        <!--Item-->
+        <!--Home View Controller-->
         <scene sceneID="6KZ-b2-4XF">
             <objects>
-                <viewController id="3pj-h2-dyn" customClass="HomeViewController" customModule="Actividades" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="homeVC" id="3pj-h2-dyn" customClass="HomeViewController" customModule="Actividades" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yQ3-h0-wA2">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="1300"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="88P-AR-5SW">
-                                <rect key="frame" x="0.0" y="59" width="393" height="1241"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="1197"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="piV-3j-IrO" customClass="SubView">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="1300"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hAM-hj-ZRN" customClass="UIButton">
+                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hAM-hj-ZRN">
                                                 <rect key="frame" x="15" y="253" width="363" height="144"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Consulta tus resultados del diagnóstico inicial" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iU3-l3-Xed">
@@ -1165,8 +1165,8 @@
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </label>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="path" translatesAutoresizingMaskIntoConstraints="NO" id="acT-Ld-Zgc">
-                                                        <rect key="frame" x="206" y="0.0" width="137" height="147"/>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="path" translatesAutoresizingMaskIntoConstraints="NO" id="acT-Ld-Zgc">
+                                                        <rect key="frame" x="226" y="0.0" width="137" height="147"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="137" id="lEb-wU-mlj"/>
                                                             <constraint firstAttribute="height" constant="147" id="sjp-up-g9l"/>
@@ -1174,13 +1174,14 @@
                                                     </imageView>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.23921568627450979" green="0.29411764705882354" blue="0.4823529411764706" alpha="1" colorSpace="calibratedRGB"/>
+                                                <gestureRecognizers/>
                                                 <constraints>
                                                     <constraint firstItem="acT-Ld-Zgc" firstAttribute="top" secondItem="hAM-hj-ZRN" secondAttribute="top" id="YVP-TW-XLb"/>
                                                     <constraint firstAttribute="trailing" secondItem="acT-Ld-Zgc" secondAttribute="trailing" constant="20" id="YiB-jA-Z96"/>
                                                     <constraint firstAttribute="bottom" secondItem="acT-Ld-Zgc" secondAttribute="bottom" constant="-3" id="kV5-NF-rQV"/>
                                                 </constraints>
                                                 <connections>
-                                                    <action selector="onClickDiagnosticoInicial:" destination="3pj-h2-dyn" eventType="valueChanged" id="mho-nf-Tby"/>
+                                                    <outletCollection property="gestureRecognizers" destination="W57-04-AmP" appends="YES" id="vJs-Ib-C9Q"/>
                                                 </connections>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Actividades" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WXi-ky-yT8">
@@ -1402,22 +1403,27 @@
                             <constraint firstItem="piV-3j-IrO" firstAttribute="width" secondItem="yQ3-h0-wA2" secondAttribute="width" id="szl-3i-zT6"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="WIc-DD-YEv"/>
+                    <navigationItem key="navigationItem" id="Obm-bf-cCy"/>
                     <size key="freeformSize" width="393" height="1300"/>
                     <connections>
-                        <segue destination="y3q-re-bw5" kind="show" identifier="showDiagnosticoInicial" id="eLs-JW-Ytj"/>
+                        <segue destination="y3q-re-bw5" kind="presentation" identifier="showDiagInicial" modalPresentationStyle="currentContext" id="S9Z-fm-hFE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GTD-Nw-U6J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="W57-04-AmP">
+                    <connections>
+                        <action selector="onClickDiagIncial:" destination="3pj-h2-dyn" id="7en-wU-Idd"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-5257" y="-987"/>
+            <point key="canvasLocation" x="-4330.5343511450383" y="-987.32394366197184"/>
         </scene>
-        <!--View Controller-->
+        <!--Diagnostico Inicial View Controller-->
         <scene sceneID="UWJ-W4-Xst">
             <objects>
-                <viewController storyboardIdentifier="diagnosticoInicial" id="y3q-re-bw5" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="diagnosticoInicial" id="y3q-re-bw5" customClass="DiagnosticoInicialViewController" customModule="Actividades" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Xrb-Fq-tcG">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RFP-i6-yB6">
@@ -1435,7 +1441,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zEv-OF-zZG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4194" y="-1013"/>
+            <point key="canvasLocation" x="-3267.9389312977096" y="-1013.3802816901409"/>
         </scene>
         <!--Item-->
         <scene sceneID="PZx-il-QiD">
@@ -1559,7 +1565,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xiC-xS-VKT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4868" y="213"/>
+            <point key="canvasLocation" x="-5019" y="508"/>
         </scene>
         <!--Item-->
         <scene sceneID="gWY-Q2-3x5">
@@ -1603,9 +1609,9 @@
                                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oxF-cg-7tH">
-                                                        <rect key="frame" x="14" y="34" width="232" height="21"/>
+                                                        <rect key="frame" x="10" y="34" width="232" height="21"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -1623,6 +1629,13 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7gn-Nd-xOL">
+                                                        <rect key="frame" x="8" y="30" width="232" height="21"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1644,6 +1657,13 @@
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A3o-XP-3kV">
+                                                        <rect key="frame" x="8" y="29" width="232" height="21"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="tintColor" red="0.73333333329999995" green="0.81960784310000001" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -1698,12 +1718,14 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="xiC-AV-QwN"/>
                     <connections>
+                        <outlet property="contrasenaLabel" destination="A3o-XP-3kV" id="kRN-ff-AYz"/>
+                        <outlet property="emailLabel" destination="7gn-Nd-xOL" id="HYK-CP-6MF"/>
                         <outlet property="nombreLabel" destination="oxF-cg-7tH" id="3a4-Ba-q3J"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a8G-8i-dOG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4164.1221374045799" y="-116.19718309859155"/>
+            <point key="canvasLocation" x="-4880" y="-202"/>
         </scene>
         <!--Contrasena View Controller-->
         <scene sceneID="KCN-vv-a8M">
@@ -1868,7 +1890,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JeO-Oe-Akp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3288" y="-425"/>
+            <point key="canvasLocation" x="-2362.5954198473282" y="-425.35211267605638"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="XBW-G4-uC7">
@@ -1881,7 +1903,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="3pj-h2-dyn" kind="relationship" relationship="viewControllers" id="NMg-eT-0Jp"/>
+                        <segue destination="KnR-lJ-1Lv" kind="relationship" relationship="viewControllers" id="NMg-eT-0Jp"/>
                         <segue destination="31h-eV-xgm" kind="relationship" relationship="viewControllers" id="40O-D1-0Es"/>
                     </connections>
                 </tabBarController>
@@ -2389,7 +2411,7 @@ Para realizar esta entrevista, se debe tener claridad de lo que se compartirá p
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="51W-yH-DFv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="10661.832061068702" y="-254.22535211267606"/>
+            <point key="canvasLocation" x="11588.549618320611" y="-254.22535211267606"/>
         </scene>
         <!--Cutionario View Controller-->
         <scene sceneID="dao-9d-AwV">
@@ -2586,7 +2608,7 @@ Para realizar esta entrevista, se debe tener claridad de lo que se compartirá p
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="63n-z4-7rJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="11460" y="-254"/>
+            <point key="canvasLocation" x="12385.496183206107" y="-254.22535211267606"/>
         </scene>
         <!--Cuestionario Final View Controller-->
         <scene sceneID="saj-se-b9C">
@@ -2836,7 +2858,7 @@ Para realizar esta entrevista, se debe tener claridad de lo que se compartirá p
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Soa-DY-Uxw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="12115" y="-254"/>
+            <point key="canvasLocation" x="13040.458015267175" y="-254.22535211267606"/>
         </scene>
         <!--Record View Controller-->
         <scene sceneID="SgR-OH-Anh">
@@ -2906,7 +2928,7 @@ Para realizar esta entrevista, se debe tener claridad de lo que se compartirá p
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aEM-Bx-Xlq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3430" y="-322"/>
+            <point key="canvasLocation" x="4356.4885496183206" y="-322.53521126760563"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="0hc-mh-Bsf">
@@ -3167,6 +3189,25 @@ Para realizar esta entrevista, se debe tener claridad de lo que se compartirá p
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DFO-tE-R01" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="12114" y="446"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="be5-DT-eAF">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KnR-lJ-1Lv" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="WIc-DD-YEv"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ycL-03-qfm">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="3pj-h2-dyn" kind="relationship" relationship="rootViewController" id="bzM-tS-3U2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lty-2y-PZ7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-5257.2519083969464" y="-987.32394366197184"/>
         </scene>
     </scenes>
     <resources>
