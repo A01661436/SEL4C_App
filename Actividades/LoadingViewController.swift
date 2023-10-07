@@ -13,33 +13,32 @@ class LoadingViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupViews()
+
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0){
+        delay(durationInSeconds: 2.0){
             self.showInitialView()
         }
+
     }
     
-    private func setupViews(){
-        view.backgroundColor = .black
-    }
+
     
     private func showInitialView(){
         
         //si el usuarui está loggeado - maintabbar
         if isUserLoggedIn{
-            let mainTabBarController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "MainTabBarController")
+            let mainTabBarController = UIStoryboard(name: K.StoryBoardID.main, bundle: nil).instantiateViewController(identifier: K.StoryBoardID.mainTabBarController)
             if let sceneDelegate = view.window?.windowScene?.delegate as? SceneDelegate,let window = sceneDelegate.window {
                 window.rootViewController = mainTabBarController
             }
             
             
         } else{
-            performSegue(withIdentifier: "showLogin", sender: nil)
+            performSegue(withIdentifier: K.Segue.showLoginScreen, sender: nil)
         }
         
     }
