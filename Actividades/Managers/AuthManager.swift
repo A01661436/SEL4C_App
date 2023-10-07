@@ -42,6 +42,16 @@ class AuthManager {
             
             do {
                 let json = try JSONSerialization.jsonObject(with: data, options: .allowFragments)
+                let result = try JSONDecoder().decode(LoginResponse.self, from: data)
+                if result.status == "existe"
+                {
+                    completion(true)
+                } else
+                {
+                    completion(false)
+                    
+                }
+                
                 print("SUCCESS: \(json)")
                 
             } catch{

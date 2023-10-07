@@ -8,8 +8,8 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-
-   
+    
+    
     @IBOutlet weak var loginButton: UIButton!
     
     @IBOutlet weak var usuarioTextField: UITextField!
@@ -17,21 +17,22 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-
+        
+        
     }
     
-
+    
     @IBAction func loginAction(_ sender: Any) {
         // Obtener el texto ingresado en los campos de texto
-        guard let usuario = usuarioTextField.text, let contrasena = contrasenaTextField.text else
+        guard let usuario = usuarioTextField.text, let contrasena = contrasenaTextField.text, !usuario.isEmpty, !contrasena.isEmpty else
         {
+            mostrarError(message: "Por favor completar todos los campos")
             return
         }
         
         let datosUsuario: [String: Any] = [
-            "username": usuarioTextField.text!,
-            "password": contrasenaTextField.text!
+            "email": usuario,
+            "contrasenia": contrasena
             
         ]
         
@@ -39,19 +40,34 @@ class LoginViewController: UIViewController {
         DispatchQueue.main.async {
             am.loginUsuario(with: datosUsuario) { success in
                 if success {
-                    // Registro exitoso, puedes hacer algo aquí si es necesario
+                    // Inicio de sesión exitoso
+                    
                     print("Login exitoso")
+                    
+                    // Realizar la transición a MainTabBarController solo cuando el inicio de sesión sea exitoso
+                    DispatchQueue.main.async {
+                        let mainTabBarController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "MainTabBarController")
+                        let sceneDelegate = self.view.window?.windowScene?.delegate as! SceneDelegate
+                        let window = sceneDelegate.window
+                        window?.rootViewController = mainTabBarController
+                    }
                 } else {
-                    // Fallo en el registro, puedes hacer algo aquí si es necesario
                     print("Fallo en el login")
+                    DispatchQueue.main.async {
+                        self.mostrarError(message: "Fallo en el inicio de sesión")
+                    }
                 }
             }
         }
         
         print(datosUsuario)
-        
-        
-        
-        
+    }
+    
+    // Función para mostrar una alerta de error
+    func mostrarError(message: String) {
+        let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(okAction)
+        present(alert, animated: true, completion: nil)
     }
 }
