@@ -74,8 +74,7 @@ class NombreViewController: UIViewController {
             return
         }
         
-        // Los campos no están vacíos, puedes realizar la acción deseada aquí.
-        // Por ejemplo, realizar una solicitud POST.
+
         
         // Deshabilitar temporalmente el botón para evitar múltiples solicitudes
         actualizarButton.isEnabled = false
@@ -89,11 +88,11 @@ class NombreViewController: UIViewController {
             DispatchQueue.main.async {
                 if success {
                     // La solicitud se realizó con éxito
-                    // Puedes mostrar un mensaje de éxito o realizar otras acciones necesarias
+                 
                     print("Solicitud POST exitosa")
                 } else {
                     // Hubo un error en la solicitud
-                    // Puedes mostrar un mensaje de error o realizar otras acciones necesarias
+                
                     print("Error en la solicitud POST")
                 }
                 
