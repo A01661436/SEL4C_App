@@ -641,7 +641,7 @@
         <!--Login View Controller-->
         <scene sceneID="4dn-3J-PbB">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="HG4-ej-xzC" customClass="LoginViewController" customModule="Actividades" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" modalPresentationStyle="fullScreen" id="HG4-ej-xzC" customClass="LoginViewController" customModule="Actividades" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AVa-Kw-S7g">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1144,7 +1144,7 @@
         <!--Item-->
         <scene sceneID="6KZ-b2-4XF">
             <objects>
-                <viewController id="3pj-h2-dyn" sceneMemberID="viewController">
+                <viewController id="3pj-h2-dyn" customClass="HomeViewController" customModule="Actividades" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yQ3-h0-wA2">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="1300"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1155,7 +1155,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="piV-3j-IrO" customClass="SubView">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="1300"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hAM-hj-ZRN">
+                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hAM-hj-ZRN" customClass="UIButton">
                                                 <rect key="frame" x="15" y="253" width="363" height="144"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Consulta tus resultados del diagnóstico inicial" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iU3-l3-Xed">
@@ -1179,6 +1179,9 @@
                                                     <constraint firstAttribute="trailing" secondItem="acT-Ld-Zgc" secondAttribute="trailing" constant="20" id="YiB-jA-Z96"/>
                                                     <constraint firstAttribute="bottom" secondItem="acT-Ld-Zgc" secondAttribute="bottom" constant="-3" id="kV5-NF-rQV"/>
                                                 </constraints>
+                                                <connections>
+                                                    <action selector="onClickDiagnosticoInicial:" destination="3pj-h2-dyn" eventType="valueChanged" id="mho-nf-Tby"/>
+                                                </connections>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Actividades" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WXi-ky-yT8">
                                                 <rect key="frame" x="15" y="411" width="108" height="15"/>
@@ -1401,10 +1404,38 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="WIc-DD-YEv"/>
                     <size key="freeformSize" width="393" height="1300"/>
+                    <connections>
+                        <segue destination="y3q-re-bw5" kind="show" identifier="showDiagnosticoInicial" id="eLs-JW-Ytj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GTD-Nw-U6J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-5257" y="-987"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="UWJ-W4-Xst">
+            <objects>
+                <viewController storyboardIdentifier="diagnosticoInicial" id="y3q-re-bw5" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Xrb-Fq-tcG">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RFP-i6-yB6">
+                                <rect key="frame" x="213" y="216" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dWq-3Y-HEc"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="EP5-7t-Smr"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zEv-OF-zZG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4194" y="-1013"/>
         </scene>
         <!--Item-->
         <scene sceneID="PZx-il-QiD">
@@ -1571,6 +1602,13 @@
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oxF-cg-7tH">
+                                                        <rect key="frame" x="14" y="34" width="232" height="21"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1659,6 +1697,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="xiC-AV-QwN"/>
+                    <connections>
+                        <outlet property="nombreLabel" destination="oxF-cg-7tH" id="3a4-Ba-q3J"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a8G-8i-dOG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

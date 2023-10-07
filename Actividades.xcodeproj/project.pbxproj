@@ -28,6 +28,8 @@
 		84C9BB612AD1DD2100ADF2DC /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C9BB602AD1DD2100ADF2DC /* Helper.swift */; };
 		84C9BB632AD1DE9100ADF2DC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C9BB622AD1DE9100ADF2DC /* Constants.swift */; };
 		84C9BB652AD1E0CE00ADF2DC /* PerfilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C9BB642AD1E0CE00ADF2DC /* PerfilViewController.swift */; };
+		84C9BB672AD1E7BF00ADF2DC /* PresenterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C9BB662AD1E7BF00ADF2DC /* PresenterManager.swift */; };
+		84C9BB692AD1FAF200ADF2DC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C9BB682AD1FAF200ADF2DC /* HomeViewController.swift */; };
 		84E3B6E82ACE53CB0059D42E /* DiagFinalScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E3B6E72ACE53CB0059D42E /* DiagFinalScene.swift */; };
 		84E3B6EA2ACE55020059D42E /* CuestionarioFinalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E3B6E92ACE55020059D42E /* CuestionarioFinalViewController.swift */; };
 		84E3B7142ACF9BA80059D42E /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E3B7132ACF9BA80059D42E /* RecordViewController.swift */; };
@@ -73,6 +75,8 @@
 		84C9BB602AD1DD2100ADF2DC /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		84C9BB622AD1DE9100ADF2DC /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		84C9BB642AD1E0CE00ADF2DC /* PerfilViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilViewController.swift; sourceTree = "<group>"; };
+		84C9BB662AD1E7BF00ADF2DC /* PresenterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterManager.swift; sourceTree = "<group>"; };
+		84C9BB682AD1FAF200ADF2DC /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		84E3B6E72ACE53CB0059D42E /* DiagFinalScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagFinalScene.swift; sourceTree = "<group>"; };
 		84E3B6E92ACE55020059D42E /* CuestionarioFinalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CuestionarioFinalViewController.swift; sourceTree = "<group>"; };
 		84E3B7132ACF9BA80059D42E /* RecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
@@ -117,6 +121,7 @@
 				5B71BF1D2ACFA07100783C4E /* RegistroManager.swift */,
 				5B71BF202ACFA08000783C4E /* AuthManager.swift */,
 				84E3B7172ACFAA7A0059D42E /* MultipartRequest.swift */,
+				84C9BB662AD1E7BF00ADF2DC /* PresenterManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -151,6 +156,7 @@
 				842512F52AC671CA0071CFBE /* CutionarioViewController.swift */,
 				84EB1A072ACCCD6D00E278AD /* Model */,
 				5BA9D9F62AC2578200894329 /* Main.storyboard */,
+				84C9BB682AD1FAF200ADF2DC /* HomeViewController.swift */,
 				84C9BB642AD1E0CE00ADF2DC /* PerfilViewController.swift */,
 				84C9BB5D2AD1D54600ADF2DC /* LoadingViewController.swift */,
 				84E3B6E92ACE55020059D42E /* CuestionarioFinalViewController.swift */,
@@ -314,6 +320,8 @@
 				5BA9D9F12AC2578200894329 /* AppDelegate.swift in Sources */,
 				842512F62AC671CA0071CFBE /* CutionarioViewController.swift in Sources */,
 				84E3B6E82ACE53CB0059D42E /* DiagFinalScene.swift in Sources */,
+				84C9BB692AD1FAF200ADF2DC /* HomeViewController.swift in Sources */,
+				84C9BB672AD1E7BF00ADF2DC /* PresenterManager.swift in Sources */,
 				84E3B7182ACFAA7A0059D42E /* MultipartRequest.swift in Sources */,
 				84E3B6EA2ACE55020059D42E /* CuestionarioFinalViewController.swift in Sources */,
 				848D206F2AD0C56500F533DC /* NombreViewController.swift in Sources */,

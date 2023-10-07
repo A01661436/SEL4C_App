@@ -45,7 +45,10 @@ class AuthManager {
                 let result = try JSONDecoder().decode(LoginResponse.self, from: data)
                 if result.status == "existe"
                 {
+                    UserDefaults.standard.set(true, forKey: "isSignedIn")
+                    self.saveUserInfo(response: result)
                     completion(true)
+                    
                 } else
                 {
                     completion(false)
@@ -62,4 +65,15 @@ class AuthManager {
         }
         task.resume()
     }
+    
+    // Función para guardar la información del usuario en UserDefaults
+    private func saveUserInfo(response: LoginResponse) {
+        UserDefaults.standard.set(response.nombre, forKey: "nombre")
+        UserDefaults.standard.set(response.contrsenia, forKey: "contrasenia")
+        UserDefaults.standard.set(response.usuarioID, forKey: "usuarioID")
+        UserDefaults.standard.set(response.avance, forKey: "avance")
+        UserDefaults.standard.set(response.email, forKey: "email")
+        UserDefaults.standard.synchronize()
+    }
+    
 }

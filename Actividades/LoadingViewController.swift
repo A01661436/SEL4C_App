@@ -9,10 +9,25 @@ import UIKit
 
 class LoadingViewController: UIViewController{
     
-    private let isUserLoggedIn = true
+
+
+    private var isUserLoggedIn = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if let isSignedIn = UserDefaults.standard.value(forKey: "isSignedIn") as? Bool {
+            // Aquí puedes usar la variable "isSignedIn" para determinar si el usuario está autenticado o no
+            if isSignedIn {
+                isUserLoggedIn = true
+            } else {
+                isUserLoggedIn = false
+            }
+        }
+            else {
+                isUserLoggedIn = false
+            }
+        
 
     }
     
