@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2jY-s4-7yZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MGa-Gq-IZY">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
@@ -1488,10 +1488,10 @@
             </objects>
             <point key="canvasLocation" x="-4877.0992366412211" y="-132.3943661971831"/>
         </scene>
-        <!--View Controller-->
+        <!--Contrasena View Controller-->
         <scene sceneID="KCN-vv-a8M">
             <objects>
-                <viewController id="MGa-Gq-IZY" sceneMemberID="viewController">
+                <viewController id="MGa-Gq-IZY" customClass="ContrasenaViewController" customModule="Actividades" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KKZ-eT-h0F">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1552,6 +1552,9 @@
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Actualizar"/>
+                                <connections>
+                                    <action selector="actualizarAction:" destination="MGa-Gq-IZY" eventType="touchUpInside" id="1JM-Ev-rgK"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cambia tu contraseña" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Egk-H0-6kd">
                                 <rect key="frame" x="21" y="181" width="336" height="32"/>
@@ -1564,6 +1567,12 @@
                         <viewLayoutGuide key="safeArea" id="p6K-z0-qUi"/>
                         <color key="backgroundColor" red="0.12156862745098039" green="0.12941176470588234" blue="0.1803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="actualizarButton" destination="Tws-Vn-Yxh" id="sgb-7w-EZe"/>
+                        <outlet property="confirmacionTextField" destination="Frc-ZY-79y" id="O8l-d0-NOh"/>
+                        <outlet property="contrasenaAnteriorTextField" destination="NSk-kl-JxG" id="6Xl-5E-cd0"/>
+                        <outlet property="contrasenaTextField" destination="dYZ-Pr-b4v" id="ntJ-nO-Pqi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zao-gA-Ra6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

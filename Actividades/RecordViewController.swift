@@ -9,7 +9,7 @@ import UIKit
 import AVKit
 import MobileCoreServices
 
-
+/*
 class RecordViewController: UIViewController, UIImagePickerControllerDelegate,UINavigationControllerDelegate  {
     
     var imagePickerController = UIImagePickerController()
@@ -102,3 +102,4 @@ class RecordViewController: UIViewController, UIImagePickerControllerDelegate,UI
     */
 
 }
+*/
