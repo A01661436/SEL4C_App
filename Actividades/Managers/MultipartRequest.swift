@@ -68,22 +68,33 @@ public struct MultipartRequest {
 
 extension MultipartRequest{
     
-    static func sendImage(user:String,activity:String,evidence_name:String,video:UIImage) async throws->Data{
+    static func sendActivity(nombre: Int, estatus: Int, usuarioID:Int, entregable: Data ) async throws->Data{
         var multipart = MultipartRequest()
+        
+        
+        let nombreString = String(nombre)
+        multipart.add(key:"nombreString", value: nombreString)
+        let entregableString = Text("/entregable")
+        multipart.add(key:"entregable", value: entregableString)
+        
+        
         for field in [
-            "usuarioID": user,
-            "entregable": activity,
+            "usuarioID_": usuarioID,
+            "estatus": estatus,
         ] {
             multipart.add(key: field.key, value: field.value)
         }
+        
+        if let videoData = FileManager.default.contents(atPath: entregableString){
+            multipart.add(
+                key: "archivo_res",
+                fileName: nombreString + ".mp4",
+                fileMimeType: "video/mp4",
+    //            fileData: "fake-image-data".data(using: .utf8)!
+                fileData: videoData
+            )
+        }
 
-        multipart.add(
-            key: "file",
-            fileName: evidence_name+".Mov",
-            fileMimeType: "video/Mov",
-//            fileData: "fake-image-data".data(using: .utf8)!
-            fileData: video.pngData()!
-        )
 
         /// Create a regular HTTP URL request & use multipart components
 //        let url = URL(string: "https://httpbin.org/post")!

@@ -44,7 +44,7 @@ class RecordViewController: UIViewController, UIImagePickerControllerDelegate,UI
     
     var VideoToPass:Data!
     
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey:Any]){
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey:Any]) async{
         dismiss(animated: true, completion: nil)
         
         guard
@@ -67,7 +67,7 @@ class RecordViewController: UIViewController, UIImagePickerControllerDelegate,UI
                 let url = URL(fileURLWithPath: tempPath)
                 do {
                     try? VideoToPass.write(to:url, options: []) //Aqui se escribe el video
-                    MultipartRequest.sendImage(usuarioID: <#T##String#>, entregable: <#T##String#>, fileName: "Video", fileData: VideoToPass)
+                    try? await MultipartRequest.sendActivity(nombre: 1, estatus: 1, usuarioID: 4, entregable: VideoToPass)
                 }
 
             }
