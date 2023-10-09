@@ -9,7 +9,7 @@ import XCTest
 @testable import Actividades
 
 final class ActividadesTests: XCTestCase {
-    //Se definen variables para la prueba
+    //Se definen variables para las diferentes pruebas prueba
     var perfilVC: PerfilViewController!
     
     override func setUp() {
