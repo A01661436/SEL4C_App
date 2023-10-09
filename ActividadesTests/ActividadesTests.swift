@@ -105,14 +105,6 @@ final class ActividadesTests: XCTestCase {
         XCTAssertFalse(didLogout, "Logout should fail if the user is not logged in.")
     }
     
-    func testCP_09_Progreso_Success() throws {
-        
-    }
-    
-    func testCP_10_Progreso_Failed() throws {
-        
-    }
-    
     
 
 }
