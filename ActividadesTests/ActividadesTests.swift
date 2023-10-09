@@ -9,6 +9,20 @@ import XCTest
 @testable import Actividades
 
 final class ActividadesTests: XCTestCase {
+    //Se definen variables para la prueba
+    var perfilVC: PerfilViewController!
+    
+    override func setUp() {
+        super.setUp()
+        perfilVC = PerfilViewController()
+    }
+
+    override func tearDown() {
+        perfilVC = nil
+        super.tearDown()
+    }
+    
+    //Comienzan los casos de prueba
     func testCP_01_LogIn_Success() throws {
         let authManager = AuthManager()
         let datosUsuario: [String: Any] = [
@@ -78,45 +92,17 @@ final class ActividadesTests: XCTestCase {
     }
     
     func testCP_07_LogOut_Success() throws {
-        var perfilVC: PerfilViewController!
-
-        func setUp() {
-            super.setUp()
-            perfilVC = PerfilViewController()
-        }
-
-        func tearDown() {
-            perfilVC = nil
-            super.tearDown()
-        }
-
-        func testCP_02_Logout_Success() throws {
-            UserDefaults.standard.set(true, forKey: "isSignedIn")
-            perfilVC.logout()
+        UserDefaults.standard.set(true, forKey: "isSignedIn")
+        perfilVC.logout()
             
-            XCTAssertNil(UserDefaults.standard.object(forKey: "isSignedIn"), "User should be logged out.")
-        }
+        XCTAssertNil(UserDefaults.standard.object(forKey: "isSignedIn"), "User should be logged out.")
     }
     
     func testCP_08_LogOut_Failed() throws {
-        var perfilVC: PerfilViewController!
-
-        func setUp() {
-            super.setUp()
-            perfilVC = PerfilViewController()
-        }
-
-        func tearDown() {
-            perfilVC = nil
-            super.tearDown()
-        }
-
-        func testCP_03_Logout_Failure() throws {
-            UserDefaults.standard.removeObject(forKey: "isSignedIn")
-            let didLogout = perfilVC.logout2()
-            
-            XCTAssertFalse(didLogout, "Logout should fail if the user is not logged in.")
-        }
+        UserDefaults.standard.removeObject(forKey: "isSignedIn")
+        let didLogout = perfilVC.logout2()
+        
+        XCTAssertFalse(didLogout, "Logout should fail if the user is not logged in.")
     }
     
     func testCP_09_Progreso_Success() throws {
