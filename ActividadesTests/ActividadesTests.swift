@@ -68,23 +68,16 @@ final class ActividadesTests: XCTestCase {
             }
     }
     
-    func testCP_05_SubirArchivo_Success() throws {
+    
+    func testCP_05_EncuestaInicFin_Success() throws {
         
     }
     
-    func testCP_06_SubirArchivo_Failed() throws {
+    func testCP_06_EncuestaInicFin_Failed() throws {
         
     }
     
-    func testCP_07_EncuestaInicFin_Success() throws {
-        
-    }
-    
-    func testCP_08_EncuestaInicFin_Failed() throws {
-        
-    }
-    
-    func testCP_09_LogOut_Success() throws {
+    func testCP_07_LogOut_Success() throws {
         var perfilVC: PerfilViewController!
 
         func setUp() {
@@ -105,7 +98,7 @@ final class ActividadesTests: XCTestCase {
         }
     }
     
-    func testCP_10_LogOut_Failed() throws {
+    func testCP_08_LogOut_Failed() throws {
         var perfilVC: PerfilViewController!
 
         func setUp() {
@@ -126,11 +119,11 @@ final class ActividadesTests: XCTestCase {
         }
     }
     
-    func testCP_11_Progreso_Success() throws {
+    func testCP_09_Progreso_Success() throws {
         
     }
     
-    func testCP_12_Progreso_Failed() throws {
+    func testCP_10_Progreso_Failed() throws {
         
     }
     
