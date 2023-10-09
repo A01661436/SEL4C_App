@@ -66,6 +66,15 @@ class AuthManager {
         task.resume()
     }
     
+    struct LoginResponse: Codable {
+        let status: String
+        let nombre: String?
+        let contrsenia: String?
+        let usuarioID: Int?
+        let avance: Int?
+        let email: String?
+    }
+    
     // Función para guardar la información del usuario en UserDefaults
     private func saveUserInfo(response: LoginResponse) {
         UserDefaults.standard.set(response.nombre, forKey: "nombre")

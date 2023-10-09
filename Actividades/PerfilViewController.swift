@@ -61,3 +61,38 @@ class PerfilViewController: UIViewController{
     
     
 }
+
+//Para prueba exitosa
+extension PerfilViewController {
+    func logout() {
+        // Eliminar la información del usuario de UserDefaults
+        UserDefaults.standard.removeObject(forKey: "isSignedIn")
+        UserDefaults.standard.removeObject(forKey: "nombre")
+        UserDefaults.standard.removeObject(forKey: "contrasenia")
+        UserDefaults.standard.removeObject(forKey: "usuarioID")
+        UserDefaults.standard.removeObject(forKey: "avance")
+        UserDefaults.standard.removeObject(forKey: "email")
+        UserDefaults.standard.synchronize()
+    }
+}
+
+//Para prueba fallida
+extension PerfilViewController {
+    func logout2() -> Bool {
+        guard UserDefaults.standard.object(forKey: "isSignedIn") != nil else {
+            // User is not logged in
+            return false
+        }
+        
+        // Eliminar la información del usuario de UserDefaults
+        UserDefaults.standard.removeObject(forKey: "isSignedIn")
+        UserDefaults.standard.removeObject(forKey: "nombre")
+        UserDefaults.standard.removeObject(forKey: "contrasenia")
+        UserDefaults.standard.removeObject(forKey: "usuarioID")
+        UserDefaults.standard.removeObject(forKey: "avance")
+        UserDefaults.standard.removeObject(forKey: "email")
+        UserDefaults.standard.synchronize()
+        
+        return true
+    }
+}
