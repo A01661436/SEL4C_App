@@ -11,6 +11,8 @@ class PerfilViewController: UIViewController{
     
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var contrasenaLabel: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -55,6 +57,16 @@ class PerfilViewController: UIViewController{
             window.rootViewController = loginViewController
             
             UIView.transition(with: window, duration: 0.25, options: .transitionCrossDissolve, animations: nil, completion: nil)
+        }
+        
+    }
+    
+    
+    @IBAction func nombreAction(_ sender: Any) {
+        let vistaDestino = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "nombreViewController")
+        vistaDestino.hidesBottomBarWhenPushed = true
+        if let navigationController = self.navigationController {
+            navigationController.pushViewController(vistaDestino, animated: true)
         }
         
     }

@@ -32,6 +32,7 @@
 		84C9BB652AD1E0CE00ADF2DC /* PerfilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C9BB642AD1E0CE00ADF2DC /* PerfilViewController.swift */; };
 		84C9BB672AD1E7BF00ADF2DC /* PresenterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C9BB662AD1E7BF00ADF2DC /* PresenterManager.swift */; };
 		84C9BB692AD1FAF200ADF2DC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C9BB682AD1FAF200ADF2DC /* HomeViewController.swift */; };
+		84DEFFB62AD6072800EA0520 /* CambiarNombreResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DEFFB52AD6072800EA0520 /* CambiarNombreResponse.swift */; };
 		84E3B6E82ACE53CB0059D42E /* DiagFinalScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E3B6E72ACE53CB0059D42E /* DiagFinalScene.swift */; };
 		84E3B6EA2ACE55020059D42E /* CuestionarioFinalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E3B6E92ACE55020059D42E /* CuestionarioFinalViewController.swift */; };
 		84E3B7142ACF9BA80059D42E /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E3B7132ACF9BA80059D42E /* RecordViewController.swift */; };
@@ -81,6 +82,7 @@
 		84C9BB642AD1E0CE00ADF2DC /* PerfilViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilViewController.swift; sourceTree = "<group>"; };
 		84C9BB662AD1E7BF00ADF2DC /* PresenterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterManager.swift; sourceTree = "<group>"; };
 		84C9BB682AD1FAF200ADF2DC /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		84DEFFB52AD6072800EA0520 /* CambiarNombreResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CambiarNombreResponse.swift; sourceTree = "<group>"; };
 		84E3B6E72ACE53CB0059D42E /* DiagFinalScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagFinalScene.swift; sourceTree = "<group>"; };
 		84E3B6E92ACE55020059D42E /* CuestionarioFinalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CuestionarioFinalViewController.swift; sourceTree = "<group>"; };
 		84E3B7132ACF9BA80059D42E /* RecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
@@ -197,6 +199,7 @@
 				84E3B7192ACFAAD30059D42E /* Data.swift */,
 				84C9BB5B2AD1C13300ADF2DC /* LoginResponse.swift */,
 				5B88032F2AD4C564005A6302 /* QuestionSend.swift */,
+				84DEFFB52AD6072800EA0520 /* CambiarNombreResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -315,6 +318,7 @@
 				84EB1A132ACCCE1900E278AD /* UserResponsesController.swift in Sources */,
 				5B71BF212ACFA08000783C4E /* AuthManager.swift in Sources */,
 				5B71BF1E2ACFA07100783C4E /* RegistroManager.swift in Sources */,
+				84DEFFB62AD6072800EA0520 /* CambiarNombreResponse.swift in Sources */,
 				848756E22AC63FDE00E4E9CA /* LoginViewController.swift in Sources */,
 				84E3B7142ACF9BA80059D42E /* RecordViewController.swift in Sources */,
 				5BA9D9F52AC2578200894329 /* ViewController.swift in Sources */,

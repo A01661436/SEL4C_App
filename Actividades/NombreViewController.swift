@@ -21,7 +21,7 @@ class NombreViewController: UIViewController {
     
     func cambioNombre(with datosUsuario: [String: Any], completion: @escaping ((Bool)-> Void))
     {
-        let url = URL(string: "")!
+        let url = URL(string: "http://18.222.144.45:8000/api/enviar_solicitudN")!
         
         // Convertir los datos del usuario a JSON
         guard let jsonData = try? JSONSerialization.data(withJSONObject: datosUsuario, options: []) else {
@@ -48,7 +48,18 @@ class NombreViewController: UIViewController {
             
             do {
                 let json = try JSONSerialization.jsonObject(with: data, options: .allowFragments)
+                let result = try JSONDecoder().decode(CambiarNombreResponse.self, from: data)
                 print("SUCCESS: \(json)")
+                if result.message == "Solicitud Enviada"
+                {
+                    completion(true)
+                    
+                } else
+                {
+                    completion(false)
+                    
+                }
+                
                 
             } catch{
                 print(error)
@@ -81,14 +92,16 @@ class NombreViewController: UIViewController {
         solicitudEnProceso = true
         
         let nombre_completo = nombre+apellidos
-        
-        let datosUsuario: [String: Any] = ["nombre": nombre_completo]
+        print(UserDefaults.standard.integer(forKey: "UsuarioID"))
+        let datosUsuario: [String: Any] = ["nombre": nombre_completo,
+                                           "estatus": "pendiente",
+                                           "usuarioID": 2]
         
         cambioNombre(with: datosUsuario){ (success) in
             DispatchQueue.main.async {
                 if success {
                     // La solicitud se realizó con éxito
-                 
+                    UserDefaults.standard.set(nombre_completo, forKey: "nombre")
                     print("Solicitud POST exitosa")
                 } else {
                     // Hubo un error en la solicitud
