@@ -60,6 +60,8 @@ class RegistroViewController: UIViewController {
     
     
     
+    @IBOutlet weak var registroView: UIView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -100,6 +102,14 @@ class RegistroViewController: UIViewController {
         disciplinaError.text = " "
         
         contrasenaTextField.addTarget(self, action: #selector(confirmacionChanged), for: .editingChanged)
+        
+        self.registroView.layer.cornerRadius = 30
+        self.registroView.clipsToBounds = true
+        self.registroView.layer.shadowColor = UIColor.black.cgColor
+        self.registroView.layer.shadowOpacity = 0.5
+        self.registroView.layer.shadowOffset = CGSize(width: 5, height: 5)
+        self.registroView.layer.shadowRadius = 1
+        self.registroView.layer.masksToBounds = false
         
         
     }
@@ -318,6 +328,11 @@ class RegistroViewController: UIViewController {
         
         
         
+    }
+    
+    
+    @IBAction func iniciaSesionAction(_ sender: Any) {
+        performSegue(withIdentifier: "showInicioSesion", sender: nil)
     }
 }
 

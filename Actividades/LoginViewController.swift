@@ -15,12 +15,29 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var usuarioTextField: UITextField!
     @IBOutlet weak var contrasenaTextField: UITextField!
     
+    @IBOutlet weak var loginView: UIView!
+    
+    @IBOutlet weak var registrateButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.loginView.layer.cornerRadius = 30
+        self.loginView.clipsToBounds = true
         
+
+        self.loginView.layer.shadowColor = UIColor.black.cgColor
+        self.loginView.layer.shadowOpacity = 0.5
+        self.loginView.layer.shadowOffset = CGSize(width: 5, height: 5)
+        self.loginView.layer.shadowRadius = 1
+        self.loginView.layer.masksToBounds = false
         
+   
     }
     
+    
+    @IBAction func registrateAction(_ sender: Any) {
+        
+        performSegue(withIdentifier: "showRegistro", sender: nil)
+    }
     
     @IBAction func loginAction(_ sender: Any) {
         // Obtener el texto ingresado en los campos de texto

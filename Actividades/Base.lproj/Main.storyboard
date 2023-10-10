@@ -61,7 +61,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c4c-hp-Yiy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1688" y="4"/>
+            <point key="canvasLocation" x="2614.5038167938928" y="3.5211267605633805"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="rUY-Vy-pLc">
@@ -312,7 +312,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hyr-Ve-eAP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3437.4045801526718" y="-321.12676056338029"/>
+            <point key="canvasLocation" x="4364.1221374045799" y="-321.12676056338029"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="2ak-4Z-SRg">
@@ -611,7 +611,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ffw-xz-lpb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="828.24427480916029" y="3.5211267605633805"/>
+            <point key="canvasLocation" x="1754.9618320610687" y="3.5211267605633805"/>
         </scene>
         <!--Loading View Controller-->
         <scene sceneID="ebg-fX-jpe">
@@ -683,8 +683,8 @@
                                             </textField>
                                         </subviews>
                                     </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EmX-aj-jnb">
-                                        <rect key="frame" x="119.33333333333334" y="410" width="124.66666666666666" height="34.333333333333314"/>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EmX-aj-jnb">
+                                        <rect key="frame" x="103" y="410" width="158" height="34"/>
                                         <color key="backgroundColor" name="AccentColor"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
@@ -699,8 +699,26 @@
                                             <constraint firstAttribute="height" constant="97" id="gZ0-bf-loG"/>
                                         </constraints>
                                     </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="¿No tienes cuenta? " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WJq-SK-gaW">
+                                        <rect key="frame" x="103" y="452" width="103.33333333333333" height="13.333333333333334"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" alpha="0.94999999999999996" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4FW-uR-zzS">
+                                        <rect key="frame" x="194" y="445" width="77.666666666666686" height="27.333333333333332"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Registrate">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="11"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="registrateAction:" destination="HG4-ej-xzC" eventType="touchUpInside" id="qdM-Rg-Snp"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="EXE-cL-eiE" firstAttribute="centerX" secondItem="EmX-aj-jnb" secondAttribute="centerX" id="1VG-xh-QD4"/>
                                     <constraint firstItem="2sy-oH-6YX" firstAttribute="leading" secondItem="h03-40-4XH" secondAttribute="leading" id="3b0-wI-KjK"/>
@@ -720,7 +738,7 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="tad-U1-TpR"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.15686274509803921" green="0.29803921568627451" blue="0.50588235294117645" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="h03-40-4XH" firstAttribute="leading" secondItem="tad-U1-TpR" secondAttribute="leading" constant="15" id="YNS-1C-Uib"/>
                             <constraint firstItem="h03-40-4XH" firstAttribute="top" secondItem="tad-U1-TpR" secondAttribute="top" constant="45" id="Z0w-4r-MLw"/>
@@ -732,12 +750,14 @@
                     <connections>
                         <outlet property="contrasenaTextField" destination="I3m-Jr-HE8" id="buw-FI-4ck"/>
                         <outlet property="loginButton" destination="EmX-aj-jnb" id="xJl-LR-Ybu"/>
+                        <outlet property="loginView" destination="h03-40-4XH" id="PmH-68-KRl"/>
                         <outlet property="usuarioTextField" destination="gsT-L4-3xS" id="VIk-5F-dv9"/>
+                        <segue destination="nZB-Kn-X5K" kind="presentation" identifier="showRegistro" modalPresentationStyle="fullScreen" id="TGF-G7-77u"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="asM-aC-Xh7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-7492" y="-344"/>
+            <point key="canvasLocation" x="-7492.3664122137397" y="-344.36619718309862"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="cVK-FT-pS1">
@@ -861,13 +881,13 @@
         <!--Registro View Controller-->
         <scene sceneID="0Ck-b8-Pqu">
             <objects>
-                <viewController id="nZB-Kn-X5K" customClass="RegistroViewController" customModule="Actividades" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="registroViewController" id="nZB-Kn-X5K" customClass="RegistroViewController" customModule="Actividades" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="l1u-ss-BEQ">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="1200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cwc-VB-ewl">
-                                <rect key="frame" x="0.0" y="59" width="393" height="1141"/>
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="1200"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ADt-pa-870">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="1200"/>
@@ -1048,14 +1068,8 @@
                                                             <constraint firstAttribute="trailing" secondItem="VqV-wv-Elj" secondAttribute="trailing" id="zNa-sN-WAK"/>
                                                         </constraints>
                                                     </stackView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Acepto los términos y condiciones" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="daq-U2-Zfn">
-                                                        <rect key="frame" x="73" y="780" width="195" height="15"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
                                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EDV-Qd-Qjp">
-                                                        <rect key="frame" x="115" y="803" width="111" height="35"/>
+                                                        <rect key="frame" x="91" y="817" width="167" height="35"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <color key="backgroundColor" name="AccentColor"/>
                                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1065,6 +1079,32 @@
                                                             <action selector="registroAction:" destination="nZB-Kn-X5K" eventType="touchUpInside" id="edc-yo-FlS"/>
                                                         </connections>
                                                     </button>
+                                                    <button opaque="NO" alpha="0.94999998807907104" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KMG-OU-eaX">
+                                                        <rect key="frame" x="179" y="852" width="89" height="28"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Inicia sesión">
+                                                            <fontDescription key="titleFontDescription" type="system" pointSize="11"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="iniciaSesionAction:" destination="nZB-Kn-X5K" eventType="touchUpInside" id="oYs-lX-bgq"/>
+                                                            <action selector="registrateAction:" destination="HG4-ej-xzC" eventType="touchUpInside" id="8sM-hj-cIq"/>
+                                                            <action selector="registroAction:" destination="nZB-Kn-X5K" eventType="touchUpInside" id="XOn-hN-YZm"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="¿Ya tienes cuenta?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qcl-yr-XC1">
+                                                        <rect key="frame" x="91" y="859" width="98" height="14"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Acepto los términos y condiciones" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="daq-U2-Zfn">
+                                                        <rect key="frame" x="91" y="772" width="195" height="15"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
                                                 </subviews>
                                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
@@ -1086,7 +1126,7 @@
                                                 </constraints>
                                             </view>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.12156862745098039" green="0.12941176470588234" blue="0.1803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.15686274509803921" green="0.29803921568627451" blue="0.50588235294117645" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstItem="C3g-5h-44c" firstAttribute="leading" secondItem="ADt-pa-870" secondAttribute="leading" constant="15" id="1zI-L7-9uV"/>
                                             <constraint firstAttribute="bottom" secondItem="C3g-5h-44c" secondAttribute="bottom" constant="146.33333333333348" id="4oF-jE-8gj"/>
@@ -1105,7 +1145,7 @@
                             </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="XcM-Vq-nLd"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.15686274509803921" green="0.29803921568627451" blue="0.50588235294117645" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Cwc-VB-ewl" firstAttribute="top" secondItem="XcM-Vq-nLd" secondAttribute="top" id="EAP-kk-awk"/>
                             <constraint firstAttribute="bottom" secondItem="Cwc-VB-ewl" secondAttribute="bottom" id="Fon-av-MHV"/>
@@ -1114,6 +1154,7 @@
                             <constraint firstItem="Cwc-VB-ewl" firstAttribute="leading" secondItem="XcM-Vq-nLd" secondAttribute="leading" id="nBv-NA-WqQ"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Eoh-Nc-HF7"/>
                     <size key="freeformSize" width="393" height="1200"/>
                     <connections>
                         <outlet property="confirmacionError" destination="z0a-8l-kVy" id="Ahw-Nz-2AS"/>
@@ -1133,13 +1174,15 @@
                         <outlet property="institucionError" destination="XzM-LF-3AE" id="hfR-Pb-e9r"/>
                         <outlet property="institucionTextField" destination="UYa-iK-kqE" id="Tcj-UH-zM4"/>
                         <outlet property="registroButton" destination="EDV-Qd-Qjp" id="WAy-eb-HVL"/>
+                        <outlet property="registroView" destination="C3g-5h-44c" id="kD8-r3-jxu"/>
                         <outlet property="usuarioError" destination="dCg-vd-i9M" id="yEo-6k-urr"/>
                         <outlet property="usuarioTextField" destination="yBl-KX-QXp" id="k7N-97-j6x"/>
+                        <segue destination="HG4-ej-xzC" kind="presentation" identifier="showInicioSesion" modalPresentationStyle="fullScreen" id="Dyi-0r-nrL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uLK-hh-ZKX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-7616" y="520"/>
+            <point key="canvasLocation" x="-7590" y="536"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="6KZ-b2-4XF">
@@ -1576,9 +1619,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xiC-xS-VKT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-5019" y="508"/>
+            <point key="canvasLocation" x="-4989" y="789"/>
         </scene>
-        <!--Item-->
+        <!--Perfil View Controller-->
         <scene sceneID="gWY-Q2-3x5">
             <objects>
                 <viewController id="31h-eV-xgm" customClass="PerfilViewController" customModule="Actividades" customModuleProvider="target" sceneMemberID="viewController">
@@ -1587,7 +1630,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DaO-4c-Z2e">
-                                <rect key="frame" x="0.0" y="59" width="393" height="793"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="749"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Lx-OS-jtn">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="1000"/>
@@ -1727,7 +1770,7 @@
                             <constraint firstItem="DaO-4c-Z2e" firstAttribute="trailing" secondItem="gbJ-QR-aKr" secondAttribute="trailing" id="z78-73-S8E"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="xiC-AV-QwN"/>
+                    <navigationItem key="navigationItem" id="AJS-S0-rQJ"/>
                     <connections>
                         <outlet property="contrasenaLabel" destination="A3o-XP-3kV" id="kRN-ff-AYz"/>
                         <outlet property="emailLabel" destination="7gn-Nd-xOL" id="HYK-CP-6MF"/>
@@ -1736,7 +1779,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a8G-8i-dOG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4753" y="16"/>
+            <point key="canvasLocation" x="-3826.7175572519081" y="15.492957746478874"/>
         </scene>
         <!--Contrasena View Controller-->
         <scene sceneID="KCN-vv-a8M">
@@ -1826,7 +1869,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zao-gA-Ra6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3225" y="256"/>
+            <point key="canvasLocation" x="-2298.4732824427479" y="255.63380281690141"/>
         </scene>
         <!--Nombre View Controller-->
         <scene sceneID="RVg-OU-6ip">
@@ -1901,7 +1944,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JeO-Oe-Akp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2362.5954198473282" y="-425.35211267605638"/>
+            <point key="canvasLocation" x="-1435.8778625954199" y="-425.35211267605638"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="XBW-G4-uC7">
@@ -1915,7 +1958,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="KnR-lJ-1Lv" kind="relationship" relationship="viewControllers" id="NMg-eT-0Jp"/>
-                        <segue destination="31h-eV-xgm" kind="relationship" relationship="viewControllers" id="40O-D1-0Es"/>
+                        <segue destination="J9O-D4-5zd" kind="relationship" relationship="viewControllers" id="40O-D1-0Es"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WX5-P4-QZu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -2422,7 +2465,7 @@ Para realizar esta entrevista, se debe tener claridad de lo que se compartirá p
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="51W-yH-DFv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="11588.549618320611" y="-254.22535211267606"/>
+            <point key="canvasLocation" x="12515.267175572519" y="-254.22535211267606"/>
         </scene>
         <!--Cutionario View Controller-->
         <scene sceneID="dao-9d-AwV">
@@ -2439,6 +2482,7 @@ Para realizar esta entrevista, se debe tener claridad de lo que se compartirá p
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lCl-JC-vDo">
                                 <rect key="frame" x="0.66666666666665719" y="9" width="391.66666666666674" height="855"/>
                                 <subviews>
+<<<<<<< Updated upstream
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="qxN-pQ-GJz">
                                         <rect key="frame" x="177" y="442.66666666666669" width="41" height="0.0"/>
                                         <constraints>
@@ -2463,6 +2507,10 @@ Para realizar esta entrevista, se debe tener claridad de lo que se compartirá p
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="x86-CI-9gm">
                                         <rect key="frame" x="63" y="481.00000000000006" width="265.66666666666669" height="251.66666666666669"/>
+=======
+                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="x86-CI-9gm">
+                                        <rect key="frame" x="64" y="511" width="386" height="255.66666666666663"/>
+>>>>>>> Stashed changes
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IK3-xT-9i3">
                                                 <rect key="frame" x="0.0" y="0.0" width="265.66666666666669" height="34.333333333333336"/>
@@ -2607,7 +2655,7 @@ Para realizar esta entrevista, se debe tener claridad de lo que se compartirá p
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="63n-z4-7rJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="12385.496183206107" y="-254.22535211267606"/>
+            <point key="canvasLocation" x="13312.213740458015" y="-254.22535211267606"/>
         </scene>
         <!--Cuestionario Final View Controller-->
         <scene sceneID="saj-se-b9C">
@@ -2624,6 +2672,7 @@ Para realizar esta entrevista, se debe tener claridad de lo que se compartirá p
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5qb-ri-JrN">
                                 <rect key="frame" x="0.0" y="9" width="393" height="855"/>
                                 <subviews>
+<<<<<<< Updated upstream
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="IVm-vW-PQY">
                                         <rect key="frame" x="60.666666666666657" y="203" width="41.333333333333343" height="20.333333333333343"/>
                                         <constraints>
@@ -2653,6 +2702,10 @@ Para realizar esta entrevista, se debe tener claridad de lo que se compartirá p
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="wjS-RU-2L2">
                                         <rect key="frame" x="61" y="466" width="265" height="279.66666666666674"/>
+=======
+                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="wjS-RU-2L2">
+                                        <rect key="frame" x="64" y="511" width="386" height="255.66666666666663"/>
+>>>>>>> Stashed changes
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W2O-uV-LGn">
                                                 <rect key="frame" x="0.0" y="0.0" width="265" height="35.333333333333336"/>
@@ -2807,7 +2860,11 @@ Para realizar esta entrevista, se debe tener claridad de lo que se compartirá p
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ova-vL-LTK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+<<<<<<< Updated upstream
             <point key="canvasLocation" x="11429.770992366412" y="445.77464788732397"/>
+=======
+            <point key="canvasLocation" x="12356.48854961832" y="445.77464788732397"/>
+>>>>>>> Stashed changes
         </scene>
         <!--View Controller-->
         <scene sceneID="rQu-Ue-zBG">
@@ -2875,7 +2932,7 @@ Para realizar esta entrevista, se debe tener claridad de lo que se compartirá p
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Soa-DY-Uxw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="13040.458015267175" y="-254.22535211267606"/>
+            <point key="canvasLocation" x="13967.175572519083" y="-254.22535211267606"/>
         </scene>
         <!--Record View Controller-->
         <scene sceneID="SgR-OH-Anh">
@@ -2945,7 +3002,7 @@ Para realizar esta entrevista, se debe tener claridad de lo que se compartirá p
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aEM-Bx-Xlq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4356.4885496183206" y="-322.53521126760563"/>
+            <point key="canvasLocation" x="5283.2061068702287" y="-322.53521126760563"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="0hc-mh-Bsf">
@@ -3152,7 +3209,7 @@ Para realizar esta entrevista, se debe tener claridad de lo que se compartirá p
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vfr-Vg-pkx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="10644" y="446"/>
+            <point key="canvasLocation" x="11570.229007633587" y="445.77464788732397"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="kxd-WC-XAe">
@@ -3219,13 +3276,13 @@ Para realizar esta entrevista, se debe tener claridad de lo que se compartirá p
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DFO-tE-R01" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="12114" y="446"/>
+            <point key="canvasLocation" x="13040.458015267175" y="445.77464788732397"/>
         </scene>
-        <!--Item-->
+        <!--Inicio-->
         <scene sceneID="be5-DT-eAF">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KnR-lJ-1Lv" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="WIc-DD-YEv"/>
+                    <tabBarItem key="tabBarItem" title="Inicio" image="house" catalog="system" id="WIc-DD-YEv"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ycL-03-qfm">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -3240,7 +3297,29 @@ Para realizar esta entrevista, se debe tener claridad de lo que se compartirá p
             </objects>
             <point key="canvasLocation" x="-5257.2519083969464" y="-987.32394366197184"/>
         </scene>
+        <!--Perfil-->
+        <scene sceneID="TL3-4u-Zax">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="J9O-D4-5zd" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Perfil" image="person" catalog="system" id="xiC-AV-QwN"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="62d-Kk-g8V">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="31h-eV-xgm" kind="relationship" relationship="rootViewController" id="fuQ-OF-0FB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fjt-8R-wvz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4753.4351145038163" y="15.492957746478874"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Dyi-0r-nrL"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="Actividad1" width="296.33334350585938" height="296"/>
         <image name="Actividad2" width="325.33334350585938" height="207.33332824707031"/>
@@ -3253,7 +3332,9 @@ Para realizar esta entrevista, se debe tener claridad de lo que se compartirá p
         <image name="chevron.right" catalog="system" width="97" height="128"/>
         <image name="circulo" width="106.33333587646484" height="106.33333587646484"/>
         <image name="cuestionario" width="90.333335876464844" height="75.333335876464844"/>
+        <image name="house" catalog="system" width="128" height="104"/>
         <image name="path" width="59" height="46"/>
+        <image name="person" catalog="system" width="128" height="121"/>
         <image name="sel4c_header" width="389" height="134.33332824707031"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
