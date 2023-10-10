@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="S8x-hU-ISx">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rnC-dx-NnQ">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
@@ -2482,7 +2482,6 @@ Para realizar esta entrevista, se debe tener claridad de lo que se compartirá p
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lCl-JC-vDo">
                                 <rect key="frame" x="0.66666666666665719" y="9" width="391.66666666666674" height="855"/>
                                 <subviews>
-<<<<<<< Updated upstream
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="qxN-pQ-GJz">
                                         <rect key="frame" x="177" y="442.66666666666669" width="41" height="0.0"/>
                                         <constraints>
@@ -2507,10 +2506,6 @@ Para realizar esta entrevista, se debe tener claridad de lo que se compartirá p
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="x86-CI-9gm">
                                         <rect key="frame" x="63" y="481.00000000000006" width="265.66666666666669" height="251.66666666666669"/>
-=======
-                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="x86-CI-9gm">
-                                        <rect key="frame" x="64" y="511" width="386" height="255.66666666666663"/>
->>>>>>> Stashed changes
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IK3-xT-9i3">
                                                 <rect key="frame" x="0.0" y="0.0" width="265.66666666666669" height="34.333333333333336"/>
@@ -2672,7 +2667,6 @@ Para realizar esta entrevista, se debe tener claridad de lo que se compartirá p
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5qb-ri-JrN">
                                 <rect key="frame" x="0.0" y="9" width="393" height="855"/>
                                 <subviews>
-<<<<<<< Updated upstream
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="IVm-vW-PQY">
                                         <rect key="frame" x="60.666666666666657" y="203" width="41.333333333333343" height="20.333333333333343"/>
                                         <constraints>
@@ -2702,10 +2696,6 @@ Para realizar esta entrevista, se debe tener claridad de lo que se compartirá p
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="wjS-RU-2L2">
                                         <rect key="frame" x="61" y="466" width="265" height="279.66666666666674"/>
-=======
-                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="wjS-RU-2L2">
-                                        <rect key="frame" x="64" y="511" width="386" height="255.66666666666663"/>
->>>>>>> Stashed changes
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W2O-uV-LGn">
                                                 <rect key="frame" x="0.0" y="0.0" width="265" height="35.333333333333336"/>
@@ -2860,11 +2850,7 @@ Para realizar esta entrevista, se debe tener claridad de lo que se compartirá p
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ova-vL-LTK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-<<<<<<< Updated upstream
-            <point key="canvasLocation" x="11429.770992366412" y="445.77464788732397"/>
-=======
             <point key="canvasLocation" x="12356.48854961832" y="445.77464788732397"/>
->>>>>>> Stashed changes
         </scene>
         <!--View Controller-->
         <scene sceneID="rQu-Ue-zBG">
@@ -3318,7 +3304,7 @@ Para realizar esta entrevista, se debe tener claridad de lo que se compartirá p
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Dyi-0r-nrL"/>
+        <segue reference="Oo5-3k-6vs"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Actividad1" width="296.33334350585938" height="296"/>
