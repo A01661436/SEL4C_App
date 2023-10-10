@@ -2437,21 +2437,21 @@ Para realizar esta entrevista, se debe tener claridad de lo que se compartirá p
                                 <color key="backgroundColor" systemColor="tertiarySystemFillColor"/>
                             </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lCl-JC-vDo">
-                                <rect key="frame" x="0.66666666666665719" y="9" width="392" height="855"/>
+                                <rect key="frame" x="0.66666666666665719" y="9" width="391.66666666666674" height="855"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="qxN-pQ-GJz">
-                                        <rect key="frame" x="177" y="462.66666666666669" width="41" height="0.0"/>
+                                        <rect key="frame" x="177" y="442.66666666666669" width="41" height="0.0"/>
                                         <constraints>
                                             <constraint firstAttribute="height" id="dLi-k9-sNh"/>
                                             <constraint firstAttribute="width" constant="41" id="eUy-tQ-e2u"/>
                                         </constraints>
                                     </stackView>
                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="eFp-VA-Ras">
-                                        <rect key="frame" x="60" y="804" width="272" height="4"/>
+                                        <rect key="frame" x="60" y="784" width="271.66666666666669" height="4"/>
                                         <color key="progressTintColor" red="0.54117647059999996" green="0.74901960779999999" blue="0.96862745100000003" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
                                     </progressView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fb3-qa-8pa">
-                                        <rect key="frame" x="263" y="25" width="112" height="54"/>
+                                        <rect key="frame" x="263" y="5" width="111.66666666666669" height="54"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="54" id="7gM-LO-4dZ"/>
                                         </constraints>
@@ -2462,7 +2462,7 @@ Para realizar esta entrevista, se debe tener claridad de lo que se compartirá p
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="x86-CI-9gm">
-                                        <rect key="frame" x="63" y="500.99999999999994" width="265.66666666666669" height="251.66666666666669"/>
+                                        <rect key="frame" x="63" y="481.00000000000006" width="265.66666666666669" height="251.66666666666669"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IK3-xT-9i3">
                                                 <rect key="frame" x="0.0" y="0.0" width="265.66666666666669" height="34.333333333333336"/>
@@ -2551,7 +2551,7 @@ Para realizar esta entrevista, se debe tener claridad de lo que se compartirá p
                                         </constraints>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Glk-T2-s75">
-                                        <rect key="frame" x="60" y="162" width="264" height="300"/>
+                                        <rect key="frame" x="60" y="142" width="263.66666666666669" height="300"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -3162,16 +3162,13 @@ Para realizar esta entrevista, se debe tener claridad de lo que se compartirá p
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="circulo" translatesAutoresizingMaskIntoConstraints="NO" id="veB-Yy-mDk">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circulo" translatesAutoresizingMaskIntoConstraints="NO" id="veB-Yy-mDk">
                                 <rect key="frame" x="0.0" y="127" width="395" height="345"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cuestionario" translatesAutoresizingMaskIntoConstraints="NO" id="hyR-JW-wgG">
-                                <rect key="frame" x="44" y="177" width="305" height="245"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="245" id="S3M-5a-vOK"/>
+                                    <constraint firstAttribute="height" constant="345" id="rMe-l8-dDL"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Encuesta Entregada!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vgn-QM-YvZ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Encuesta Entregada!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vgn-QM-YvZ">
                                 <rect key="frame" x="81" y="488" width="233" height="29"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                 <nil key="textColor"/>
@@ -3183,7 +3180,7 @@ Para realizar esta entrevista, se debe tener claridad de lo que se compartirá p
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gaA-VM-gdA">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gaA-VM-gdA">
                                 <rect key="frame" x="129" y="742" width="135" height="35"/>
                                 <color key="tintColor" red="0.07621637899" green="0.114769934" blue="0.437795928" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
@@ -3194,23 +3191,28 @@ Para realizar esta entrevista, se debe tener claridad de lo que se compartirá p
                                     <color key="baseBackgroundColor" red="0.07621637899" green="0.114769934" blue="0.437795928" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="cuestionario" translatesAutoresizingMaskIntoConstraints="NO" id="hyR-JW-wgG">
+                                <rect key="frame" x="44" y="177" width="305" height="245"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="FBf-m5-ZoG"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="hyR-JW-wgG" firstAttribute="centerX" secondItem="gaA-VM-gdA" secondAttribute="centerX" id="CYl-Az-OBi"/>
-                            <constraint firstItem="hyR-JW-wgG" firstAttribute="top" secondItem="FBf-m5-ZoG" secondAttribute="top" constant="177" id="Fiq-cf-Qa4"/>
-                            <constraint firstItem="FBf-m5-ZoG" firstAttribute="bottom" secondItem="gaA-VM-gdA" secondAttribute="bottom" constant="75" id="Gm7-4i-0ck"/>
-                            <constraint firstItem="gaA-VM-gdA" firstAttribute="leading" secondItem="FBf-m5-ZoG" secondAttribute="leading" constant="129" id="Jas-zU-qyd"/>
-                            <constraint firstItem="hyR-JW-wgG" firstAttribute="centerX" secondItem="twf-y2-fuc" secondAttribute="centerX" id="PKb-bR-DLd"/>
-                            <constraint firstItem="hyR-JW-wgG" firstAttribute="centerX" secondItem="OJl-ug-Wgw" secondAttribute="centerX" id="SKg-8K-4xg"/>
-                            <constraint firstItem="hyR-JW-wgG" firstAttribute="centerY" secondItem="veB-Yy-mDk" secondAttribute="centerY" id="amx-vx-CRI"/>
-                            <constraint firstItem="hyR-JW-wgG" firstAttribute="centerX" secondItem="veB-Yy-mDk" secondAttribute="centerX" constant="-1" id="dkO-AM-fIs"/>
-                            <constraint firstItem="twf-y2-fuc" firstAttribute="leading" secondItem="FBf-m5-ZoG" secondAttribute="leading" constant="72" id="fPn-s7-t3V"/>
-                            <constraint firstItem="hyR-JW-wgG" firstAttribute="centerX" secondItem="Vgn-QM-YvZ" secondAttribute="centerX" id="hfy-uQ-i0g"/>
-                            <constraint firstItem="hyR-JW-wgG" firstAttribute="leading" secondItem="FBf-m5-ZoG" secondAttribute="leading" constant="44" id="o4R-Ja-Tbj"/>
-                            <constraint firstItem="Vgn-QM-YvZ" firstAttribute="top" secondItem="hyR-JW-wgG" secondAttribute="bottom" constant="66" id="qq9-cU-eJp"/>
-                            <constraint firstItem="twf-y2-fuc" firstAttribute="top" secondItem="Vgn-QM-YvZ" secondAttribute="bottom" constant="41" id="tv4-sK-U1P"/>
+                            <constraint firstItem="hyR-JW-wgG" firstAttribute="top" secondItem="FBf-m5-ZoG" secondAttribute="top" constant="177" id="28M-sa-a2s"/>
+                            <constraint firstItem="twf-y2-fuc" firstAttribute="leading" secondItem="FBf-m5-ZoG" secondAttribute="leading" constant="72" id="2m1-lF-2ef"/>
+                            <constraint firstItem="hyR-JW-wgG" firstAttribute="leading" secondItem="FBf-m5-ZoG" secondAttribute="leading" constant="44" id="5W8-9N-Rx4"/>
+                            <constraint firstItem="veB-Yy-mDk" firstAttribute="centerX" secondItem="twf-y2-fuc" secondAttribute="centerX" id="6ec-Bs-Y1U"/>
+                            <constraint firstItem="veB-Yy-mDk" firstAttribute="leading" secondItem="FBf-m5-ZoG" secondAttribute="leading" id="Ad6-0k-y1m"/>
+                            <constraint firstItem="veB-Yy-mDk" firstAttribute="centerX" secondItem="Vgn-QM-YvZ" secondAttribute="centerX" id="Lk3-Ef-ZhV"/>
+                            <constraint firstItem="FBf-m5-ZoG" firstAttribute="bottom" secondItem="gaA-VM-gdA" secondAttribute="bottom" constant="75" id="Q46-ow-0VI"/>
+                            <constraint firstItem="hyR-JW-wgG" firstAttribute="centerX" secondItem="gaA-VM-gdA" secondAttribute="centerX" id="afe-xd-xX2"/>
+                            <constraint firstItem="Vgn-QM-YvZ" firstAttribute="top" secondItem="veB-Yy-mDk" secondAttribute="bottom" constant="16" id="cfw-59-G40"/>
+                            <constraint firstItem="veB-Yy-mDk" firstAttribute="top" secondItem="FBf-m5-ZoG" secondAttribute="top" constant="127" id="chZ-8Y-L8e"/>
+                            <constraint firstItem="hyR-JW-wgG" firstAttribute="centerY" secondItem="veB-Yy-mDk" secondAttribute="centerY" id="jRn-Un-0Lx"/>
+                            <constraint firstItem="twf-y2-fuc" firstAttribute="top" secondItem="Vgn-QM-YvZ" secondAttribute="bottom" constant="41" id="m0x-wM-crs"/>
+                            <constraint firstItem="gaA-VM-gdA" firstAttribute="leading" secondItem="FBf-m5-ZoG" secondAttribute="leading" constant="129" id="pfc-ob-tOp"/>
+                            <constraint firstItem="hyR-JW-wgG" firstAttribute="centerX" secondItem="twf-y2-fuc" secondAttribute="centerX" id="syK-0U-9Jh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="veB-Yy-mDk" secondAttribute="trailing" constant="-18" id="zYK-1E-Uxa"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="xZb-RX-KCf"/>
