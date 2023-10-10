@@ -11,7 +11,8 @@ class CuestionarioFinalViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        rectangle1.layer.cornerRadius = 8
+        textQuestion.numberOfLines = 0
+        EndB.isHidden = true
         
         Task {
             do{
@@ -40,6 +41,11 @@ class CuestionarioFinalViewController: UIViewController {
     
     @IBOutlet weak var progressB: UIProgressView!
     
+
+    @IBOutlet weak var EndB: UIButton!
+    
+    
+    
     var engine = EcomplexityEngine()
     
     var userResponses = UserResponses()
@@ -65,7 +71,7 @@ class CuestionarioFinalViewController: UIViewController {
     
     @IBAction func userAnswer(_ sender: UIButton){
         let answer = sender.titleLabel?.text
-        let question = Question(id: engine.getId(), text: engine.getTextQuestion())
+        let question = QuestionSend(id: engine.getId())
         
         var ans = Answer(question: question, answer: 0)
         
@@ -84,6 +90,9 @@ class CuestionarioFinalViewController: UIViewController {
         PocoDeAcuerdo.isEnabled =  false
         NadaDeAcuerdo.isEnabled = false
         
+        if progressB.progress == 1.0 {
+            EndB.isHidden = false
+        }
         
         if engine.nextQuestion(){
             Task{

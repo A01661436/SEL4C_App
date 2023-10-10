@@ -8,7 +8,8 @@
 import UIKit
 
 class CutionarioViewController: UIViewController {
-
+    @IBOutlet weak var EndB: UIButton!
+    
     @IBOutlet weak var NadaDeAcuerdo: UIButton!
     
     @IBOutlet weak var PocoDeAcuerdo: UIButton!
@@ -31,7 +32,8 @@ class CutionarioViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        rectangle1.layer.cornerRadius = 8
+        EndB.isHidden = true
+        textQuestion.numberOfLines = 0
         
         Task {
             do{
@@ -71,7 +73,7 @@ class CutionarioViewController: UIViewController {
     
     @IBAction func userAnswer(_ sender: UIButton){
         let answer = sender.titleLabel?.text
-        let question = Question(id: engine.getId(), text: engine.getTextQuestion())
+        let question = QuestionSend(id: engine.getId())
         
         var ans = Answer(question: question, answer: 0)
         
@@ -90,6 +92,9 @@ class CutionarioViewController: UIViewController {
         PocoDeAcuerdo.isEnabled =  false
         NadaDeAcuerdo.isEnabled = false
         
+        if progressB.progress == 1.0 {
+            EndB.isHidden = false
+        }
         
         if engine.nextQuestion(){
             Task{
