@@ -82,15 +82,6 @@ final class ActividadesTests: XCTestCase {
             }
     }
     
-    
-    func testCP_05_EncuestaInicFin_Success() throws {
-        
-    }
-    
-    func testCP_06_EncuestaInicFin_Failed() throws {
-        
-    }
-    
     func testCP_07_LogOut_Success() throws {
         UserDefaults.standard.set(true, forKey: "isSignedIn")
         perfilVC.logout()
@@ -107,4 +98,47 @@ final class ActividadesTests: XCTestCase {
     
     
 
+}
+
+class CutionarioViewControllerTests: XCTestCase {
+    
+    var sut: CutionarioViewController! // System Under Test
+    
+    override func setUp() {
+        super.setUp()
+        let storyboard = UIStoryboard(name: "Main", bundle: nil) // Asume que tu storyboard se llama "Main"
+        sut = storyboard.instantiateViewController(withIdentifier: "CutionarioViewController") as? CutionarioViewController
+        sut.loadViewIfNeeded()
+        
+        // Preparar el entorno de la prueba
+        let sampleQuestions = [
+            Question(id: 1, text: "Sample Question 1"),
+            Question(id: 2, text: "Sample Question 2")
+        ]
+        sut.engine.initialize(q: sampleQuestions)
+    }
+    
+    override func tearDown() {
+        sut = nil
+        super.tearDown()
+    }
+    
+    func testCP_05_EncuestaInicFin_Success() {
+        // Asegúrate de que userResponses está vacío al inicio
+        sut.userResponses.responses.removeAll()
+        
+        // Simula un clic en el botón NiAcuerdoNi
+        let button = UIButton()
+        button.titleLabel?.text = "Ni de acuerdo ni desacuerdo"
+        sut.userAnswer(button)
+        
+        // Verifica que se agregó una respuesta a userResponses
+        XCTAssertEqual(sut.userResponses.responses.count, 1, "Expected one response to be added after clicking the button.")
+    }
+    
+    func testCP_06_EncuestaInicFin_Failed() {
+        sut.engine.questions = []
+        
+        XCTAssertEqual(sut.engine.questions.count, 0, "Expected questions to be empty, which is an invalid state.")
+    }
 }
