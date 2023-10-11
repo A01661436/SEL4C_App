@@ -44,6 +44,46 @@ class HomeViewController: UIViewController {
         //performSegue(withIdentifier: "showDiagInicial", sender: nil)
     }
     
+    @IBAction func onClickAct1(_ sender: UITapGestureRecognizer) {
+        
+        let vistaDestino = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "act1VC")
+        vistaDestino.hidesBottomBarWhenPushed = true
+        if let navigationController = self.navigationController {
+            navigationController.pushViewController(vistaDestino, animated: true)
+        }
+        //performSegue(withIdentifier: "showDiagInicial", sender: nil)
+    }
+    
+    @IBAction func onClickAct2(_ sender: UITapGestureRecognizer) {
+        
+        let vistaDestino = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "act2VC")
+        vistaDestino.hidesBottomBarWhenPushed = true
+        if let navigationController = self.navigationController {
+            navigationController.pushViewController(vistaDestino, animated: true)
+        }
+        //performSegue(withIdentifier: "showDiagInicial", sender: nil)
+    }
+    
+    @IBAction func onClickAct3(_ sender: UITapGestureRecognizer) {
+        
+        let vistaDestino = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "act3VC")
+        vistaDestino.hidesBottomBarWhenPushed = true
+        if let navigationController = self.navigationController {
+            navigationController.pushViewController(vistaDestino, animated: true)
+        }
+        //performSegue(withIdentifier: "showDiagInicial", sender: nil)
+    }
+    
+    @IBAction func onClickAct4(_ sender: UITapGestureRecognizer) {
+        
+        let vistaDestino = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "act4VC")
+        vistaDestino.hidesBottomBarWhenPushed = true
+        if let navigationController = self.navigationController {
+            navigationController.pushViewController(vistaDestino, animated: true)
+        }
+        //performSegue(withIdentifier: "showDiagInicial", sender: nil)
+    }
+    
     func updateUI(avance: Int){
         DispatchQueue.main.async {
             self.avanceBar.progress = Float(avance)/4
