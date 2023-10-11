@@ -7,7 +7,7 @@
 
 import Foundation
 struct Answer:Codable{
-    var question:QuestionSend
+    var question:Int
     var answer:Int
 }
 

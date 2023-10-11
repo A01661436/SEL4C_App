@@ -71,7 +71,7 @@ class CuestionarioFinalViewController: UIViewController {
     
     @IBAction func userAnswer(_ sender: UIButton){
         let answer = sender.titleLabel?.text
-        let question = QuestionSend(id: engine.getId())
+        let question = engine.getId()
         
         var ans = Answer(question: question, answer: 0)
         

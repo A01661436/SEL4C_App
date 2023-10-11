@@ -51,7 +51,7 @@ class CutionarioViewController: UIViewController {
             self.engine.initialize(q: questions)
             self.progressB.progress = self.engine.getProgress()
             self.textQuestion.text = self.engine.getTextQuestion()
-            self.userResponses.user = "user@tec.mx"
+            self.userResponses.user = 2
         }
     }
     
@@ -73,9 +73,11 @@ class CutionarioViewController: UIViewController {
     
     @IBAction func userAnswer(_ sender: UIButton){
         let answer = sender.titleLabel?.text
-        let question = QuestionSend(id: engine.getId())
+        let question = engine.getId()
+        
         
         var ans = Answer(question: question, answer: 0)
+        
         
         switch answer!{
         case let str where str.contains("Nada de acuerdo"): ans.answer = 1
@@ -94,6 +96,7 @@ class CutionarioViewController: UIViewController {
         
         if progressB.progress == 1.0 {
             EndB.isHidden = false
+            print(ans)
         }
         
         if engine.nextQuestion(){
