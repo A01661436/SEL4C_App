@@ -8,7 +8,8 @@
 import Foundation
 struct Answer:Codable{
     var question:Int
-    var answer:Int
+    var answer:String
+    
 }
 
 typealias Answers = [Answer]

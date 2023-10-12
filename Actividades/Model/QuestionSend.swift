@@ -20,7 +20,7 @@ enum QuestionErrorS: Error, LocalizedError{
 extension QuestionSend{
     
     static func fetchQuestions() async throws->Questions{
-        let baseString = "http://18.222.144.45:8000/api/cuestionario_inicial"
+        let baseString = "http://18.222.144.45:8000/api/respuestas_cuestionarioI"
         let questionsURL = URL(string: baseString)!
         let (data, response) = try await URLSession.shared.data(from: questionsURL)
         guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {

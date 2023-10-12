@@ -76,15 +76,14 @@ class CutionarioViewController: UIViewController {
         let question = engine.getId()
         
         
-        var ans = Answer(question: question, answer: 0)
-        
+        var ans = Answer(question: question, answer: "")
         
         switch answer!{
-        case let str where str.contains("Nada de acuerdo"): ans.answer = 1
-        case let str where str.contains("Poco de acuerdo"): ans.answer = 2
-        case let str where str.contains("Ni de acuerdo ni desacuerdo"): ans.answer = 3
-        case let str where str.contains("De acuerdo"): ans.answer = 4
-        default: ans.answer = 5
+        case let str where str.contains("Nada de acuerdo"): ans.answer = "Nada de acuerdo"
+        case let str where str.contains("Poco de acuerdo"): ans.answer = "Poco de acuerdo"
+        case let str where str.contains("Ni de acuerdo ni desacuerdo"): ans.answer = "Ni de acuerdo ni desacuerdo"
+        case let str where str.contains("De acuerdo"): ans.answer = "De acuerdo"
+        default: ans.answer = "5"
         }
         userResponses.responses.append(ans)
         sender.backgroundColor = UIColor.green
