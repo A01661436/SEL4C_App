@@ -87,7 +87,6 @@ class CutionarioViewController: UIViewController {
         }
         userResponses.responses.append(ans)
         sender.backgroundColor = UIColor.green
-        NadaDeAcuerdo.isEnabled = false
         NiAcuerdoNi.isEnabled = false
         MuyDeAcuerdo.isEnabled = false
         PocoDeAcuerdo.isEnabled =  false
@@ -144,8 +143,6 @@ class CutionarioViewController: UIViewController {
         NadaDeAcuerdo.isEnabled = true
         PocoDeAcuerdo.isEnabled = true
     }
-    
-    @IBOutlet weak var rectangle1: UIView!
     
    
     

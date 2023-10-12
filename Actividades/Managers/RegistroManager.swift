@@ -38,11 +38,17 @@ class RegistroManager {
             
             do {
                 let json = try JSONSerialization.jsonObject(with: data, options: .allowFragments)
-                let result = try JSONDecoder().decode(RegistroResponse.self, from: data)
-                print("SUCCESS: \(json)")
-                UserDefaults.standard.set(true, forKey: "isSignedIn")
-                self.saveUserInfo(response: result)
- 
+                if let result = try? JSONDecoder().decode(RegistroResponse.self, from: data) {
+                    
+                    
+                    print("SUCCESS: \(json)")
+                    UserDefaults.standard.set(false, forKey: "isSignedIn")
+                    self.saveUserInfo(response: result)
+                    completion(true)
+                } else {
+                    print("Failed to decode RegistroResponse")
+                    completion(false)
+                }
  
             } catch{
                 print(error)

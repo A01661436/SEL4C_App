@@ -118,6 +118,9 @@ class RegistroViewController: UIViewController {
         
         updateTextView()
         
+        contrasenaTextField.isSecureTextEntry = true
+        confirmacionTextField.isSecureTextEntry = true
+        
         
     }
     

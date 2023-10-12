@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rnC-dx-NnQ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gcl-hE-n41">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
@@ -1175,7 +1175,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="88P-AR-5SW">
-                                <rect key="frame" x="0.0" y="103" width="393" height="1197"/>
+                                <rect key="frame" x="0.0" y="44" width="393" height="1256"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="piV-3j-IrO" customClass="SubView">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="1300"/>
@@ -1225,7 +1225,7 @@
                                                 <rect key="frame" x="15" y="790" width="363" height="132"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Realiza el pitch de cierre" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j8t-SZ-yxg">
-                                                        <rect key="frame" x="18" y="26" width="177" height="48"/>
+                                                        <rect key="frame" x="16" y="18" width="122" height="71"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1241,6 +1241,13 @@
                                                         <rect key="frame" x="208" y="0.0" width="137" height="147"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Realiza tu evaluación de cierre" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fry-7A-Jc1">
+                                                        <rect key="frame" x="20" y="27" width="199" height="48"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </label>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.73333333333333328" green="0.81960784313725488" blue="0.93725490196078431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </view>
@@ -1514,7 +1521,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-2201" y="-565"/>
+            <point key="canvasLocation" x="-2203.8167938931297" y="-565.49295774647885"/>
         </scene>
         <!--Diagnostico Inicial View Controller-->
         <scene sceneID="UWJ-W4-Xst">
@@ -1674,7 +1681,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DaO-4c-Z2e">
-                                <rect key="frame" x="0.0" y="103" width="393" height="749"/>
+                                <rect key="frame" x="0.0" y="44" width="393" height="808"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Lx-OS-jtn">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="1000"/>
@@ -2913,10 +2920,10 @@ Para realizar esta entrevista, se debe tener claridad de lo que se compartirá p
             </objects>
             <point key="canvasLocation" x="12356.48854961832" y="445.77464788732397"/>
         </scene>
-        <!--View Controller-->
+        <!--Diag Comp View Controller-->
         <scene sceneID="rQu-Ue-zBG">
             <objects>
-                <viewController id="gcl-hE-n41" sceneMemberID="viewController">
+                <viewController id="gcl-hE-n41" customClass="DiagCompViewController" customModule="Actividades" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4ST-1X-Ug8">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2952,6 +2959,9 @@ Para realizar esta entrevista, se debe tener claridad de lo que se compartirá p
                                     </backgroundConfiguration>
                                     <color key="baseBackgroundColor" red="0.07621637899" green="0.114769934" blue="0.437795928" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="z7q-U3-0ID" kind="presentation" modalPresentationStyle="fullScreen" id="vPM-9j-yF9"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Umw-8p-vho"/>
@@ -3258,10 +3268,10 @@ Para realizar esta entrevista, se debe tener claridad de lo que se compartirá p
             </objects>
             <point key="canvasLocation" x="11570.229007633587" y="445.77464788732397"/>
         </scene>
-        <!--View Controller-->
+        <!--Diag Comp View Controller-->
         <scene sceneID="kxd-WC-XAe">
             <objects>
-                <viewController id="RaH-9M-W5r" sceneMemberID="viewController">
+                <viewController id="RaH-9M-W5r" customClass="DiagCompViewController" customModule="Actividades" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OJl-ug-Wgw">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3294,6 +3304,10 @@ Para realizar esta entrevista, se debe tener claridad de lo que se compartirá p
                                     </backgroundConfiguration>
                                     <color key="baseBackgroundColor" red="0.07621637899" green="0.114769934" blue="0.437795928" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="siguienteAction:" destination="WPb-OP-Er3" eventType="touchUpInside" id="4Q7-iW-7Y9"/>
+                                    <action selector="siguienteAction:" destination="RaH-9M-W5r" eventType="touchUpInside" id="COH-PC-m0Z"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="cuestionario" translatesAutoresizingMaskIntoConstraints="NO" id="hyR-JW-wgG">
                                 <rect key="frame" x="44" y="177" width="305" height="245"/>
@@ -3322,6 +3336,7 @@ Para realizar esta entrevista, se debe tener claridad de lo que se compartirá p
                     <navigationItem key="navigationItem" id="xZb-RX-KCf"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DFO-tE-R01" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="WPb-OP-Er3" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="13040.458015267175" y="445.77464788732397"/>
         </scene>
@@ -3332,7 +3347,7 @@ Para realizar esta entrevista, se debe tener claridad de lo que se compartirá p
                     <tabBarItem key="tabBarItem" title="Inicio" image="house" catalog="system" id="WIc-DD-YEv"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ycL-03-qfm">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -3351,7 +3366,7 @@ Para realizar esta entrevista, se debe tener claridad de lo que se compartirá p
                     <tabBarItem key="tabBarItem" title="Perfil" image="person" catalog="system" id="xiC-AV-QwN"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="62d-Kk-g8V">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -3365,6 +3380,7 @@ Para realizar esta entrevista, se debe tener claridad de lo que se compartirá p
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="TGF-G7-77u"/>
         <segue reference="Dyi-0r-nrL"/>
     </inferredMetricsTieBreakers>
     <resources>

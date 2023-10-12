@@ -30,6 +30,8 @@ class LoginViewController: UIViewController {
         self.loginView.layer.shadowRadius = 1
         self.loginView.layer.masksToBounds = false
         
+        contrasenaTextField.isSecureTextEntry = true
+        
    
     }
     
