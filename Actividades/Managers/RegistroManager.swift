@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 class RegistroManager {
 
@@ -37,14 +38,28 @@ class RegistroManager {
             
             do {
                 let json = try JSONSerialization.jsonObject(with: data, options: .allowFragments)
+                let result = try JSONDecoder().decode(RegistroResponse.self, from: data)
                 print("SUCCESS: \(json)")
-                
+                UserDefaults.standard.set(true, forKey: "isSignedIn")
+                self.saveUserInfo(response: result)
+ 
+ 
             } catch{
-                print(error.localizedDescription)
+                print(error)
                 completion(false)
                 
             }
         }
         task.resume()
     }
+    
+    private func saveUserInfo(response: RegistroResponse) {
+        UserDefaults.standard.set(response.nombre, forKey: "nombre")
+        UserDefaults.standard.set(response.contrasenia, forKey: "contrasenia")
+        UserDefaults.standard.set(response.usuarioID, forKey: "usuarioID")
+        UserDefaults.standard.set(response.avance, forKey: "avance")
+        UserDefaults.standard.set(response.email, forKey: "email")
+        UserDefaults.standard.synchronize()
+    }
+    
 }

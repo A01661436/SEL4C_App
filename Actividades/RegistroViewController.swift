@@ -64,6 +64,8 @@ class RegistroViewController: UIViewController {
     
     
     @IBOutlet weak var tycButton: UIButton!
+    
+    @IBOutlet weak var tycTextView: UITextView!
     var flag = false
     
     override func viewDidLoad() {
@@ -113,6 +115,8 @@ class RegistroViewController: UIViewController {
         self.registroView.layer.shadowOffset = CGSize(width: 5, height: 5)
         self.registroView.layer.shadowRadius = 1
         self.registroView.layer.masksToBounds = false
+        
+        updateTextView()
         
         
     }
@@ -292,21 +296,26 @@ class RegistroViewController: UIViewController {
     }
     
     @IBAction func registroAction(_ sender: Any) {
-        //resetForm()
+        
+        guard let fechaNacimiento = fechaNacimientoTextField.text, !fechaNacimiento.isEmpty, let genero = generoTextField.text, !genero.isEmpty, let grado = gradoAcademicoTextField.text, !grado.isEmpty, let institucion = institucionTextField.text, !institucion.isEmpty, let disciplina = disciplinaTextField.text, !disciplina.isEmpty, isEmailValid == true, isContrasenaValid == true, isConfirmacionValid == true, isEmailValid == true else {
+ 
+            mostrarError(message: "Intente de nuevo")
+            return
+        }
+       
+        let edad = calculateAge()
         
         let datosUsuario: [String: Any] = [
             "nombre": usuarioTextField.text!,
             "contrasenia": contrasenaTextField.text!,
             "email": emailTextField.text!,
             "avance": 0,
-            "genero": "Femenino",
-            "edad": 17,
-            "pais": "México",
-            "institucion": "TEC",
-            "grado": "prepa",
-            "diciplina": "Humanidades"
-            
-            
+            "genero": String(generoTextField.text!),
+            "edad": 14,
+            "pais": "Mexico",
+            "institucion": String(institucionTextField.text!),
+            "grado": String(gradoAcademicoTextField.text!),
+            "diciplina": String(disciplinaTextField.text!)
         ]
         
         let rm = RegistroManager()
@@ -316,11 +325,21 @@ class RegistroViewController: UIViewController {
                 if success {
                     // Registro exitoso, puedes hacer algo aquí si es necesario
                     print("Registro exitoso")
+                    
+
+                    
                 } else {
                     // Fallo en el registro, puedes hacer algo aquí si es necesario
                     print("Fallo en el registro")
+                    return
                 }
             }
+        }
+        
+        
+        let diagInicialController = UIStoryboard(name: K.StoryBoardID.main, bundle: nil).instantiateViewController(identifier: "diagInicial")
+        if let sceneDelegate = self.view.window?.windowScene?.delegate as? SceneDelegate,let window = sceneDelegate.window {
+            window.rootViewController = diagInicialController
         }
         
         print(datosUsuario)
@@ -351,6 +370,35 @@ class RegistroViewController: UIViewController {
             sender.setBackgroundImage((UIImage(named: "check")), for: UIControl.State.normal)
             flag = false
         }
+    }
+    
+    func updateTextView() {
+        let path = "https://tec.mx/es/politicas-de-privacidad-del-tecnologico-de-monterrey"
+        let text = tycTextView.text ?? ""
+        let attributedString = NSAttributedString.makeHyperlink(for: path, in: text, as: "términos y condiciones")
+        tycTextView.attributedText = attributedString
+    }
+    
+    func calculateAge() -> Int {
+        let calendar = Calendar.current
+        let currentDate = Date()
+        let birthdate = fechaNacimientoDatePicker.date
+        
+        let ageComponents = calendar.dateComponents([.year], from: birthdate, to: currentDate)
+        
+        if let age = ageComponents.year {
+            return age
+        }
+        
+        // Si no se pudo calcular la edad, puedes manejarlo de alguna otra manera, como lanzar un error o devolver un valor predeterminado.
+        return 0 // Valor predeterminado en caso de error.
+    }
+    
+    func mostrarError(message: String) {
+        let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(okAction)
+        present(alert, animated: true, completion: nil)
     }
 }
 

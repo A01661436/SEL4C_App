@@ -25,6 +25,8 @@
 		848756E22AC63FDE00E4E9CA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848756E12AC63FDE00E4E9CA /* LoginViewController.swift */; };
 		848756E42AC64BF100E4E9CA /* RegistroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848756E32AC64BF100E4E9CA /* RegistroViewController.swift */; };
 		848D206F2AD0C56500F533DC /* NombreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848D206E2AD0C56500F533DC /* NombreViewController.swift */; };
+		84BA76E72AD7817F009FFE1C /* NSAttributedStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BA76E62AD7817F009FFE1C /* NSAttributedStringExtension.swift */; };
+		84BA76E92AD78594009FFE1C /* RegistroResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BA76E82AD78594009FFE1C /* RegistroResponse.swift */; };
 		84C9BB5C2AD1C13300ADF2DC /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C9BB5B2AD1C13300ADF2DC /* LoginResponse.swift */; };
 		84C9BB5E2AD1D54600ADF2DC /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C9BB5D2AD1D54600ADF2DC /* LoadingViewController.swift */; };
 		84C9BB612AD1DD2100ADF2DC /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C9BB602AD1DD2100ADF2DC /* Helper.swift */; };
@@ -75,6 +77,8 @@
 		848756E12AC63FDE00E4E9CA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		848756E32AC64BF100E4E9CA /* RegistroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistroViewController.swift; sourceTree = "<group>"; };
 		848D206E2AD0C56500F533DC /* NombreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NombreViewController.swift; sourceTree = "<group>"; };
+		84BA76E62AD7817F009FFE1C /* NSAttributedStringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSAttributedStringExtension.swift; sourceTree = "<group>"; };
+		84BA76E82AD78594009FFE1C /* RegistroResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistroResponse.swift; sourceTree = "<group>"; };
 		84C9BB5B2AD1C13300ADF2DC /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 		84C9BB5D2AD1D54600ADF2DC /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		84C9BB602AD1DD2100ADF2DC /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
@@ -172,6 +176,7 @@
 				848756E12AC63FDE00E4E9CA /* LoginViewController.swift */,
 				848D206E2AD0C56500F533DC /* NombreViewController.swift */,
 				8450840D2AD1080500C25543 /* ContrasenaViewController.swift */,
+				84BA76E62AD7817F009FFE1C /* NSAttributedStringExtension.swift */,
 				5BA9D9F92AC2578400894329 /* Assets.xcassets */,
 				5BA9D9FB2AC2578400894329 /* LaunchScreen.storyboard */,
 				5BA9D9FE2AC2578400894329 /* Info.plist */,
@@ -200,6 +205,7 @@
 				84C9BB5B2AD1C13300ADF2DC /* LoginResponse.swift */,
 				5B88032F2AD4C564005A6302 /* QuestionSend.swift */,
 				84DEFFB52AD6072800EA0520 /* CambiarNombreResponse.swift */,
+				84BA76E82AD78594009FFE1C /* RegistroResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -320,6 +326,7 @@
 				5B71BF1E2ACFA07100783C4E /* RegistroManager.swift in Sources */,
 				84DEFFB62AD6072800EA0520 /* CambiarNombreResponse.swift in Sources */,
 				848756E22AC63FDE00E4E9CA /* LoginViewController.swift in Sources */,
+				84BA76E72AD7817F009FFE1C /* NSAttributedStringExtension.swift in Sources */,
 				84E3B7142ACF9BA80059D42E /* RecordViewController.swift in Sources */,
 				5BA9D9F52AC2578200894329 /* ViewController.swift in Sources */,
 				84EB1A0B2ACCCDAE00E278AD /* Question.swift in Sources */,
@@ -329,6 +336,7 @@
 				8450840E2AD1080500C25543 /* ContrasenaViewController.swift in Sources */,
 				5BA9D9F12AC2578200894329 /* AppDelegate.swift in Sources */,
 				842512F62AC671CA0071CFBE /* CutionarioViewController.swift in Sources */,
+				84BA76E92AD78594009FFE1C /* RegistroResponse.swift in Sources */,
 				84E3B6E82ACE53CB0059D42E /* DiagFinalScene.swift in Sources */,
 				84C9BB692AD1FAF200ADF2DC /* HomeViewController.swift in Sources */,
 				84C9BB672AD1E7BF00ADF2DC /* PresenterManager.swift in Sources */,
