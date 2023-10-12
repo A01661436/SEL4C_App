@@ -63,6 +63,9 @@ class RegistroViewController: UIViewController {
     @IBOutlet weak var registroView: UIView!
     
     
+    @IBOutlet weak var tycButton: UIButton!
+    var flag = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -333,6 +336,21 @@ class RegistroViewController: UIViewController {
     
     @IBAction func iniciaSesionAction(_ sender: Any) {
         performSegue(withIdentifier: "showInicioSesion", sender: nil)
+    }
+    
+    
+    @IBAction func tycAction(_ sender: UIButton) {
+        
+        if(flag == false)
+        {
+            sender.setBackgroundImage((UIImage(named: "uncheck")), for: UIControl.State.normal)
+            flag = true
+        }
+        else
+        {
+            sender.setBackgroundImage((UIImage(named: "check")), for: UIControl.State.normal)
+            flag = false
+        }
     }
 }
 
