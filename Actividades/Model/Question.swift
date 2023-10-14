@@ -45,6 +45,7 @@ extension Question{
         }
         let jsonDecoder = JSONDecoder()
         let questions = try? jsonDecoder.decode(Questions.self, from: data)
+        print(questions)
         return questions!
         
     }
