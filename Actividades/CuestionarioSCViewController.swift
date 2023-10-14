@@ -1,32 +1,15 @@
 //
-//  CuestionarioFinalViewController.swift
+//  CuestionarioSCViewController.swift
 //  Actividades
 //
-//  Created by Usuario on 04/10/23.
+//  Created by Usuario on 14/10/23.
 //
 
 import UIKit
 
-class CuestionarioFinalViewController: UIViewController {
+class CuestionarioSCViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        textQuestion.numberOfLines = 0
-        EndB.isHidden = true
-        rectangle.layer.cornerRadius = 10
-        
-        Task {
-            do{
-                let questions = try await Question.fetchQuestions()
-                updateUI(with: questions)
-            }catch{
-                displayError(QuestionError.itemNotFound, title: "No gusto acceder a las preguntas")
-            }
-        }
-        // Do any additional setup after loading the view.
-
-        // Do any additional setup after loading the view.
-    }
+    @IBOutlet weak var EndB: UIButton!
     
     @IBOutlet weak var NadaDeAcuerdo: UIButton!
     
@@ -42,16 +25,28 @@ class CuestionarioFinalViewController: UIViewController {
     
     @IBOutlet weak var progressB: UIProgressView!
     
-
-    @IBOutlet weak var EndB: UIButton!
-    
-    
-    
     var engine = EcomplexityEngine()
     
     var userResponses = UserResponses()
     
-    var userResponsesControllerF = UserResponsesControllerF()
+    var userResponsesController = UserResponsesController()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        EndB.isHidden = true
+        textQuestion.numberOfLines = 0
+        rectangle.layer.cornerRadius = 10
+        
+        Task {
+            do{
+                let questions = try await Question.fetchQuestions2()
+                updateUI(with: questions)
+            }catch{
+                displayError(QuestionError.itemNotFound, title: "No gusto acceder a las preguntas")
+            }
+        }
+        // Do any additional setup after loading the view.
+    }
     
     func updateUI(with questions:Questions){
         DispatchQueue.main.async {
@@ -59,6 +54,14 @@ class CuestionarioFinalViewController: UIViewController {
             self.progressB.progress = self.engine.getProgress()
             self.textQuestion.text = self.engine.getTextQuestion()
             self.userResponses.usuarioID = UserDefaults.standard.integer(forKey: "usuarioID")
+        }
+    }
+    
+    func checkProgress(){
+        let progress = self.engine.getProgress()
+        if progress == 1
+        {
+            
         }
     }
     
@@ -73,6 +76,7 @@ class CuestionarioFinalViewController: UIViewController {
     @IBAction func userAnswer(_ sender: UIButton){
         let answer = sender.titleLabel?.text
         let question = engine.getId()
+        
         
         var ans = Answer(question: question, answer: "")
         
@@ -98,17 +102,16 @@ class CuestionarioFinalViewController: UIViewController {
             PocoDeAcuerdo.isHidden =  true
             NadaDeAcuerdo.isHidden = true
             DeAcuerdo.isHidden = true
-            
-            
+            print(ans)
         }
         
         if engine.nextQuestion(){
             Task{
                 do{
-                    try await userResponsesControllerF.insertUserResponsesF(newUserResponses: userResponses)
+                    try await userResponsesController.insertUserResponses(newUserResponses: userResponses)
                     updateUserResponses(title: "Las respuestas fueron almacenadas con exito en el servidor")
                 }catch{
-                    displayErrorUserResponses(UserResponsesErrorF.itemNotFound, title: "No se pudo alamacenar las respuestas en la base de datos")
+                    displayErrorUserResponses(UserResponsesError.itemNotFound, title: "No se pudo alamacenar las respuestas en la base de datos")
                 }
             }
         }else{
@@ -149,10 +152,8 @@ class CuestionarioFinalViewController: UIViewController {
         PocoDeAcuerdo.isEnabled = true
     }
     
-    
-    @IBOutlet weak var rectangle: UILabel!
-    
 
+    @IBOutlet weak var rectangle: UIView!
     /*
     // MARK: - Navigation
 

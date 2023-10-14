@@ -25,6 +25,9 @@
 		848756E22AC63FDE00E4E9CA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848756E12AC63FDE00E4E9CA /* LoginViewController.swift */; };
 		848756E42AC64BF100E4E9CA /* RegistroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848756E32AC64BF100E4E9CA /* RegistroViewController.swift */; };
 		848D206F2AD0C56500F533DC /* NombreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848D206E2AD0C56500F533DC /* NombreViewController.swift */; };
+		84A057B82ADAF9EB00D6E4EF /* UserResponsesControllerF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A057B72ADAF9EB00D6E4EF /* UserResponsesControllerF.swift */; };
+		84A057BC2ADB00E400D6E4EF /* CuestionarioFinalSCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A057BB2ADB00E400D6E4EF /* CuestionarioFinalSCViewController.swift */; };
+		84A057BE2ADB026000D6E4EF /* CuestionarioSCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A057BD2ADB026000D6E4EF /* CuestionarioSCViewController.swift */; };
 		84BA76E72AD7817F009FFE1C /* NSAttributedStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BA76E62AD7817F009FFE1C /* NSAttributedStringExtension.swift */; };
 		84BA76E92AD78594009FFE1C /* RegistroResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BA76E82AD78594009FFE1C /* RegistroResponse.swift */; };
 		84BA76EB2AD79566009FFE1C /* DiagCompViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BA76EA2AD79566009FFE1C /* DiagCompViewController.swift */; };
@@ -38,7 +41,6 @@
 		84DEFFB62AD6072800EA0520 /* CambiarNombreResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DEFFB52AD6072800EA0520 /* CambiarNombreResponse.swift */; };
 		84E3B6E82ACE53CB0059D42E /* DiagFinalScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E3B6E72ACE53CB0059D42E /* DiagFinalScene.swift */; };
 		84E3B6EA2ACE55020059D42E /* CuestionarioFinalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E3B6E92ACE55020059D42E /* CuestionarioFinalViewController.swift */; };
-		84E3B7182ACFAA7A0059D42E /* MultipartRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E3B7172ACFAA7A0059D42E /* MultipartRequest.swift */; };
 		84E3B71A2ACFAAD30059D42E /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E3B7192ACFAAD30059D42E /* Data.swift */; };
 		84EB1A0B2ACCCDAE00E278AD /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EB1A0A2ACCCDAE00E278AD /* Question.swift */; };
 		84EB1A0D2ACCCDD400E278AD /* EcomplexityEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EB1A0C2ACCCDD400E278AD /* EcomplexityEngine.swift */; };
@@ -77,6 +79,9 @@
 		848756E12AC63FDE00E4E9CA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		848756E32AC64BF100E4E9CA /* RegistroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistroViewController.swift; sourceTree = "<group>"; };
 		848D206E2AD0C56500F533DC /* NombreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NombreViewController.swift; sourceTree = "<group>"; };
+		84A057B72ADAF9EB00D6E4EF /* UserResponsesControllerF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResponsesControllerF.swift; sourceTree = "<group>"; };
+		84A057BB2ADB00E400D6E4EF /* CuestionarioFinalSCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CuestionarioFinalSCViewController.swift; sourceTree = "<group>"; };
+		84A057BD2ADB026000D6E4EF /* CuestionarioSCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CuestionarioSCViewController.swift; sourceTree = "<group>"; };
 		84BA76E62AD7817F009FFE1C /* NSAttributedStringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSAttributedStringExtension.swift; sourceTree = "<group>"; };
 		84BA76E82AD78594009FFE1C /* RegistroResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistroResponse.swift; sourceTree = "<group>"; };
 		84BA76EA2AD79566009FFE1C /* DiagCompViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagCompViewController.swift; sourceTree = "<group>"; };
@@ -90,7 +95,6 @@
 		84DEFFB52AD6072800EA0520 /* CambiarNombreResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CambiarNombreResponse.swift; sourceTree = "<group>"; };
 		84E3B6E72ACE53CB0059D42E /* DiagFinalScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagFinalScene.swift; sourceTree = "<group>"; };
 		84E3B6E92ACE55020059D42E /* CuestionarioFinalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CuestionarioFinalViewController.swift; sourceTree = "<group>"; };
-		84E3B7172ACFAA7A0059D42E /* MultipartRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipartRequest.swift; sourceTree = "<group>"; };
 		84E3B7192ACFAAD30059D42E /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		84EB1A0A2ACCCDAE00E278AD /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		84EB1A0C2ACCCDD400E278AD /* EcomplexityEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EcomplexityEngine.swift; sourceTree = "<group>"; };
@@ -130,7 +134,6 @@
 			children = (
 				5B71BF1D2ACFA07100783C4E /* RegistroManager.swift */,
 				5B71BF202ACFA08000783C4E /* AuthManager.swift */,
-				84E3B7172ACFAA7A0059D42E /* MultipartRequest.swift */,
 				84C9BB662AD1E7BF00ADF2DC /* PresenterManager.swift */,
 			);
 			path = Managers;
@@ -163,6 +166,7 @@
 				5BA9D9F22AC2578200894329 /* SceneDelegate.swift */,
 				5BA9D9F42AC2578200894329 /* ViewController.swift */,
 				842512F52AC671CA0071CFBE /* CutionarioViewController.swift */,
+				84A057BD2ADB026000D6E4EF /* CuestionarioSCViewController.swift */,
 				84EB1A072ACCCD6D00E278AD /* Model */,
 				5BA9D9F62AC2578200894329 /* Main.storyboard */,
 				846A82C52AD208A800BB46B1 /* DiagnosticoInicialViewController.swift */,
@@ -170,6 +174,7 @@
 				84C9BB642AD1E0CE00ADF2DC /* PerfilViewController.swift */,
 				84C9BB5D2AD1D54600ADF2DC /* LoadingViewController.swift */,
 				84E3B6E92ACE55020059D42E /* CuestionarioFinalViewController.swift */,
+				84A057BB2ADB00E400D6E4EF /* CuestionarioFinalSCViewController.swift */,
 				84E3B6E72ACE53CB0059D42E /* DiagFinalScene.swift */,
 				848756E32AC64BF100E4E9CA /* RegistroViewController.swift */,
 				848756E12AC63FDE00E4E9CA /* LoginViewController.swift */,
@@ -201,6 +206,7 @@
 				84EB1A0E2ACCCDEB00E278AD /* Answer.swift */,
 				84EB1A102ACCCE0800E278AD /* UserResponses.swift */,
 				84EB1A122ACCCE1900E278AD /* UserResponsesController.swift */,
+				84A057B72ADAF9EB00D6E4EF /* UserResponsesControllerF.swift */,
 				84E3B7192ACFAAD30059D42E /* Data.swift */,
 				84C9BB5B2AD1C13300ADF2DC /* LoginResponse.swift */,
 				5B88032F2AD4C564005A6302 /* QuestionSend.swift */,
@@ -325,6 +331,7 @@
 				5B71BF212ACFA08000783C4E /* AuthManager.swift in Sources */,
 				84BA76EB2AD79566009FFE1C /* DiagCompViewController.swift in Sources */,
 				5B71BF1E2ACFA07100783C4E /* RegistroManager.swift in Sources */,
+				84A057B82ADAF9EB00D6E4EF /* UserResponsesControllerF.swift in Sources */,
 				84DEFFB62AD6072800EA0520 /* CambiarNombreResponse.swift in Sources */,
 				848756E22AC63FDE00E4E9CA /* LoginViewController.swift in Sources */,
 				84BA76E72AD7817F009FFE1C /* NSAttributedStringExtension.swift in Sources */,
@@ -340,8 +347,8 @@
 				84E3B6E82ACE53CB0059D42E /* DiagFinalScene.swift in Sources */,
 				84C9BB692AD1FAF200ADF2DC /* HomeViewController.swift in Sources */,
 				84C9BB672AD1E7BF00ADF2DC /* PresenterManager.swift in Sources */,
-				84E3B7182ACFAA7A0059D42E /* MultipartRequest.swift in Sources */,
 				846A82C62AD208A800BB46B1 /* DiagnosticoInicialViewController.swift in Sources */,
+				84A057BE2ADB026000D6E4EF /* CuestionarioSCViewController.swift in Sources */,
 				84E3B6EA2ACE55020059D42E /* CuestionarioFinalViewController.swift in Sources */,
 				848D206F2AD0C56500F533DC /* NombreViewController.swift in Sources */,
 				848756E42AC64BF100E4E9CA /* RegistroViewController.swift in Sources */,
@@ -351,6 +358,7 @@
 				84C9BB612AD1DD2100ADF2DC /* Helper.swift in Sources */,
 				5B8803302AD4C564005A6302 /* QuestionSend.swift in Sources */,
 				84EB1A112ACCCE0800E278AD /* UserResponses.swift in Sources */,
+				84A057BC2ADB00E400D6E4EF /* CuestionarioFinalSCViewController.swift in Sources */,
 				84C9BB5C2AD1C13300ADF2DC /* LoginResponse.swift in Sources */,
 				84C9BB632AD1DE9100ADF2DC /* Constants.swift in Sources */,
 			);

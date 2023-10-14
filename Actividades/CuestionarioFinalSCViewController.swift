@@ -1,23 +1,22 @@
 //
-//  CuestionarioFinalViewController.swift
+//  CuestionarioFinalSCViewController.swift
 //  Actividades
 //
-//  Created by Usuario on 04/10/23.
+//  Created by Usuario on 14/10/23.
 //
 
 import UIKit
 
-class CuestionarioFinalViewController: UIViewController {
+class CuestionarioFinalSCViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         textQuestion.numberOfLines = 0
         EndB.isHidden = true
         rectangle.layer.cornerRadius = 10
-        
         Task {
             do{
-                let questions = try await Question.fetchQuestions()
+                let questions = try await Question.fetchQuestions2()
                 updateUI(with: questions)
             }catch{
                 displayError(QuestionError.itemNotFound, title: "No gusto acceder a las preguntas")
@@ -85,10 +84,10 @@ class CuestionarioFinalViewController: UIViewController {
         }
         userResponses.responses.append(ans)
         sender.backgroundColor = UIColor.green
+        NadaDeAcuerdo.isEnabled = false
         NiAcuerdoNi.isEnabled = false
         MuyDeAcuerdo.isEnabled = false
         PocoDeAcuerdo.isEnabled =  false
-        NadaDeAcuerdo.isEnabled = false
         DeAcuerdo.isEnabled = false
         
         if progressB.progress == 1.0 {
@@ -98,8 +97,6 @@ class CuestionarioFinalViewController: UIViewController {
             PocoDeAcuerdo.isHidden =  true
             NadaDeAcuerdo.isHidden = true
             DeAcuerdo.isHidden = true
-            
-            
         }
         
         if engine.nextQuestion(){
@@ -149,10 +146,8 @@ class CuestionarioFinalViewController: UIViewController {
         PocoDeAcuerdo.isEnabled = true
     }
     
+    @IBOutlet weak var rectangle: UIView!
     
-    @IBOutlet weak var rectangle: UILabel!
-    
-
     /*
     // MARK: - Navigation
 

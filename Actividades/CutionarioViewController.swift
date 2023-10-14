@@ -34,6 +34,7 @@ class CutionarioViewController: UIViewController {
         super.viewDidLoad()
         EndB.isHidden = true
         textQuestion.numberOfLines = 0
+        rectangle.layer.cornerRadius = 10
         
         Task {
             do{
@@ -51,7 +52,7 @@ class CutionarioViewController: UIViewController {
             self.engine.initialize(q: questions)
             self.progressB.progress = self.engine.getProgress()
             self.textQuestion.text = self.engine.getTextQuestion()
-            self.userResponses.usuarioID = 2
+            self.userResponses.usuarioID = UserDefaults.standard.integer(forKey: "usuarioID")
         }
     }
     
@@ -91,9 +92,17 @@ class CutionarioViewController: UIViewController {
         MuyDeAcuerdo.isEnabled = false
         PocoDeAcuerdo.isEnabled =  false
         NadaDeAcuerdo.isEnabled = false
+        DeAcuerdo.isEnabled = false
         
-        if progressB.progress == 1.0 {
+        print(progressB.progress)
+        
+        if progressB.progress == 1 {
             EndB.isHidden = false
+            NiAcuerdoNi.isHidden = true
+            MuyDeAcuerdo.isHidden = true
+            PocoDeAcuerdo.isHidden =  true
+            NadaDeAcuerdo.isHidden = true
+            DeAcuerdo.isHidden = true
             print(ans)
         }
         
@@ -146,6 +155,7 @@ class CutionarioViewController: UIViewController {
     
    
     
+    @IBOutlet weak var rectangle: UIView!
     
     
     /*
