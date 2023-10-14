@@ -28,6 +28,8 @@
 		84A057B82ADAF9EB00D6E4EF /* UserResponsesControllerF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A057B72ADAF9EB00D6E4EF /* UserResponsesControllerF.swift */; };
 		84A057BC2ADB00E400D6E4EF /* CuestionarioFinalSCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A057BB2ADB00E400D6E4EF /* CuestionarioFinalSCViewController.swift */; };
 		84A057BE2ADB026000D6E4EF /* CuestionarioSCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A057BD2ADB026000D6E4EF /* CuestionarioSCViewController.swift */; };
+		84A057E62ADB33F900D6E4EF /* archivosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A057E52ADB33F900D6E4EF /* archivosViewController.swift */; };
+		84A057E82ADB399F00D6E4EF /* Data + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A057E72ADB399F00D6E4EF /* Data + Extensions.swift */; };
 		84BA76E72AD7817F009FFE1C /* NSAttributedStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BA76E62AD7817F009FFE1C /* NSAttributedStringExtension.swift */; };
 		84BA76E92AD78594009FFE1C /* RegistroResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BA76E82AD78594009FFE1C /* RegistroResponse.swift */; };
 		84BA76EB2AD79566009FFE1C /* DiagCompViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BA76EA2AD79566009FFE1C /* DiagCompViewController.swift */; };
@@ -82,6 +84,8 @@
 		84A057B72ADAF9EB00D6E4EF /* UserResponsesControllerF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResponsesControllerF.swift; sourceTree = "<group>"; };
 		84A057BB2ADB00E400D6E4EF /* CuestionarioFinalSCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CuestionarioFinalSCViewController.swift; sourceTree = "<group>"; };
 		84A057BD2ADB026000D6E4EF /* CuestionarioSCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CuestionarioSCViewController.swift; sourceTree = "<group>"; };
+		84A057E52ADB33F900D6E4EF /* archivosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = archivosViewController.swift; sourceTree = "<group>"; };
+		84A057E72ADB399F00D6E4EF /* Data + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data + Extensions.swift"; sourceTree = "<group>"; };
 		84BA76E62AD7817F009FFE1C /* NSAttributedStringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSAttributedStringExtension.swift; sourceTree = "<group>"; };
 		84BA76E82AD78594009FFE1C /* RegistroResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistroResponse.swift; sourceTree = "<group>"; };
 		84BA76EA2AD79566009FFE1C /* DiagCompViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagCompViewController.swift; sourceTree = "<group>"; };
@@ -169,6 +173,7 @@
 				84A057BD2ADB026000D6E4EF /* CuestionarioSCViewController.swift */,
 				84EB1A072ACCCD6D00E278AD /* Model */,
 				5BA9D9F62AC2578200894329 /* Main.storyboard */,
+				84A057E52ADB33F900D6E4EF /* archivosViewController.swift */,
 				846A82C52AD208A800BB46B1 /* DiagnosticoInicialViewController.swift */,
 				84C9BB682AD1FAF200ADF2DC /* HomeViewController.swift */,
 				84C9BB642AD1E0CE00ADF2DC /* PerfilViewController.swift */,
@@ -208,6 +213,7 @@
 				84EB1A122ACCCE1900E278AD /* UserResponsesController.swift */,
 				84A057B72ADAF9EB00D6E4EF /* UserResponsesControllerF.swift */,
 				84E3B7192ACFAAD30059D42E /* Data.swift */,
+				84A057E72ADB399F00D6E4EF /* Data + Extensions.swift */,
 				84C9BB5B2AD1C13300ADF2DC /* LoginResponse.swift */,
 				5B88032F2AD4C564005A6302 /* QuestionSend.swift */,
 				84DEFFB52AD6072800EA0520 /* CambiarNombreResponse.swift */,
@@ -338,6 +344,7 @@
 				5BA9D9F52AC2578200894329 /* ViewController.swift in Sources */,
 				84EB1A0B2ACCCDAE00E278AD /* Question.swift in Sources */,
 				84E3B71A2ACFAAD30059D42E /* Data.swift in Sources */,
+				84A057E82ADB399F00D6E4EF /* Data + Extensions.swift in Sources */,
 				84EB1A0F2ACCCDEB00E278AD /* Answer.swift in Sources */,
 				84EB1A0D2ACCCDD400E278AD /* EcomplexityEngine.swift in Sources */,
 				8450840E2AD1080500C25543 /* ContrasenaViewController.swift in Sources */,
@@ -351,6 +358,7 @@
 				84A057BE2ADB026000D6E4EF /* CuestionarioSCViewController.swift in Sources */,
 				84E3B6EA2ACE55020059D42E /* CuestionarioFinalViewController.swift in Sources */,
 				848D206F2AD0C56500F533DC /* NombreViewController.swift in Sources */,
+				84A057E62ADB33F900D6E4EF /* archivosViewController.swift in Sources */,
 				848756E42AC64BF100E4E9CA /* RegistroViewController.swift in Sources */,
 				5BA9D9F32AC2578200894329 /* SceneDelegate.swift in Sources */,
 				84C9BB652AD1E0CE00ADF2DC /* PerfilViewController.swift in Sources */,

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="na7-DJ-hwp">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ler-KC-vOb">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
@@ -3027,10 +3027,10 @@ Para realizar esta entrevista, se debe tener claridad de lo que se compartirá p
             </objects>
             <point key="canvasLocation" x="14914" y="-254"/>
         </scene>
-        <!--Record View Controller-->
+        <!--Archivos View Controller-->
         <scene sceneID="SgR-OH-Anh">
             <objects>
-                <viewController id="ler-KC-vOb" customClass="RecordViewController" customModule="Actividades" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ler-KC-vOb" customClass="archivosViewController" customModule="Actividades" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="W74-Bg-r2u">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3052,7 +3052,7 @@ Para realizar esta entrevista, se debe tener claridad de lo que se compartirá p
                                     </backgroundConfiguration>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="onRecordVideo:" destination="ler-KC-vOb" eventType="touchUpInside" id="qDa-eL-XzR"/>
+                                    <action selector="btnVideoPicker:" destination="ler-KC-vOb" eventType="touchUpInside" id="Zbp-O6-XPo"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Video" translatesAutoresizingMaskIntoConstraints="NO" id="5Mf-Zr-sZ0">
@@ -3075,6 +3075,9 @@ Para realizar esta entrevista, se debe tener claridad de lo que se compartirá p
                                         <color key="backgroundColor" red="0.18823529780000001" green="0.2941176593" blue="0.49019610879999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </backgroundConfiguration>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="btnImagePicker:" destination="ler-KC-vOb" eventType="touchUpInside" id="IIk-yC-mdr"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Imagen" translatesAutoresizingMaskIntoConstraints="NO" id="ku4-1C-y7G">
                                 <rect key="frame" x="223" y="141" width="126" height="130"/>
@@ -3087,15 +3090,50 @@ Para realizar esta entrevista, se debe tener claridad de lo que se compartirá p
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Li-Ul-IeP">
+                                <rect key="frame" x="76" y="414" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="----------- Multimedia  Seleccionado-----------" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yYQ-5x-Sck">
+                                <rect key="frame" x="16" y="361" width="369" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s1v-XQ-Fty">
+                                <rect key="frame" x="200" y="563" width="64" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Subir"/>
+                                <connections>
+                                    <action selector="Upload:" destination="ler-KC-vOb" eventType="touchUpInside" id="KII-KY-xmm"/>
+                                    <action selector="UploadV:" destination="ler-KC-vOb" eventType="touchUpInside" id="tiD-ZR-T4k"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w48-lZ-YLG">
+                                <rect key="frame" x="128" y="563" width="64" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Subir"/>
+                                <connections>
+                                    <action selector="Upload:" destination="ler-KC-vOb" eventType="touchUpInside" id="2w1-0U-XHY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="EdB-Zd-oAy"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="aVv-3v-GQZ"/>
+                    <connections>
+                        <outlet property="Upload" destination="w48-lZ-YLG" id="4HA-sn-Nua"/>
+                        <outlet property="UploadV" destination="s1v-XQ-Fty" id="RoW-8U-Eti"/>
+                        <outlet property="imageView" destination="5Li-Ul-IeP" id="09H-WA-BVn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aEM-Bx-Xlq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1360" y="-939"/>
+            <point key="canvasLocation" x="1359.5419847328244" y="-939.43661971830988"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="0hc-mh-Bsf">
