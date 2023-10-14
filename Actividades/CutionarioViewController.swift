@@ -51,7 +51,7 @@ class CutionarioViewController: UIViewController {
             self.engine.initialize(q: questions)
             self.progressB.progress = self.engine.getProgress()
             self.textQuestion.text = self.engine.getTextQuestion()
-            self.userResponses.user = 2
+            self.userResponses.usuarioID = 2
         }
     }
     

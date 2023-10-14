@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gcl-hE-n41">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="S8x-hU-ISx">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
@@ -3266,7 +3266,7 @@ Para realizar esta entrevista, se debe tener claridad de lo que se compartirá p
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vfr-Vg-pkx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="11570.229007633587" y="445.77464788732397"/>
+            <point key="canvasLocation" x="11563" y="435"/>
         </scene>
         <!--Diag Comp View Controller-->
         <scene sceneID="kxd-WC-XAe">
@@ -3380,7 +3380,6 @@ Para realizar esta entrevista, se debe tener claridad de lo que se compartirá p
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="TGF-G7-77u"/>
         <segue reference="Dyi-0r-nrL"/>
     </inferredMetricsTieBreakers>
     <resources>

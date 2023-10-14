@@ -1,8 +1,8 @@
 //
 //  MultipartRequest.swift
-//  Actividades
+//  multiparte99
 //
-//  Created by Usuario on 05/10/23.
+//  Created by molina on 20/09/23.
 // Codigo adaptado de https://theswiftdev.com/easy-multipart-file-upload-for-swift/
 
 import Foundation
@@ -65,36 +65,28 @@ public struct MultipartRequest {
         return bodyData
     }
 }
-/*
+
 extension MultipartRequest{
     
-    static func sendActivity(nombre: Int, estatus: Int, usuarioID:Int, entregable: Data ) async throws->Data{
+    static func sendVideo(user:String,activity:String,evidence_name:String,pathV:String) async throws->Data{
         var multipart = MultipartRequest()
-        
-        
-        let nombreString = String(nombre)
-        multipart.add(key:"nombreString", value: nombreString)
-        let entregableString = Text("/entregable")
-        multipart.add(key:"entregable", value: entregableString)
-        
-        
         for field in [
-            "usuarioID_": usuarioID,
-            "estatus": estatus,
+            "user": user, //Id del usuario
+            "activity": activity, //act
+            "evidence_name": evidence_name //nOMBRE DEL ARCHIVO
         ] {
-            multipart.add(key: field.key, value: field.value)
+            multipart.add(key: field.key, value: field.value) //Key +  todo el for de arriba
         }
         
-        if let videoData = FileManager.default.contents(atPath: entregableString){
-            multipart.add(
-                key: "archivo_res",
-                fileName: nombreString + ".mp4",
-                fileMimeType: "video/mp4",
-    //            fileData: "fake-image-data".data(using: .utf8)!
-                fileData: videoData
-            )
-        }
-
+        
+        //Aqui metemos como tal el
+        multipart.add(
+            key: "file",
+            fileName: evidence_name+".mp4",
+            fileMimeType: "image/mp4",
+//            fileData: "fake-image-data".data(using: .utf8)!
+            fileData: "fake-image-data".data(using: .utf8)!
+        )
 
         /// Create a regular HTTP URL request & use multipart components
 //        let url = URL(string: "https://httpbin.org/post")!
@@ -111,4 +103,4 @@ extension MultipartRequest{
         print(String(data: data, encoding: .utf8)!)
         return data
     }
-}*/
+}

@@ -7,7 +7,7 @@
 
 import Foundation
 struct UserResponses:Codable{
-    var user: Int = 0
+    var usuarioID: Int = 0
     var responses = Answers()
     
 }
