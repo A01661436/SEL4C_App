@@ -3338,7 +3338,7 @@ Para realizar esta entrevista, se debe tener claridad de lo que se compartirá p
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DFO-tE-R01" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="WPb-OP-Er3" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="13040.458015267175" y="445.77464788732397"/>
+            <point key="canvasLocation" x="13040" y="435"/>
         </scene>
         <!--Inicio-->
         <scene sceneID="be5-DT-eAF">
