@@ -15,15 +15,23 @@ class DiagnosticoInicialViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    /*func fetchPhotoInfo() -> PhotoInfo {
+        var urlComponents = URLComponents(string: "https://api.nasa.gov/planetary/apod")!
+        urlComponents.queryItems = [
+            "api_key": "DEMO_KEY"
+        ].map { URLQueryItem(name: $0.key, value: $0.value) }
 
-    /*
-    // MARK: - Navigation
+        let (data, response) = try await URLSession.shared.data(from: urlComponents.url!)
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+        let jsonDecoder = JSONDecoder()
+        if let httpResponse = response as? HTTPURLResponse,
+            httpResponse.statusCode == 200,
+            let photoInfo = try? jsonDecoder.decode(PhotoInfo.self, from: data) {
+            print(photoInfo)
+        }
+    }*/
+
+    
+
 
 }
