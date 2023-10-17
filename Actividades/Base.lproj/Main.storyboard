@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3pj-h2-dyn">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rnC-dx-NnQ">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
@@ -1332,7 +1332,7 @@
                                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     </label>
-                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="sLX-VV-pzr">
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ideacion2" translatesAutoresizingMaskIntoConstraints="NO" id="sLX-VV-pzr">
                                                                         <rect key="frame" x="30" y="8" width="111" height="94"/>
                                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                     </imageView>
@@ -4080,16 +4080,14 @@ Para realizar esta entrevista, se debe tener claridad de lo que se compartirá p
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="TGF-G7-77u"/>
         <segue reference="pau-pT-cMm"/>
-        <segue reference="Dyi-0r-nrL"/>
+        <segue reference="Oo5-3k-6vs"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Actividad1" width="296.33334350585938" height="296"/>
         <image name="Actividad2" width="325.33334350585938" height="207.33332824707031"/>
         <image name="Actividad3" width="299" height="312"/>
         <image name="Actividad4" width="426.66665649414062" height="290.33334350585938"/>
-        <image name="Image" width="28.333333969116211" height="33"/>
         <image name="Imagen" width="170.66667175292969" height="170.66667175292969"/>
         <image name="Mapa" width="170.66667175292969" height="170.66667175292969"/>
         <image name="Texto" width="170.66667175292969" height="170.66667175292969"/>
@@ -4102,6 +4100,7 @@ Para realizar esta entrevista, se debe tener claridad de lo que se compartirá p
         <image name="freinship" width="45.333332061767578" height="31.666666030883789"/>
         <image name="hand.raised.slash.fill" catalog="system" width="128" height="128"/>
         <image name="house" catalog="system" width="128" height="104"/>
+        <image name="ideacion2" width="866" height="683"/>
         <image name="idenitificacion" width="31" height="31"/>
         <image name="investigacion" width="51.666667938232422" height="30.666666030883789"/>
         <image name="path" width="59" height="46"/>
