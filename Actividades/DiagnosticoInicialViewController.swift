@@ -13,13 +13,18 @@ class DiagnosticoInicialViewController: UIViewController {
     @IBOutlet weak var liderazgoProgressView: UIProgressView!
     @IBOutlet weak var concienciaProgressView: UIProgressView!
     @IBOutlet weak var innovacionProgressView: UIProgressView!
-    
+    var id:Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if let usuarioID = UserDefaults.standard.object(forKey: "usuarioID") as? Int {
+            id = usuarioID
+        }
+        
         Task {
             do {
-                let resultadosInfo = try await fetchResultadosInfo(userID: 1)
+                let resultadosInfo = try await fetchResultadosInfo(userID: id)
                 updateUI(with: resultadosInfo)
                 print(resultadosInfo)
             } catch {
@@ -33,10 +38,10 @@ class DiagnosticoInicialViewController: UIViewController {
     
     func updateUI(with resultadosInfo: ResultadosInfo) {
         DispatchQueue.main.async {
-            self.autocontrolProgressView.progress = Float(resultadosInfo.autocontrol_Promedio ?? 0)/4
-            self.liderazgoProgressView.progress = Float(resultadosInfo.autocontrol_Promedio ?? 0)/4
-            self.concienciaProgressView.progress = Float(resultadosInfo.autocontrol_Promedio ?? 0)/4
-            self.innovacionProgressView.progress = Float(resultadosInfo.autocontrol_Promedio ?? 0)/4
+            self.autocontrolProgressView.progress = Float(resultadosInfo.Autocontrol ?? 0)/5
+            self.liderazgoProgressView.progress = Float(resultadosInfo.Liderazgo ?? 0)/5
+            self.concienciaProgressView.progress = Float(resultadosInfo.Conciencia ?? 0)/5
+            self.innovacionProgressView.progress = Float(resultadosInfo.Innovacion ?? 0)/5
         }
         
         

@@ -14,6 +14,8 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var progresoLabel: UILabel!
     
     
+    @IBOutlet weak var progresoView: UIView!
+    @IBOutlet weak var diagInicialView: UIView!
     @IBOutlet weak var identificaciónView: UIView!
     
     @IBOutlet weak var investigacionView: UIView!
@@ -23,10 +25,28 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var socializacionView: UIView!
     
+    @IBOutlet weak var pitchView: UIView!
+    
+    @IBOutlet weak var evaluacionView: UIView!
     var avance = 0
+    var id:Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if let usuarioID = UserDefaults.standard.object(forKey: "usuarioID") as? Int {
+            id = usuarioID
+        }
+        
+        //Diseño
+        applyDesign(to: identificaciónView)
+        applyDesign(to: investigacionView)
+        applyDesign(to: ideacionView)
+        applyDesign(to: socializacionView)
+        applyDesign(to: diagInicialView)
+        applyDesign(to: progresoView)
+        applyDesign(to: pitchView)
+        applyDesign(to: evaluacionView)
         
         if let progreso = UserDefaults.standard.string(forKey: "avance") {
             progresoLabel.text = "Actividad \(progreso) de 4 completadas"
@@ -41,7 +61,7 @@ class HomeViewController: UIViewController {
         
         Task {
             do {
-                let resultadosInfo = try await fetchActividadesInfo(userID:1)
+                let resultadosInfo = try await fetchActividadesInfo(userID:id)
                 
                 updateUI(with: resultadosInfo)
                 print(resultadosInfo)
@@ -164,6 +184,17 @@ class HomeViewController: UIViewController {
         let actividadesInfo = try jsonDecoder.decode(ActividadesInfo.self, from: data)
         //print(actividadesInfo)
         return actividadesInfo
+    }
+    
+    func applyDesign(to view: UIView) {
+        view.layer.cornerRadius = 10
+        view.clipsToBounds = true
+
+        view.layer.shadowColor = UIColor.black.cgColor
+        view.layer.shadowOpacity = 0.15
+        view.layer.shadowOffset = CGSize(width: 3, height: 3)
+        view.layer.shadowRadius = 1
+        view.layer.masksToBounds = false
     }
         
 
