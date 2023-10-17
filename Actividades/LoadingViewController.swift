@@ -34,7 +34,7 @@ class LoadingViewController: UIViewController{
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        delay(durationInSeconds: 2.0){
+        delay(durationInSeconds: 1.30){
             self.showInitialView()
         }
 

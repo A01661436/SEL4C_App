@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ocf-Cw-NbJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3pj-h2-dyn">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
@@ -1225,12 +1225,16 @@
                                                 <rect key="frame" x="15" y="790" width="363" height="132"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Realiza el pitch de cierre" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j8t-SZ-yxg">
-                                                        <rect key="frame" x="16" y="18" width="122" height="71"/>
+                                                        <rect key="frame" x="16" y="18" width="220" height="71"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </label>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pitch" translatesAutoresizingMaskIntoConstraints="NO" id="JPe-Kx-tBd">
+                                                        <rect key="frame" x="219" y="18" width="130" height="97"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    </imageView>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
                                             </view>
@@ -1486,7 +1490,11 @@
                     <size key="freeformSize" width="393" height="1300"/>
                     <connections>
                         <outlet property="avanceBar" destination="SoH-tF-H7a" id="tEv-oE-Qe0"/>
+                        <outlet property="ideacionView" destination="npK-CK-snS" id="sgM-As-Wmg"/>
+                        <outlet property="identificaciónView" destination="iE2-ho-eah" id="AnI-Pm-OzR"/>
+                        <outlet property="investigacionView" destination="a1t-YL-5LO" id="h7p-Hk-VuX"/>
                         <outlet property="progresoLabel" destination="b5Z-83-e6V" id="Y62-mo-3IB"/>
+                        <outlet property="socializacionView" destination="z0N-Pi-mu0" id="xEB-br-lMi"/>
                         <segue destination="y3q-re-bw5" kind="presentation" identifier="showDiagInicial" modalPresentationStyle="currentContext" id="S9Z-fm-hFE"/>
                         <segue destination="Lff-cN-hHP" kind="presentation" modalPresentationStyle="fullScreen" id="uHs-34-CJi"/>
                         <segue destination="Izb-T4-J8F" kind="presentation" modalPresentationStyle="fullScreen" id="C2X-lP-Ise"/>
@@ -1641,6 +1649,12 @@
                         <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="EP5-7t-Smr"/>
+                    <connections>
+                        <outlet property="autocontrolProgressView" destination="R7g-FN-Osu" id="44t-uW-oNt"/>
+                        <outlet property="concienciaProgressView" destination="pIP-6t-d7q" id="s1v-sg-ryZ"/>
+                        <outlet property="innovacionProgressView" destination="4kW-CW-U2W" id="afg-YK-Pqh"/>
+                        <outlet property="liderazgoProgressView" destination="BWj-ia-bzo" id="YSr-yj-MY2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zEv-OF-zZG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -4088,6 +4102,7 @@ Para realizar esta entrevista, se debe tener claridad de lo que se compartirá p
         <image name="path" width="59" height="46"/>
         <image name="person" catalog="system" width="128" height="121"/>
         <image name="person.line.dotted.person.fill" catalog="system" width="128" height="58"/>
+        <image name="pitch" width="866" height="683"/>
         <image name="sel4c_header" width="389" height="134.33332824707031"/>
         <image name="uncheck" width="30" height="30"/>
         <namedColor name="AccentColor">

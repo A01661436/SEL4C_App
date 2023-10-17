@@ -22,6 +22,8 @@
 		842512F62AC671CA0071CFBE /* CutionarioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842512F52AC671CA0071CFBE /* CutionarioViewController.swift */; };
 		8450840E2AD1080500C25543 /* ContrasenaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8450840D2AD1080500C25543 /* ContrasenaViewController.swift */; };
 		846A82C62AD208A800BB46B1 /* DiagnosticoInicialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846A82C52AD208A800BB46B1 /* DiagnosticoInicialViewController.swift */; };
+		847D34592ADE067D00D11D8A /* ResultadosInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847D34582ADE067D00D11D8A /* ResultadosInfo.swift */; };
+		847D345B2ADE18C400D11D8A /* ActividadesInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847D345A2ADE18C400D11D8A /* ActividadesInfo.swift */; };
 		848756E22AC63FDE00E4E9CA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848756E12AC63FDE00E4E9CA /* LoginViewController.swift */; };
 		848756E42AC64BF100E4E9CA /* RegistroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848756E32AC64BF100E4E9CA /* RegistroViewController.swift */; };
 		848D206F2AD0C56500F533DC /* NombreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848D206E2AD0C56500F533DC /* NombreViewController.swift */; };
@@ -80,6 +82,8 @@
 		842512F52AC671CA0071CFBE /* CutionarioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CutionarioViewController.swift; sourceTree = "<group>"; };
 		8450840D2AD1080500C25543 /* ContrasenaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContrasenaViewController.swift; sourceTree = "<group>"; };
 		846A82C52AD208A800BB46B1 /* DiagnosticoInicialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagnosticoInicialViewController.swift; sourceTree = "<group>"; };
+		847D34582ADE067D00D11D8A /* ResultadosInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultadosInfo.swift; sourceTree = "<group>"; };
+		847D345A2ADE18C400D11D8A /* ActividadesInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActividadesInfo.swift; sourceTree = "<group>"; };
 		848756E12AC63FDE00E4E9CA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		848756E32AC64BF100E4E9CA /* RegistroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistroViewController.swift; sourceTree = "<group>"; };
 		848D206E2AD0C56500F533DC /* NombreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NombreViewController.swift; sourceTree = "<group>"; };
@@ -224,6 +228,8 @@
 				5B88032F2AD4C564005A6302 /* QuestionSend.swift */,
 				84DEFFB52AD6072800EA0520 /* CambiarNombreResponse.swift */,
 				84BA76E82AD78594009FFE1C /* RegistroResponse.swift */,
+				847D34582ADE067D00D11D8A /* ResultadosInfo.swift */,
+				847D345A2ADE18C400D11D8A /* ActividadesInfo.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -356,6 +362,7 @@
 				84EB1A0D2ACCCDD400E278AD /* EcomplexityEngine.swift in Sources */,
 				8450840E2AD1080500C25543 /* ContrasenaViewController.swift in Sources */,
 				5BA9D9F12AC2578200894329 /* AppDelegate.swift in Sources */,
+				847D34592ADE067D00D11D8A /* ResultadosInfo.swift in Sources */,
 				842512F62AC671CA0071CFBE /* CutionarioViewController.swift in Sources */,
 				84BA76E92AD78594009FFE1C /* RegistroResponse.swift in Sources */,
 				84E3B6E82ACE53CB0059D42E /* DiagFinalScene.swift in Sources */,
@@ -366,6 +373,7 @@
 				84E3B6EA2ACE55020059D42E /* CuestionarioFinalViewController.swift in Sources */,
 				848D206F2AD0C56500F533DC /* NombreViewController.swift in Sources */,
 				84A057E62ADB33F900D6E4EF /* archivosViewController.swift in Sources */,
+				847D345B2ADE18C400D11D8A /* ActividadesInfo.swift in Sources */,
 				848756E42AC64BF100E4E9CA /* RegistroViewController.swift in Sources */,
 				5BA9D9F32AC2578200894329 /* SceneDelegate.swift in Sources */,
 				84C9BB652AD1E0CE00ADF2DC /* PerfilViewController.swift in Sources */,
