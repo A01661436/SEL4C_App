@@ -8,10 +8,10 @@
 import Foundation
 
 struct ResultadosInfo: Codable {
-    let autocontrol: Int?
-    let liderazgo: Int?
-    let conciencia: Int?
-    let innovacion: Int?
+    let autocontrol_Promedio: Int?
+    let liderazgo_Promedio: Int?
+    let conciencia_Promedio: Int?
+    let innovacion_Promedio: Int?
     
 }
 

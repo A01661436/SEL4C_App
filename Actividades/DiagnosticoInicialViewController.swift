@@ -19,8 +19,9 @@ class DiagnosticoInicialViewController: UIViewController {
         super.viewDidLoad()
         Task {
             do {
-                let resultadosInfo = try await fetchResultadosInfo()
+                let resultadosInfo = try await fetchResultadosInfo(userID: 1)
                 updateUI(with: resultadosInfo)
+                print(resultadosInfo)
             } catch {
                 print(error)
             }
@@ -32,10 +33,10 @@ class DiagnosticoInicialViewController: UIViewController {
     
     func updateUI(with resultadosInfo: ResultadosInfo) {
         DispatchQueue.main.async {
-            self.autocontrolProgressView.progress = Float(resultadosInfo.autocontrol ?? 0)/4
-            self.liderazgoProgressView.progress = Float(resultadosInfo.autocontrol ?? 0)/4
-            self.concienciaProgressView.progress = Float(resultadosInfo.autocontrol ?? 0)/4
-            self.innovacionProgressView.progress = Float(resultadosInfo.autocontrol ?? 0)/4
+            self.autocontrolProgressView.progress = Float(resultadosInfo.autocontrol_Promedio ?? 0)/4
+            self.liderazgoProgressView.progress = Float(resultadosInfo.autocontrol_Promedio ?? 0)/4
+            self.concienciaProgressView.progress = Float(resultadosInfo.autocontrol_Promedio ?? 0)/4
+            self.innovacionProgressView.progress = Float(resultadosInfo.autocontrol_Promedio ?? 0)/4
         }
         
         
@@ -47,20 +48,26 @@ class DiagnosticoInicialViewController: UIViewController {
         self.present(alertController, animated: true, completion: nil)
     }
     
-    func fetchResultadosInfo() async throws -> ResultadosInfo {
-        var url = URL(string: "https://api.nasa.gov/planetary/apod")!
+    func fetchResultadosInfo(userID: Int) async throws -> ResultadosInfo {
+        let url = URL(string: "http://18.222.144.45:8000/api/calculo")!
+        let requestBody = ["usuarioID_id": userID]
+        let jsonData = try JSONSerialization.data(withJSONObject: requestBody)
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.httpBody = jsonData
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
 
-
-        let (data, response) = try await URLSession.shared.data(from: url)
+        let (data, response) = try await URLSession.shared.data(for: request)
 
         guard let httpResponse = response as? HTTPURLResponse,
               httpResponse.statusCode == 200 else {
             throw ResultadosInfoError.itemNotFound
         }
-        
+
         let jsonDecoder = JSONDecoder()
         let resultadosInfo = try jsonDecoder.decode(ResultadosInfo.self, from: data)
-        return(resultadosInfo)
+        //print(actividadesInfo)
+        return resultadosInfo
     }
 
     
