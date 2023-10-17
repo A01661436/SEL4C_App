@@ -30,6 +30,8 @@
 		84A057BE2ADB026000D6E4EF /* CuestionarioSCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A057BD2ADB026000D6E4EF /* CuestionarioSCViewController.swift */; };
 		84A057E62ADB33F900D6E4EF /* archivosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A057E52ADB33F900D6E4EF /* archivosViewController.swift */; };
 		84A057E82ADB399F00D6E4EF /* Data + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A057E72ADB399F00D6E4EF /* Data + Extensions.swift */; };
+		84A057EA2ADE09B900D6E4EF /* TextoSendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A057E92ADE09B900D6E4EF /* TextoSendViewController.swift */; };
+		84A057EC2ADE1E9B00D6E4EF /* VideoPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A057EB2ADE1E9B00D6E4EF /* VideoPViewController.swift */; };
 		84BA76E72AD7817F009FFE1C /* NSAttributedStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BA76E62AD7817F009FFE1C /* NSAttributedStringExtension.swift */; };
 		84BA76E92AD78594009FFE1C /* RegistroResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BA76E82AD78594009FFE1C /* RegistroResponse.swift */; };
 		84BA76EB2AD79566009FFE1C /* DiagCompViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BA76EA2AD79566009FFE1C /* DiagCompViewController.swift */; };
@@ -86,6 +88,8 @@
 		84A057BD2ADB026000D6E4EF /* CuestionarioSCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CuestionarioSCViewController.swift; sourceTree = "<group>"; };
 		84A057E52ADB33F900D6E4EF /* archivosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = archivosViewController.swift; sourceTree = "<group>"; };
 		84A057E72ADB399F00D6E4EF /* Data + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data + Extensions.swift"; sourceTree = "<group>"; };
+		84A057E92ADE09B900D6E4EF /* TextoSendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextoSendViewController.swift; sourceTree = "<group>"; };
+		84A057EB2ADE1E9B00D6E4EF /* VideoPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPViewController.swift; sourceTree = "<group>"; };
 		84BA76E62AD7817F009FFE1C /* NSAttributedStringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSAttributedStringExtension.swift; sourceTree = "<group>"; };
 		84BA76E82AD78594009FFE1C /* RegistroResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistroResponse.swift; sourceTree = "<group>"; };
 		84BA76EA2AD79566009FFE1C /* DiagCompViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagCompViewController.swift; sourceTree = "<group>"; };
@@ -173,6 +177,8 @@
 				84A057BD2ADB026000D6E4EF /* CuestionarioSCViewController.swift */,
 				84EB1A072ACCCD6D00E278AD /* Model */,
 				5BA9D9F62AC2578200894329 /* Main.storyboard */,
+				84A057EB2ADE1E9B00D6E4EF /* VideoPViewController.swift */,
+				84A057E92ADE09B900D6E4EF /* TextoSendViewController.swift */,
 				84A057E52ADB33F900D6E4EF /* archivosViewController.swift */,
 				846A82C52AD208A800BB46B1 /* DiagnosticoInicialViewController.swift */,
 				84C9BB682AD1FAF200ADF2DC /* HomeViewController.swift */,
@@ -341,6 +347,7 @@
 				84DEFFB62AD6072800EA0520 /* CambiarNombreResponse.swift in Sources */,
 				848756E22AC63FDE00E4E9CA /* LoginViewController.swift in Sources */,
 				84BA76E72AD7817F009FFE1C /* NSAttributedStringExtension.swift in Sources */,
+				84A057EA2ADE09B900D6E4EF /* TextoSendViewController.swift in Sources */,
 				5BA9D9F52AC2578200894329 /* ViewController.swift in Sources */,
 				84EB1A0B2ACCCDAE00E278AD /* Question.swift in Sources */,
 				84E3B71A2ACFAAD30059D42E /* Data.swift in Sources */,
@@ -365,6 +372,7 @@
 				84C9BB5E2AD1D54600ADF2DC /* LoadingViewController.swift in Sources */,
 				84C9BB612AD1DD2100ADF2DC /* Helper.swift in Sources */,
 				5B8803302AD4C564005A6302 /* QuestionSend.swift in Sources */,
+				84A057EC2ADE1E9B00D6E4EF /* VideoPViewController.swift in Sources */,
 				84EB1A112ACCCE0800E278AD /* UserResponses.swift in Sources */,
 				84A057BC2ADB00E400D6E4EF /* CuestionarioFinalSCViewController.swift in Sources */,
 				84C9BB5C2AD1C13300ADF2DC /* LoginResponse.swift in Sources */,

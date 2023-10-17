@@ -94,26 +94,15 @@ class archivosViewController: UIViewController, UIImagePickerControllerDelegate,
         picker.delegate = self
         
         present(picker, animated: true)
+        
     }
     
     //Boton de Video para iniciar el picker de video
     @IBAction func btnVideoPicker(_ sender: Any) {
-        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerController.SourceType.photoLibrary) {
-            
-             print("Camera Available")
-
-            let videoPicker = UIImagePickerController()
-            videoPicker.delegate = self
-            videoPicker.sourceType = .photoLibrary
-            videoPicker.mediaTypes = [kUTTypeMovie as String] // MobileCoreServices
-            videoPicker.allowsEditing = false
-
-             self.present(videoPicker, animated: true, completion: nil)
-            
-         }else{
-             
-             print("Camera UnAvaialable")
-         }
+        videoPickerController.sourceType = .photoLibrary
+        videoPickerController.delegate = self
+        videoPickerController.mediaTypes = [""]
+        present(videoPickerController, animated: true, completion: nil)
     }
     
     
@@ -122,6 +111,7 @@ class archivosViewController: UIViewController, UIImagePickerControllerDelegate,
         guard let image = info[.editedImage] as? UIImage else {return}
         
         //Carga imagen seleccionada en el image view
+        print("---musica de atraco----")
         imageView.image = image
         globalImage = image
         //Cambia booleando para el boton Upload
@@ -133,63 +123,38 @@ class archivosViewController: UIViewController, UIImagePickerControllerDelegate,
     //Video picker
     func videoPickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info:[UIImagePickerController.InfoKey : Any]){
         videoURL = info[UIImagePickerController.InfoKey.mediaURL] as? URL
-        
-        // Close
-        dismiss(animated: true, completion: nil)
-
-        guard
-            
-            let mediaType = info[UIImagePickerController.InfoKey.mediaType] as? String,
-            mediaType == (kUTTypeMovie as String),
-            let url = info[UIImagePickerController.InfoKey.mediaURL] as? URL,
-            UIVideoAtPathIsCompatibleWithSavedPhotosAlbum(url.path)
-            
-            else {
-                return
-            }
-        
-        
+        let videoruL = videoURL!.path
+        print(videoruL)
+        //--------------------------------------------------
         if let pickedVideo:NSURL = (info[UIImagePickerController.InfoKey.mediaURL] as? NSURL) {
-
-            // Get Video URL
-            self.myPickedVideo = pickedVideo
+        
+        // Get Video URL
+        self.myPickedVideo = pickedVideo
+        
+        do {
+            try? VideoToPass = Data(contentsOf: pickedVideo as URL)//este es el contenido del video
+            print("El video esta listo en memoria en el objeto VideoToPass")
             
-            do {
-                try? VideoToPass = Data(contentsOf: pickedVideo as URL)//este es el contenido del video
-                let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
-                let documentsDirectory = paths[0]
-                let tempPath = documentsDirectory.appendingFormat("/vid.mp4")
-                let url = URL(fileURLWithPath: tempPath)
-                do {
-                    try? VideoToPass.write(to: url, options: [])
-                    
-                    let requestBody = multipartFormDataBodyV(self.boundary,"Investigacion","Completado","2", self.VideoToPass!)
-                    let request = generateRequest(httpBody: requestBody)
-                    print(requestBody)
-                    
-                    URLSession.shared.dataTask(with: request){
-                        data, resp, error in if let error = error{
-                            print(error)
-                            return
-                        }
-                        
-                        print("success")
-                        self.Upload.isHidden = true
-                        self.imageView.isHidden = true
-                    }.resume()
-                    //Aqui llamas a la multipart request
+            let requestBody = self.multipartFormDataBodyV(self.boundary,"Investigacion","Completado","2", self.VideoToPass!)
+            let request = self.generateRequest(httpBody: requestBody)
+            print(requestBody)
+            
+            URLSession.shared.dataTask(with: request){
+                data, resp, error in if let error = error{
+                    print(error)
+                    return
                 }
-
-                // If you want display Video here 1
-            }
-            
-            // Handle a movie capture
-             UISaveVideoAtPathToSavedPhotosAlbum(
-                 url.path,
-                 self,
-                #selector(video(_:didFinishSavingWithError:contextInfo:)),
-                 nil)
+                
+                print("success")
+                self.Upload.isHidden = true
+                self.imageView.isHidden = true
+            }.resume()
         }
+    }
+    
+        
+        //---------------------------------------------------
+        
         //Cambia booleando para el boton Upload
         Upload.isHidden = false
         
@@ -216,6 +181,7 @@ class archivosViewController: UIViewController, UIImagePickerControllerDelegate,
     override func viewDidLoad() {
         super.viewDidLoad()
         Upload.isHidden = true
+        UploadV.isHidden = true
 
         // Do any additional setup after loading the view.
     }
