@@ -22,6 +22,9 @@
 		842512F62AC671CA0071CFBE /* CutionarioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842512F52AC671CA0071CFBE /* CutionarioViewController.swift */; };
 		8450840E2AD1080500C25543 /* ContrasenaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8450840D2AD1080500C25543 /* ContrasenaViewController.swift */; };
 		846A82C62AD208A800BB46B1 /* DiagnosticoInicialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846A82C52AD208A800BB46B1 /* DiagnosticoInicialViewController.swift */; };
+		847AAB2A2ADF747300B46DD0 /* Video2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847AAB292ADF747300B46DD0 /* Video2ViewController.swift */; };
+		847AAB2C2ADF760C00B46DD0 /* Video3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847AAB2B2ADF760C00B46DD0 /* Video3ViewController.swift */; };
+		847AAB2E2ADF796900B46DD0 /* Video4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847AAB2D2ADF796900B46DD0 /* Video4ViewController.swift */; };
 		847D34592ADE067D00D11D8A /* ResultadosInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847D34582ADE067D00D11D8A /* ResultadosInfo.swift */; };
 		847D345B2ADE18C400D11D8A /* ActividadesInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847D345A2ADE18C400D11D8A /* ActividadesInfo.swift */; };
 		848756E22AC63FDE00E4E9CA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848756E12AC63FDE00E4E9CA /* LoginViewController.swift */; };
@@ -82,6 +85,9 @@
 		842512F52AC671CA0071CFBE /* CutionarioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CutionarioViewController.swift; sourceTree = "<group>"; };
 		8450840D2AD1080500C25543 /* ContrasenaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContrasenaViewController.swift; sourceTree = "<group>"; };
 		846A82C52AD208A800BB46B1 /* DiagnosticoInicialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagnosticoInicialViewController.swift; sourceTree = "<group>"; };
+		847AAB292ADF747300B46DD0 /* Video2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video2ViewController.swift; sourceTree = "<group>"; };
+		847AAB2B2ADF760C00B46DD0 /* Video3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video3ViewController.swift; sourceTree = "<group>"; };
+		847AAB2D2ADF796900B46DD0 /* Video4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video4ViewController.swift; sourceTree = "<group>"; };
 		847D34582ADE067D00D11D8A /* ResultadosInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultadosInfo.swift; sourceTree = "<group>"; };
 		847D345A2ADE18C400D11D8A /* ActividadesInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActividadesInfo.swift; sourceTree = "<group>"; };
 		848756E12AC63FDE00E4E9CA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -181,6 +187,9 @@
 				84A057BD2ADB026000D6E4EF /* CuestionarioSCViewController.swift */,
 				84EB1A072ACCCD6D00E278AD /* Model */,
 				5BA9D9F62AC2578200894329 /* Main.storyboard */,
+				847AAB2D2ADF796900B46DD0 /* Video4ViewController.swift */,
+				847AAB2B2ADF760C00B46DD0 /* Video3ViewController.swift */,
+				847AAB292ADF747300B46DD0 /* Video2ViewController.swift */,
 				84A057EB2ADE1E9B00D6E4EF /* VideoPViewController.swift */,
 				84A057E92ADE09B900D6E4EF /* TextoSendViewController.swift */,
 				84A057E52ADB33F900D6E4EF /* archivosViewController.swift */,
@@ -363,6 +372,7 @@
 				8450840E2AD1080500C25543 /* ContrasenaViewController.swift in Sources */,
 				5BA9D9F12AC2578200894329 /* AppDelegate.swift in Sources */,
 				847D34592ADE067D00D11D8A /* ResultadosInfo.swift in Sources */,
+				847AAB2C2ADF760C00B46DD0 /* Video3ViewController.swift in Sources */,
 				842512F62AC671CA0071CFBE /* CutionarioViewController.swift in Sources */,
 				84BA76E92AD78594009FFE1C /* RegistroResponse.swift in Sources */,
 				84E3B6E82ACE53CB0059D42E /* DiagFinalScene.swift in Sources */,
@@ -373,6 +383,7 @@
 				84E3B6EA2ACE55020059D42E /* CuestionarioFinalViewController.swift in Sources */,
 				848D206F2AD0C56500F533DC /* NombreViewController.swift in Sources */,
 				84A057E62ADB33F900D6E4EF /* archivosViewController.swift in Sources */,
+				847AAB2E2ADF796900B46DD0 /* Video4ViewController.swift in Sources */,
 				847D345B2ADE18C400D11D8A /* ActividadesInfo.swift in Sources */,
 				848756E42AC64BF100E4E9CA /* RegistroViewController.swift in Sources */,
 				5BA9D9F32AC2578200894329 /* SceneDelegate.swift in Sources */,
@@ -383,6 +394,7 @@
 				84A057EC2ADE1E9B00D6E4EF /* VideoPViewController.swift in Sources */,
 				84EB1A112ACCCE0800E278AD /* UserResponses.swift in Sources */,
 				84A057BC2ADB00E400D6E4EF /* CuestionarioFinalSCViewController.swift in Sources */,
+				847AAB2A2ADF747300B46DD0 /* Video2ViewController.swift in Sources */,
 				84C9BB5C2AD1C13300ADF2DC /* LoginResponse.swift in Sources */,
 				84C9BB632AD1DE9100ADF2DC /* Constants.swift in Sources */,
 			);

@@ -24,7 +24,7 @@ class TextoSendViewController: UIViewController {
     
     
     //Declaraciones necesarias para multiparte ------
-    let url: URL = URL(string: "http://18.222.144.45:8000/api/upload")!
+    let url: URL = URL(string: "http://18.222.144.45:8000/api/upload_string")!
     
     let boundary: String = "Boundary-\(UUID().uuidString)"
     //----------------------------
@@ -33,24 +33,17 @@ class TextoSendViewController: UIViewController {
             super.viewDidLoad()
             Rectangle3.layer.cornerRadius = 10
             // Set initial text
-            textView.text = "Initial text here"
+            textView.text = ""
 
             // Register for text change notifications
             NotificationCenter.default.addObserver(self, selector: #selector(textViewDidChange), name: UITextView.textDidChangeNotification, object: textView)
-            
-            let url2 = URL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent(fileName)
-            do {
-                try textSend.write(toFile: url2.path, atomically: true, encoding: .utf8)
-                print(url2)
-            } catch {
-                print(error)
-            }
         }
     
         
     @IBAction func SubirT(_ sender: Any) {
-        let url2 = URL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent(fileName)
-        let requestBody = self.multipartFormDataBody(self.boundary,"Ideacion","Completado","2", url2)
+    
+        let requestBody = self.multipartFormDataBody(self.boundary,"Ideacion","Completado",UserDefaults.standard.integer(forKey: "usuarioID"),textSend )
+        print(requestBody)
         let request = self.generateRequest(httpBody: requestBody)
         print(requestBody)
         
@@ -86,7 +79,7 @@ class TextoSendViewController: UIViewController {
     }
     
     //multipart  Texto.
-    private func multipartFormDataBody(_ boundary: String, _ nombre: String,_ estatus: String , _ usuarioID: String,_ image:URL) -> Data{
+    private func multipartFormDataBody(_ boundary: String, _ nombre: String,_ estatus: String , _ usuarioID: Int,_ image:String) -> Data{
         
         let lineBreak = "\r\n" // r =remove all spaces at the end of a string.
         var body = Data()
@@ -103,13 +96,13 @@ class TextoSendViewController: UIViewController {
         
         body.appendS("--\(boundary + lineBreak)") //Adding to data body we are adding coundry and making a new line
         body.appendS("Content-Disposition: form-data; name=\"usuarioID\"\(lineBreak + lineBreak)") //Aqui anadimos el nombre del archivo FromName
-        body.appendS("\(usuarioID + lineBreak)")
+        body.appendS("\(usuarioID)")
         
         
         //Adding text.
         body.appendS("--\(boundary + lineBreak)") //Adding to data body we are adding coundry and making a new line
         body.appendS("Content-Disposition: form-data; name=\"entregable\"\(lineBreak + lineBreak)") //Aqui anadimos el nombre del archivo FromName
-        body.appendS("\(image)")
+        body.appendS("\(image + lineBreak)")
         
         body.appendS("--\(boundary)--\(lineBreak)") //End of the multipart and return
         

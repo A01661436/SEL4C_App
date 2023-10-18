@@ -80,11 +80,11 @@ class CutionarioViewController: UIViewController {
         var ans = Answer(question: question, answer: "")
         
         switch answer!{
-        case let str where str.contains("Nada de acuerdo"): ans.answer = "Nada de acuerdo"
-        case let str where str.contains("Poco de acuerdo"): ans.answer = "Poco de acuerdo"
-        case let str where str.contains("Ni de acuerdo ni desacuerdo"): ans.answer = "Ni de acuerdo ni desacuerdo"
+        case let str where str.contains("Totalmente en desacuerdo"): ans.answer = "Totalmente en desacuerdo"
+        case let str where str.contains("En desacuerdo"): ans.answer = "En desacuerdo"
+        case let str where str.contains("Ni en acuerdo ni desacuerdo"): ans.answer = "Ni en acuerdo ni en desacuerdo"
         case let str where str.contains("De acuerdo"): ans.answer = "De acuerdo"
-        default: ans.answer = "5"
+        default: ans.answer = "Totalmente de acuerdo"
         }
         userResponses.responses.append(ans)
         sender.backgroundColor = UIColor.green

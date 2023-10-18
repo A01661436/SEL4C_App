@@ -1,15 +1,15 @@
 //
-//  VideoPViewController.swift
+//  Video2ViewController.swift
 //  Actividades
 //
-//  Created by Usuario on 16/10/23.
+//  Created by Usuario on 17/10/23.
 //
 
 import UIKit
 import AVKit
 import MobileCoreServices
 
-class VideoPViewController: UIViewController, UIImagePickerControllerDelegate,UINavigationControllerDelegate{
+class Video2ViewController: UIViewController, UIImagePickerControllerDelegate,UINavigationControllerDelegate {
 
     var imagePickerController = UIImagePickerController()
     var videoURL: URL?
@@ -24,7 +24,7 @@ class VideoPViewController: UIViewController, UIImagePickerControllerDelegate,UI
     
     
     @IBAction func SubirVideo(_ sender: Any) {
-        let requestBody = self.multipartFormDataBodyV(self.boundary,"Socializacion","Completado",UserDefaults.standard.integer(forKey: "usuarioID"), self.VideoToPass!)
+        let requestBody = self.multipartFormDataBodyV(self.boundary,"Ideacion","Completado",UserDefaults.standard.integer(forKey: "usuarioID"), self.VideoToPass!)
         let request = self.generateRequest(httpBody: requestBody)
         print(requestBody)
         
@@ -44,7 +44,6 @@ class VideoPViewController: UIViewController, UIImagePickerControllerDelegate,UI
     override func viewDidLoad() {
         super.viewDidLoad()
         SubirVideo.isHidden = true
-    
     }
     
     @IBAction func playVideo(_ sender: Any) {
@@ -53,7 +52,6 @@ class VideoPViewController: UIViewController, UIImagePickerControllerDelegate,UI
         imagePickerController.mediaTypes = ["public.movie"]
         present(imagePickerController, animated: true, completion: nil)
         SubirVideo.isHidden = false
-        
     }
     var myPickedVideo:NSURL! = NSURL()
     
@@ -141,6 +139,7 @@ class VideoPViewController: UIViewController, UIImagePickerControllerDelegate,UI
         
         return body
     }
+    
 
     /*
     // MARK: - Navigation

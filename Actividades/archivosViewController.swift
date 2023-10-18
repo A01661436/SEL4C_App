@@ -69,7 +69,7 @@ class archivosViewController: UIViewController, UIImagePickerControllerDelegate,
     let boundary: String = "Boundary-\(UUID().uuidString)"
     // --------------------------
     
-    @IBOutlet weak var UploadV: UIButton!
+    
     
     @IBOutlet weak var Upload: UIButton!
     
@@ -98,14 +98,7 @@ class archivosViewController: UIViewController, UIImagePickerControllerDelegate,
     }
     
     //Boton de Video para iniciar el picker de video
-    @IBAction func btnVideoPicker(_ sender: Any) {
-        videoPickerController.sourceType = .photoLibrary
-        videoPickerController.delegate = self
-        videoPickerController.mediaTypes = [""]
-        present(videoPickerController, animated: true, completion: nil)
-    }
-    
-    
+        
     //Image picker
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info:[UIImagePickerController.InfoKey : Any]){
         guard let image = info[.editedImage] as? UIImage else {return}
@@ -181,7 +174,7 @@ class archivosViewController: UIViewController, UIImagePickerControllerDelegate,
     override func viewDidLoad() {
         super.viewDidLoad()
         Upload.isHidden = true
-        UploadV.isHidden = true
+        
 
         // Do any additional setup after loading the view.
     }
