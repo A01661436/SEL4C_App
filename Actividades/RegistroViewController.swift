@@ -40,10 +40,10 @@ class RegistroViewController: UIViewController {
     @IBOutlet weak var registroButton: UIButton!
     
     
-    let instituciones = ["Tec", "UNAM", "Otros"]
+    let instituciones = ["ITESM", "UNAM", "ITAM", "IPN", "Ibero", "UP", "LaSalle", "Otra"]
     let disciplinas = ["Ingeniería", "Ciencias sociales"]
-    let generos = ["Hombre", "Mujer", "Otro", "Prefiero no decir"]
-    let gradosAcademicos = ["Licenciatura", "Maestría", "Doctorado"]
+    let generos = ["Masculino", "Femenino", "Otro", "Prefiero no decirlo"]
+    let gradosAcademicos = ["Primaria", "Preparatoria", "Licenciatura", "Maestría", "Doctorado"]
     
     
     var institucionPickerView = UIPickerView()
@@ -66,7 +66,7 @@ class RegistroViewController: UIViewController {
     @IBOutlet weak var tycButton: UIButton!
     
     @IBOutlet weak var tycTextView: UITextView!
-    var flag = false
+    var flag = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -300,8 +300,9 @@ class RegistroViewController: UIViewController {
     
     @IBAction func registroAction(_ sender: Any) {
         
-        guard let fechaNacimiento = fechaNacimientoTextField.text, !fechaNacimiento.isEmpty, let genero = generoTextField.text, !genero.isEmpty, let grado = gradoAcademicoTextField.text, !grado.isEmpty, let institucion = institucionTextField.text, !institucion.isEmpty, let disciplina = disciplinaTextField.text, !disciplina.isEmpty, isEmailValid == true, isContrasenaValid == true, isConfirmacionValid == true, isEmailValid == true, flag == true else {
- 
+        guard let fechaNacimiento = fechaNacimientoTextField.text, !fechaNacimiento.isEmpty, let genero = generoTextField.text, !genero.isEmpty, let grado = gradoAcademicoTextField.text, !grado.isEmpty, let institucion = institucionTextField.text, !institucion.isEmpty, let disciplina = disciplinaTextField.text, !disciplina.isEmpty, isEmailValid == true, isContrasenaValid == true, isConfirmacionValid == true, isEmailValid == true, flag == false else {
+            
+            
             mostrarError(message: "Intente de nuevo")
             return
         }
@@ -313,7 +314,7 @@ class RegistroViewController: UIViewController {
             "contrasenia": contrasenaTextField.text!,
             "email": emailTextField.text!,
             "avance": -1,
-            "genero": String(generoTextField.text!),
+            "genero": generoTextField.text!,
             "edad": edad,
             "pais": "Mexico",
             "institucion": String(institucionTextField.text!),
