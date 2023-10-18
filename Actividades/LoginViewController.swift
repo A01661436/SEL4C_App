@@ -42,9 +42,7 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func loginAction(_ sender: Any) {
-        // Obtener el texto ingresado en los campos de texto
-        guard let usuario = usuarioTextField.text, let contrasena = contrasenaTextField.text, !usuario.isEmpty, !contrasena.isEmpty else
-        {
+        guard let usuario = usuarioTextField.text, let contrasena = contrasenaTextField.text, !usuario.isEmpty, !contrasena.isEmpty else {
             mostrarError(message: "Por favor completar todos los campos")
             return
         }
@@ -52,41 +50,79 @@ class LoginViewController: UIViewController {
         let datosUsuario: [String: Any] = [
             "email": usuario,
             "contrasenia": contrasena
-            
         ]
         
-        let am = AuthManager()
-        DispatchQueue.main.async {
-            am.loginUsuario(with: datosUsuario) { success in
-                if success {
-                    // Inicio de sesión exitoso
-                    
-                    print("Login exitoso")
-                    
-                    // Realizar la transición a MainTabBarController solo cuando el inicio de sesión sea exitoso
-                    DispatchQueue.main.async {
-                        let mainTabBarController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "MainTabBarController")
-                        let sceneDelegate = self.view.window?.windowScene?.delegate as! SceneDelegate
-                        let window = sceneDelegate.window
-                        window?.rootViewController = mainTabBarController
-                    }
+        Task {
+            do {
+                if let loginInfo = try await fetchLoginInfo(with: datosUsuario) {
+                    handleLoginInfo(loginInfo)
                 } else {
-                    print("Fallo en el login")
-                    DispatchQueue.main.async {
-                        self.mostrarError(message: "Fallo en el inicio de sesión")
-                    }
+                    mostrarError(message: "Fallo en la solicitud de inicio de sesión")
                 }
+            } catch {
+                print("Error en la solicitud de inicio de sesión: \(error)")
             }
         }
-        
-        print(datosUsuario)
     }
     
-    // Función para mostrar una alerta de error
+    func handleLoginInfo(_ loginInfo: LoginResponse) {
+        DispatchQueue.main.async {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            
+            if loginInfo.status == "existe" {
+                
+                UserDefaults.standard.set(true, forKey: "isSignedIn")
+                self.saveUserInfo(response: loginInfo)
+                
+                let identifier = (loginInfo.avance == -1) ? "diagInicial" : "MainTabBarController"
+                let mainTabBarController = storyboard.instantiateViewController(identifier: identifier)
+
+                if let sceneDelegate = self.view.window?.windowScene?.delegate as? SceneDelegate,
+                   let window = sceneDelegate.window {
+                    window.rootViewController = mainTabBarController
+                }
+            } else {
+                self.mostrarError(message: "Intente de nuevo")
+            }
+
+        }
+    }
+    
+    func fetchLoginInfo(with datosUsuario: [String: Any]) async throws -> LoginResponse? {
+        guard let url = URL(string: "http://18.222.144.45:8000/api/existe_usuario") else {
+            return nil
+        }
+        
+        let jsonData = try JSONSerialization.data(withJSONObject: datosUsuario, options: [])
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.httpBody = jsonData
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        let (data, response) = try await URLSession.shared.data(for: request)
+        
+        guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
+            return nil
+        }
+        
+        let jsonDecoder = JSONDecoder()
+        let loginInfo = try jsonDecoder.decode(LoginResponse.self, from: data)
+        return loginInfo
+    }
+    
     func mostrarError(message: String) {
         let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
         alert.addAction(okAction)
         present(alert, animated: true, completion: nil)
+    }
+    
+    private func saveUserInfo(response: LoginResponse) {
+        UserDefaults.standard.set(response.nombre, forKey: "nombre")
+        UserDefaults.standard.set(response.contrsenia, forKey: "contrasenia")
+        UserDefaults.standard.set(response.usuarioID, forKey: "usuarioID")
+        UserDefaults.standard.set(response.avance, forKey: "avance")
+        UserDefaults.standard.set(response.email, forKey: "email")
+        UserDefaults.standard.synchronize()
     }
 }

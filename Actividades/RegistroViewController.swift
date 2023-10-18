@@ -300,7 +300,7 @@ class RegistroViewController: UIViewController {
     
     @IBAction func registroAction(_ sender: Any) {
         
-        guard let fechaNacimiento = fechaNacimientoTextField.text, !fechaNacimiento.isEmpty, let genero = generoTextField.text, !genero.isEmpty, let grado = gradoAcademicoTextField.text, !grado.isEmpty, let institucion = institucionTextField.text, !institucion.isEmpty, let disciplina = disciplinaTextField.text, !disciplina.isEmpty, isEmailValid == true, isContrasenaValid == true, isConfirmacionValid == true, isEmailValid == true else {
+        guard let fechaNacimiento = fechaNacimientoTextField.text, !fechaNacimiento.isEmpty, let genero = generoTextField.text, !genero.isEmpty, let grado = gradoAcademicoTextField.text, !grado.isEmpty, let institucion = institucionTextField.text, !institucion.isEmpty, let disciplina = disciplinaTextField.text, !disciplina.isEmpty, isEmailValid == true, isContrasenaValid == true, isConfirmacionValid == true, isEmailValid == true, flag == true else {
  
             mostrarError(message: "Intente de nuevo")
             return
@@ -312,9 +312,9 @@ class RegistroViewController: UIViewController {
             "nombre": usuarioTextField.text!,
             "contrasenia": contrasenaTextField.text!,
             "email": emailTextField.text!,
-            "avance": 0,
+            "avance": -1,
             "genero": String(generoTextField.text!),
-            "edad": 14,
+            "edad": edad,
             "pais": "Mexico",
             "institucion": String(institucionTextField.text!),
             "grado": String(gradoAcademicoTextField.text!),
@@ -328,7 +328,12 @@ class RegistroViewController: UIViewController {
                 if success {
                     // Registro exitoso, puedes hacer algo aquí si es necesario
                     print("Registro exitoso")
-                    
+                    DispatchQueue.main.async {
+                        let diagInicialController = UIStoryboard(name: K.StoryBoardID.main, bundle: nil).instantiateViewController(identifier: "diagInicial")
+                        if let sceneDelegate = self.view.window?.windowScene?.delegate as? SceneDelegate,let window = sceneDelegate.window {
+                            window.rootViewController = diagInicialController
+                        }
+                    }
 
                     
                 } else {
@@ -340,10 +345,7 @@ class RegistroViewController: UIViewController {
         }
         
         
-        let diagInicialController = UIStoryboard(name: K.StoryBoardID.main, bundle: nil).instantiateViewController(identifier: "diagInicial")
-        if let sceneDelegate = self.view.window?.windowScene?.delegate as? SceneDelegate,let window = sceneDelegate.window {
-            window.rootViewController = diagInicialController
-        }
+
         
         print(datosUsuario)
         

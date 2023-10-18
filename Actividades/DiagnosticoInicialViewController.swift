@@ -15,6 +15,16 @@ class DiagnosticoInicialViewController: UIViewController {
     @IBOutlet weak var innovacionProgressView: UIProgressView!
     var id:Int = 0
     
+    
+    @IBOutlet weak var autocontrolView: UIView!
+    
+    @IBOutlet weak var liderazgoView: UIView!
+    
+    @IBOutlet weak var concienciaView: UIView!
+    
+    
+    @IBOutlet weak var innovacionView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -31,6 +41,11 @@ class DiagnosticoInicialViewController: UIViewController {
                 print(error)
             }
         }
+        
+        applyDesign(to: autocontrolView)
+        applyDesign(to: liderazgoView)
+        applyDesign(to: concienciaView)
+        applyDesign(to: innovacionView)
         
     }
     
@@ -73,6 +88,17 @@ class DiagnosticoInicialViewController: UIViewController {
         let resultadosInfo = try jsonDecoder.decode(ResultadosInfo.self, from: data)
         //print(actividadesInfo)
         return resultadosInfo
+    }
+    
+    func applyDesign(to view: UIView) {
+        view.layer.cornerRadius = 10
+        view.clipsToBounds = true
+
+        view.layer.shadowColor = UIColor.black.cgColor
+        view.layer.shadowOpacity = 0.15
+        view.layer.shadowOffset = CGSize(width: 3, height: 3)
+        view.layer.shadowRadius = 1
+        view.layer.masksToBounds = false
     }
 
     

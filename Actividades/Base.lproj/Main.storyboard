@@ -331,14 +331,14 @@
         <scene sceneID="S0e-RP-LlA">
             <objects>
                 <viewController storyboardIdentifier="act1VC" id="Lff-cN-hHP" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="9M0-aL-Jxk">
+                    <view key="view" contentMode="scaleToFill" id="9M0-aL-Jxk">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nqc-j7-Kwl">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nqc-j7-Kwl">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gf3-7W-R4p">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gf3-7W-R4p">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="1000"/>
                                         <subviews>
                                             <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cmz-TM-Dt8">
@@ -1655,9 +1655,13 @@
                     <navigationItem key="navigationItem" id="EP5-7t-Smr"/>
                     <connections>
                         <outlet property="autocontrolProgressView" destination="R7g-FN-Osu" id="44t-uW-oNt"/>
+                        <outlet property="autocontrolView" destination="Zfy-kn-he7" id="jyn-gO-82n"/>
                         <outlet property="concienciaProgressView" destination="pIP-6t-d7q" id="s1v-sg-ryZ"/>
+                        <outlet property="concienciaView" destination="rXW-DQ-572" id="jzg-m2-ck5"/>
                         <outlet property="innovacionProgressView" destination="4kW-CW-U2W" id="afg-YK-Pqh"/>
+                        <outlet property="innovacionView" destination="fSW-lo-ppz" id="R1G-mg-3ec"/>
                         <outlet property="liderazgoProgressView" destination="BWj-ia-bzo" id="YSr-yj-MY2"/>
+                        <outlet property="liderazgoView" destination="Qni-dK-xgg" id="hIg-Yq-oND"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zEv-OF-zZG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -4100,7 +4104,7 @@ Para realizar esta entrevista, se debe tener claridad de lo que se compartirá p
         <image name="freinship" width="45.333332061767578" height="31.666666030883789"/>
         <image name="hand.raised.slash.fill" catalog="system" width="128" height="128"/>
         <image name="house" catalog="system" width="128" height="104"/>
-        <image name="ideacion2" width="866" height="683"/>
+        <image name="ideacion2" width="288.66665649414062" height="227.66667175292969"/>
         <image name="idenitificacion" width="31" height="31"/>
         <image name="investigacion" width="51.666667938232422" height="30.666666030883789"/>
         <image name="path" width="59" height="46"/>
