@@ -3255,6 +3255,43 @@ Para realizar esta entrevista, se debe tener claridad de lo que se compartirá p
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Vg-Ud-rzi">
+                                <rect key="frame" x="16" y="146" width="361" height="665"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Video seleccionado correctamente !!!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t5F-Dw-L01">
+                                        <rect key="frame" x="38" y="343" width="284" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="checkbox" translatesAutoresizingMaskIntoConstraints="NO" id="1b6-X4-vsc">
+                                        <rect key="frame" x="60" y="392" width="240" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dlN-ox-8iI">
+                                        <rect key="frame" x="148" y="209" width="64" height="35"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Subir"/>
+                                        <connections>
+                                            <action selector="SubirVideo:" destination="YE5-Vb-eUw" eventType="touchUpInside" id="ZZv-st-nYW"/>
+                                            <segue destination="3pj-h2-dyn" kind="presentation" modalPresentationStyle="fullScreen" id="z8V-Bh-oep"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W7l-kM-Yat">
+                                        <rect key="frame" x="45" y="85" width="270" height="35"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Abrir biblioteca para elegir video"/>
+                                        <connections>
+                                            <action selector="playVideo:" destination="YE5-Vb-eUw" eventType="touchUpInside" id="sDk-fw-82J"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="------Selecciona tu archivo de video------" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t8k-bs-lJZ">
                                 <rect key="frame" x="5" y="114" width="385" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -3262,25 +3299,6 @@ Para realizar esta entrevista, se debe tener claridad de lo que se compartirá p
                                 <color key="textColor" red="0.18823529780000001" green="0.2941176593" blue="0.49019610879999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W7l-kM-Yat">
-                                <rect key="frame" x="63" y="174" width="270" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Abrir biblioteca para elegir video"/>
-                                <connections>
-                                    <action selector="playVideo:" destination="YE5-Vb-eUw" eventType="touchUpInside" id="sDk-fw-82J"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dlN-ox-8iI">
-                                <rect key="frame" x="167" y="237" width="64" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Subir"/>
-                                <connections>
-                                    <action selector="SubirVideo:" destination="YE5-Vb-eUw" eventType="touchUpInside" id="ZZv-st-nYW"/>
-                                    <segue destination="3pj-h2-dyn" kind="presentation" modalPresentationStyle="fullScreen" id="z8V-Bh-oep"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="WuK-08-4Sh"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -3288,6 +3306,9 @@ Para realizar esta entrevista, se debe tener claridad de lo que se compartirá p
                     <navigationItem key="navigationItem" id="oge-6u-mQp"/>
                     <connections>
                         <outlet property="SubirVideo" destination="dlN-ox-8iI" id="anV-mD-lhz"/>
+                        <outlet property="checkBox" destination="1b6-X4-vsc" id="swe-yy-QKG"/>
+                        <outlet property="rectangle5" destination="0Vg-Ud-rzi" id="56o-d6-EJs"/>
+                        <outlet property="textCorr" destination="t5F-Dw-L01" id="U2V-5d-VYi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OIu-wA-y0t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -4118,23 +4139,44 @@ Para realizar esta entrevista, se debe tener claridad de lo que se compartirá p
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Video" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tpm-Ku-uYv">
-                                <rect key="frame" x="173" y="280" width="47" height="21"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2DB-PN-x8N">
+                                <rect key="frame" x="16" y="148" width="361" height="665"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0cx-fE-PFS">
-                                <rect key="frame" x="61" y="174" width="270" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Abrir biblioteca para elegir video"/>
-                                <connections>
-                                    <action selector="playVideo:" destination="YE5-Vb-eUw" eventType="touchUpInside" id="1iT-K7-4p4"/>
-                                    <action selector="playVideo:" destination="zv0-b0-OUR" eventType="touchUpInside" id="LRf-5f-zZv"/>
-                                </connections>
-                            </button>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bnj-a0-NeD">
+                                        <rect key="frame" x="148" y="199" width="64" height="35"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Subir"/>
+                                        <connections>
+                                            <action selector="SubirVideo:" destination="zv0-b0-OUR" eventType="touchUpInside" id="l4u-PI-koo"/>
+                                            <segue destination="3pj-h2-dyn" kind="presentation" modalPresentationStyle="fullScreen" id="V9v-2K-s5F"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Video seleccionado correctamente !!!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XGg-XN-hbv">
+                                        <rect key="frame" x="38" y="343" width="284" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="checkbox" translatesAutoresizingMaskIntoConstraints="NO" id="AQN-hY-GNr">
+                                        <rect key="frame" x="60" y="392" width="240" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0cx-fE-PFS">
+                                        <rect key="frame" x="45" y="86" width="270" height="35"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Abrir biblioteca para elegir video"/>
+                                        <connections>
+                                            <action selector="playVideo:" destination="YE5-Vb-eUw" eventType="touchUpInside" id="1iT-K7-4p4"/>
+                                            <action selector="playVideo:" destination="zv0-b0-OUR" eventType="touchUpInside" id="LRf-5f-zZv"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="------Selecciona tu archivo de video------" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vrj-sf-d1a">
                                 <rect key="frame" x="4" y="116" width="385" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -4142,16 +4184,6 @@ Para realizar esta entrevista, se debe tener claridad de lo que se compartirá p
                                 <color key="textColor" red="0.18823529780000001" green="0.2941176593" blue="0.49019610879999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bnj-a0-NeD">
-                                <rect key="frame" x="164" y="253" width="64" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Subir"/>
-                                <connections>
-                                    <action selector="SubirVideo:" destination="zv0-b0-OUR" eventType="touchUpInside" id="l4u-PI-koo"/>
-                                    <segue destination="3pj-h2-dyn" kind="presentation" modalPresentationStyle="fullScreen" id="V9v-2K-s5F"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="oQJ-L3-s91"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -4159,20 +4191,61 @@ Para realizar esta entrevista, se debe tener claridad de lo que se compartirá p
                     <navigationItem key="navigationItem" id="6SN-EV-91b"/>
                     <connections>
                         <outlet property="SubirVideo" destination="Bnj-a0-NeD" id="B27-Cx-kCw"/>
+                        <outlet property="checkBox" destination="AQN-hY-GNr" id="OqE-oF-0JY"/>
+                        <outlet property="rectangulo4" destination="2DB-PN-x8N" id="K9K-xs-TbM"/>
+                        <outlet property="textCorr" destination="XGg-XN-hbv" id="Hhc-0g-Vrm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tis-Q2-Ekc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1589" y="520"/>
+            <point key="canvasLocation" x="1588.5496183206105" y="519.71830985915494"/>
         </scene>
         <!--Video4 View Controller-->
         <scene sceneID="tTU-IL-dP4">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mu6-xO-Xc2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="7OJ-2B-tQl" customClass="Video4ViewController" customModule="Actividades" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Rrv-Q6-GIf">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UfZ-24-xN8">
+                                <rect key="frame" x="16" y="146" width="361" height="665"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Video seleccionado correctamente !!!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hF0-3m-RNE">
+                                        <rect key="frame" x="38" y="343" width="284" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="checkbox" translatesAutoresizingMaskIntoConstraints="NO" id="Rsb-S8-53t">
+                                        <rect key="frame" x="60" y="392" width="240" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8oa-M7-fph">
+                                        <rect key="frame" x="148" y="184" width="64" height="35"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Subir"/>
+                                        <connections>
+                                            <action selector="SubirVideo:" destination="7OJ-2B-tQl" eventType="touchUpInside" id="zu3-QU-fiS"/>
+                                            <segue destination="3pj-h2-dyn" kind="presentation" modalPresentationStyle="fullScreen" id="ohe-ba-Vf6"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QaG-SP-I0m">
+                                        <rect key="frame" x="45" y="69" width="270" height="35"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Abrir biblioteca para elegir video"/>
+                                        <connections>
+                                            <action selector="playVideo:" destination="7OJ-2B-tQl" eventType="touchUpInside" id="RCx-1s-Dtp"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="------Selecciona tu archivo de video------" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qHN-hF-W2w">
                                 <rect key="frame" x="5" y="114" width="385" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -4180,25 +4253,6 @@ Para realizar esta entrevista, se debe tener claridad de lo que se compartirá p
                                 <color key="textColor" red="0.18823529780000001" green="0.2941176593" blue="0.49019610879999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QaG-SP-I0m">
-                                <rect key="frame" x="63" y="174" width="270" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Abrir biblioteca para elegir video"/>
-                                <connections>
-                                    <action selector="playVideo:" destination="7OJ-2B-tQl" eventType="touchUpInside" id="RCx-1s-Dtp"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8oa-M7-fph">
-                                <rect key="frame" x="167" y="237" width="64" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Subir"/>
-                                <connections>
-                                    <action selector="SubirVideo:" destination="7OJ-2B-tQl" eventType="touchUpInside" id="zu3-QU-fiS"/>
-                                    <segue destination="3pj-h2-dyn" kind="presentation" modalPresentationStyle="fullScreen" id="ohe-ba-Vf6"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="uCd-BM-3IO"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -4206,15 +4260,17 @@ Para realizar esta entrevista, se debe tener claridad de lo que se compartirá p
                     <navigationItem key="navigationItem" id="sIM-Gu-n1t"/>
                     <connections>
                         <outlet property="SubirVideo" destination="8oa-M7-fph" id="sgb-0C-ws4"/>
+                        <outlet property="checkBox" destination="Rsb-S8-53t" id="C0k-P7-mJj"/>
+                        <outlet property="rectangle6" destination="UfZ-24-xN8" id="sAr-5U-pkt"/>
+                        <outlet property="textCorr" destination="hF0-3m-RNE" id="xyu-MQ-ucr"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mu6-xO-Xc2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2200.7633587786258" y="-1758.4507042253522"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="z8V-Bh-oep"/>
+        <segue reference="V9v-2K-s5F"/>
         <segue reference="Oo5-3k-6vs"/>
     </inferredMetricsTieBreakers>
     <resources>
@@ -4226,6 +4282,7 @@ Para realizar esta entrevista, se debe tener claridad de lo que se compartirá p
         <image name="Mapa" width="170.66667175292969" height="170.66667175292969"/>
         <image name="Texto" width="170.66667175292969" height="170.66667175292969"/>
         <image name="Video" width="170.66667175292969" height="170.66667175292969"/>
+        <image name="checkbox" width="170.66667175292969" height="170.66667175292969"/>
         <image name="chevron.right" catalog="system" width="97" height="128"/>
         <image name="circulo" width="106.33333587646484" height="106.33333587646484"/>
         <image name="cuestionario" width="90.333335876464844" height="75.333335876464844"/>

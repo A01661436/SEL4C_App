@@ -14,6 +14,12 @@ class Video2ViewController: UIViewController, UIImagePickerControllerDelegate,UI
     var imagePickerController = UIImagePickerController()
     var videoURL: URL?
     
+    @IBOutlet weak var rectangulo4: UIView!
+    
+    @IBOutlet weak var textCorr: UILabel!
+    
+    @IBOutlet weak var checkBox: UIImageView!
+    
     
     @IBOutlet weak var SubirVideo: UIButton!
     //Declaraciones necesarias para multiparte ------
@@ -44,6 +50,9 @@ class Video2ViewController: UIViewController, UIImagePickerControllerDelegate,UI
     override func viewDidLoad() {
         super.viewDidLoad()
         SubirVideo.isHidden = true
+        rectangulo4.layer.cornerRadius = 15
+        textCorr.isHidden = true
+        checkBox.isHidden = true
     }
     
     @IBAction func playVideo(_ sender: Any) {
@@ -68,6 +77,8 @@ class Video2ViewController: UIViewController, UIImagePickerControllerDelegate,UI
             do {
                 try? VideoToPass = Data(contentsOf: pickedVideo as URL)//este es el contenido del video
                 print("El video esta listo en memoria en el objeto VideoToPass")
+                textCorr.isHidden = false
+                checkBox.isHidden = false
             }
         }
         do {

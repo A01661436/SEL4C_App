@@ -14,8 +14,14 @@ class Video4ViewController: UIViewController, UIImagePickerControllerDelegate,UI
     var imagePickerController = UIImagePickerController()
     var videoURL: URL?
     
+    @IBOutlet weak var textCorr: UILabel!
     
+    @IBOutlet weak var checkBox: UIImageView!
     @IBOutlet weak var SubirVideo: UIButton!
+    
+    @IBOutlet weak var rectangle6: UIView!
+    
+    
     //Declaraciones necesarias para multiparte ------
     let url: URL = URL(string: "http://18.222.144.45:8000/api/upload")!
     
@@ -44,6 +50,9 @@ class Video4ViewController: UIViewController, UIImagePickerControllerDelegate,UI
     override func viewDidLoad() {
         super.viewDidLoad()
         SubirVideo.isHidden = true
+        textCorr.isHidden = true
+        rectangle6.layer.cornerRadius = 15
+        checkBox.isHidden = true
     }
     
     @IBAction func playVideo(_ sender: Any) {
@@ -52,6 +61,7 @@ class Video4ViewController: UIViewController, UIImagePickerControllerDelegate,UI
         imagePickerController.mediaTypes = ["public.movie"]
         present(imagePickerController, animated: true, completion: nil)
         SubirVideo.isHidden = false
+        
     }
     var myPickedVideo:NSURL! = NSURL()
     
@@ -68,6 +78,8 @@ class Video4ViewController: UIViewController, UIImagePickerControllerDelegate,UI
             do {
                 try? VideoToPass = Data(contentsOf: pickedVideo as URL)//este es el contenido del video
                 print("El video esta listo en memoria en el objeto VideoToPass")
+                textCorr.isHidden = false
+                checkBox.isHidden = false
             }
         }
         do {
