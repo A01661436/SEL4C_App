@@ -44,6 +44,8 @@ class Video4ViewController: UIViewController, UIImagePickerControllerDelegate,UI
             self.SubirVideo.isHidden = true
         }.resume()
         
+
+        
     }
     
     

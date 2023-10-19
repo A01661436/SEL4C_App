@@ -49,10 +49,10 @@ class HomeViewController: UIViewController {
         applyDesign(to: evaluacionView)
         
         if let progreso = UserDefaults.standard.string(forKey: "avance") {
-            progresoLabel.text = "Actividad \(progreso) de 4 completadas"
+            progresoLabel.text = "Actividad \(progreso) de 5 completadas"
             avance = Int(progreso)!
         } else {
-            progresoLabel.text = "Actividad 0 de 4 completadas"
+            progresoLabel.text = "Actividad 0 de 5 completadas"
         }
         
         Task {
@@ -62,6 +62,7 @@ class HomeViewController: UIViewController {
         Task {
             do {
                 let resultadosInfo = try await fetchActividadesInfo(userID:id)
+                
                 
                 updateUI(with: resultadosInfo)
                 print(resultadosInfo)
@@ -135,9 +136,19 @@ class HomeViewController: UIViewController {
         }
     }
     
+    
+    @IBAction func onClickDiagFinal(_ sender: Any) {
+        let vistaDestino = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "diagFinal")
+        vistaDestino.hidesBottomBarWhenPushed = true
+        if let navigationController = self.navigationController {
+            navigationController.pushViewController(vistaDestino, animated: true)
+        }
+        
+    }
+    
     func updateUI(avance: Int){
         DispatchQueue.main.async {
-            self.avanceBar.progress = Float(avance)/4
+            self.avanceBar.progress = Float(avance)/5
         }
     }
     

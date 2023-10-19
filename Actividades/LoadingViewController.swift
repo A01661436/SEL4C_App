@@ -14,8 +14,8 @@ class LoadingViewController: UIViewController{
     private var isUserLoggedIn = false
     var avance:Optional<Int> = nil
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
         if let isSignedIn = UserDefaults.standard.value(forKey: "isSignedIn") as? Bool {
             // Aquí puedes usar la variable "isSignedIn" para determinar si el usuario está autenticado o no
@@ -29,8 +29,11 @@ class LoadingViewController: UIViewController{
             isUserLoggedIn = false
         }
         
-        if let avanceUsuario = UserDefaults.standard.value(forKey: "avance") as? Int {
+        if var avanceUsuario = UserDefaults.standard.value(forKey: "avance") as? Int {
             
+            if avanceUsuario < 0 {
+                avanceUsuario = 0
+            }
             avance = avanceUsuario
         } else {
             avance = nil

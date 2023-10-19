@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rnC-dx-NnQ">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -285,7 +286,7 @@
                                     </backgroundConfiguration>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="7OJ-2B-tQl" kind="presentation" modalPresentationStyle="fullScreen" id="loh-x2-O2X"/>
+                                    <segue destination="7OJ-2B-tQl" kind="presentation" id="loh-x2-O2X"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Video" translatesAutoresizingMaskIntoConstraints="NO" id="KNi-ef-RyQ">
@@ -1275,11 +1276,11 @@
             <objects>
                 <viewController storyboardIdentifier="homeVC" id="3pj-h2-dyn" customClass="HomeViewController" customModule="Actividades" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yQ3-h0-wA2">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="1300"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="1290"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="88P-AR-5SW">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="1300"/>
+                                <rect key="frame" x="0.0" y="56" width="393" height="1234"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="piV-3j-IrO" customClass="SubView">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="1300"/>
@@ -1362,6 +1363,10 @@
                                                     </label>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.73333333333333328" green="0.81960784313725488" blue="0.93725490196078431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <gestureRecognizers/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="hbW-Mm-Bdt" appends="YES" id="57E-ns-4Sx"/>
+                                                </connections>
                                             </view>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="TSy-Bg-3Uz">
                                                 <rect key="frame" x="15" y="440" width="363" height="298"/>
@@ -1645,6 +1650,11 @@
                         <action selector="onClickPitch:" destination="3pj-h2-dyn" id="G82-lV-eRv"/>
                     </connections>
                 </tapGestureRecognizer>
+                <tapGestureRecognizer id="hbW-Mm-Bdt">
+                    <connections>
+                        <action selector="onClickDiagFinal:" destination="3pj-h2-dyn" id="gEq-EI-TV2"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-2203.8167938931297" y="-565.49295774647885"/>
         </scene>
@@ -1653,7 +1663,7 @@
             <objects>
                 <viewController storyboardIdentifier="diagnosticoInicial" id="y3q-re-bw5" customClass="DiagnosticoInicialViewController" customModule="Actividades" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Xrb-Fq-tcG">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zfy-kn-he7">
@@ -1910,11 +1920,11 @@
             <objects>
                 <viewController id="31h-eV-xgm" customClass="PerfilViewController" customModule="Actividades" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OqI-21-dOl">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DaO-4c-Z2e">
-                                <rect key="frame" x="0.0" y="44" width="393" height="808"/>
+                                <rect key="frame" x="0.0" y="56" width="393" height="786"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Lx-OS-jtn">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="1000"/>
@@ -2624,7 +2634,7 @@ Para realizar esta entrevista, se debe tener claridad de lo que se compartirá p
                                                     <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="18"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <segue destination="Ocf-Cw-NbJ" kind="show" id="2J8-b4-Cyi"/>
+                                                    <segue destination="Ocf-Cw-NbJ" kind="presentation" id="2J8-b4-Cyi"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sx3-vd-by2">
@@ -3285,7 +3295,7 @@ Para realizar esta entrevista, se debe tener claridad de lo que se compartirá p
                                     </backgroundConfiguration>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="YE5-Vb-eUw" kind="show" id="rGR-EY-sVU"/>
+                                    <segue destination="YE5-Vb-eUw" kind="presentation" id="rGR-EY-sVU"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Video" translatesAutoresizingMaskIntoConstraints="NO" id="5Mf-Zr-sZ0">
@@ -3341,6 +3351,7 @@ Para realizar esta entrevista, se debe tener claridad de lo que se compartirá p
                                 <buttonConfiguration key="configuration" style="filled" title="Subir"/>
                                 <connections>
                                     <action selector="Upload:" destination="ler-KC-vOb" eventType="touchUpInside" id="2w1-0U-XHY"/>
+                                    <segue destination="z7q-U3-0ID" kind="presentation" modalPresentationStyle="fullScreen" id="XkG-sJ-Bb6"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -3387,7 +3398,7 @@ Para realizar esta entrevista, se debe tener claridad de lo que se compartirá p
                                         <buttonConfiguration key="configuration" style="filled" title="Subir"/>
                                         <connections>
                                             <action selector="SubirVideo:" destination="YE5-Vb-eUw" eventType="touchUpInside" id="ZZv-st-nYW"/>
-                                            <segue destination="3pj-h2-dyn" kind="presentation" modalPresentationStyle="fullScreen" id="z8V-Bh-oep"/>
+                                            <segue destination="z7q-U3-0ID" kind="presentation" modalPresentationStyle="fullScreen" id="9xJ-IT-PJb"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W7l-kM-Yat">
@@ -3536,7 +3547,7 @@ Para realizar esta entrevista, se debe tener claridad de lo que se compartirá p
                                 <buttonConfiguration key="configuration" style="plain" title="Subir"/>
                                 <connections>
                                     <action selector="SubirT:" destination="Ioi-Mf-9k7" eventType="touchUpInside" id="xZK-uu-hOP"/>
-                                    <segue destination="3pj-h2-dyn" kind="presentation" modalPresentationStyle="fullScreen" id="pau-pT-cMm"/>
+                                    <segue destination="z7q-U3-0ID" kind="presentation" modalPresentationStyle="fullScreen" id="nzB-eN-Z70"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -3552,7 +3563,7 @@ Para realizar esta entrevista, se debe tener claridad de lo que se compartirá p
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="33m-gb-cI9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1589" y="-180"/>
+            <point key="canvasLocation" x="2086" y="-208"/>
         </scene>
         <!--VideoP View Controller-->
         <scene sceneID="qzE-O8-iaZ">
@@ -3600,7 +3611,7 @@ Para realizar esta entrevista, se debe tener claridad de lo que se compartirá p
                                 <buttonConfiguration key="configuration" style="filled" title="Subir"/>
                                 <connections>
                                     <action selector="SubirVideo:" destination="Ocf-Cw-NbJ" eventType="touchUpInside" id="lAH-g3-VLu"/>
-                                    <segue destination="3pj-h2-dyn" kind="presentation" modalPresentationStyle="fullScreen" id="Jcf-O4-Bp4"/>
+                                    <segue destination="z7q-U3-0ID" kind="presentation" modalPresentationStyle="fullScreen" id="seI-bM-9aI"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -3619,7 +3630,7 @@ Para realizar esta entrevista, se debe tener claridad de lo que se compartirá p
         <!--Diag Final Scene-->
         <scene sceneID="wZ6-eY-Sst">
             <objects>
-                <viewController id="S8x-hU-ISx" customClass="DiagFinalScene" customModule="Actividades" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="diagFinal" id="S8x-hU-ISx" customClass="DiagFinalScene" customModule="Actividades" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aRd-A1-Gp7">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3789,7 +3800,7 @@ Para realizar esta entrevista, se debe tener claridad de lo que se compartirá p
                     <tabBarItem key="tabBarItem" title="Inicio" image="house" catalog="system" id="WIc-DD-YEv"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ycL-03-qfm">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -3808,7 +3819,7 @@ Para realizar esta entrevista, se debe tener claridad de lo que se compartirá p
                     <tabBarItem key="tabBarItem" title="Perfil" image="person" catalog="system" id="xiC-AV-QwN"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="62d-Kk-g8V">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -3836,7 +3847,7 @@ Para realizar esta entrevista, se debe tener claridad de lo que se compartirá p
                                 <rect key="frame" x="0.0" y="9" width="393" height="855"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="69A-so-SRo">
-                                        <rect key="frame" x="60.666666666666657" y="203" width="41.333333333333343" height="20.333333333333343"/>
+                                        <rect key="frame" x="65.666666666666671" y="203" width="41.333333333333329" height="20.333333333333343"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20.333333333333343" id="Dw1-Df-RK9"/>
                                         </constraints>
@@ -3846,13 +3857,13 @@ Para realizar esta entrevista, se debe tener claridad de lo que se compartirá p
                                         <color key="progressTintColor" red="0.54117647059999996" green="0.74901960779999999" blue="0.96862745100000003" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
                                     </progressView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oek-lU-ClP">
-                                        <rect key="frame" x="38" y="158" width="311" height="300"/>
+                                        <rect key="frame" x="43" y="158" width="311" height="300"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="v6j-pU-x4l">
-                                        <rect key="frame" x="61" y="466" width="265" height="279.66666666666674"/>
+                                        <rect key="frame" x="66" y="466" width="265" height="279.66666666666674"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aFo-z0-UK6">
                                                 <rect key="frame" x="0.0" y="0.0" width="265" height="35.333333333333336"/>
@@ -3958,8 +3969,8 @@ Para realizar esta entrevista, se debe tener claridad de lo que se compartirá p
                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W4c-1U-Ajt">
                                         <rect key="frame" x="73" y="62" width="240" height="35"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Perfil del Pensamiento Complejo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3YX-DW-Ivl">
-                                                <rect key="frame" x="15" y="10" width="210" height="17"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pensamiento Complejo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3YX-DW-Ivl">
+                                                <rect key="frame" x="46" y="10" width="149" height="17"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -3969,7 +3980,7 @@ Para realizar esta entrevista, se debe tener claridad de lo que se compartirá p
                                         <color key="backgroundColor" red="0.12941176469999999" green="0.55294117649999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EsL-3X-kxA">
-                                        <rect key="frame" x="273" y="8" width="112" height="54"/>
+                                        <rect key="frame" x="278" y="8" width="112" height="54"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="54" id="2Z8-oM-zvQ"/>
                                         </constraints>
@@ -4162,8 +4173,8 @@ Para realizar esta entrevista, se debe tener claridad de lo que se compartirá p
                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V84-Nm-ezj">
                                         <rect key="frame" x="78" y="57" width="240" height="35"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Perfil del Pensamiento Complejo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ejx-6f-1rw">
-                                                <rect key="frame" x="15" y="10" width="210" height="17"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=" Pensamiento Complejo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ejx-6f-1rw">
+                                                <rect key="frame" x="44" y="10" width="152" height="17"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -4260,7 +4271,7 @@ Para realizar esta entrevista, se debe tener claridad de lo que se compartirá p
                                         <buttonConfiguration key="configuration" style="filled" title="Subir"/>
                                         <connections>
                                             <action selector="SubirVideo:" destination="zv0-b0-OUR" eventType="touchUpInside" id="l4u-PI-koo"/>
-                                            <segue destination="3pj-h2-dyn" kind="presentation" modalPresentationStyle="fullScreen" id="V9v-2K-s5F"/>
+                                            <segue destination="z7q-U3-0ID" kind="presentation" id="8IW-PY-4ne"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Video seleccionado correctamente !!!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XGg-XN-hbv">
@@ -4315,7 +4326,7 @@ Para realizar esta entrevista, se debe tener claridad de lo que se compartirá p
             <objects>
                 <viewController id="7OJ-2B-tQl" customClass="Video4ViewController" customModule="Actividades" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Rrv-Q6-GIf">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UfZ-24-xN8">
@@ -4340,7 +4351,7 @@ Para realizar esta entrevista, se debe tener claridad de lo que se compartirá p
                                         <buttonConfiguration key="configuration" style="filled" title="Subir"/>
                                         <connections>
                                             <action selector="SubirVideo:" destination="7OJ-2B-tQl" eventType="touchUpInside" id="zu3-QU-fiS"/>
-                                            <segue destination="3pj-h2-dyn" kind="presentation" modalPresentationStyle="fullScreen" id="ohe-ba-Vf6"/>
+                                            <segue destination="z7q-U3-0ID" kind="presentation" modalPresentationStyle="fullScreen" id="HmS-lx-dKY"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QaG-SP-I0m">
@@ -4598,7 +4609,7 @@ Para realizar esta entrevista, se debe tener claridad de lo que se compartirá p
                                 <buttonConfiguration key="configuration" style="filled" title="Subir"/>
                                 <connections>
                                     <action selector="SubirVideo:" destination="bcE-1q-hrJ" eventType="touchUpInside" id="8bN-MC-Krr"/>
-                                    <segue destination="3pj-h2-dyn" kind="presentation" modalPresentationStyle="fullScreen" id="Aqm-LV-gzi"/>
+                                    <segue destination="z7q-U3-0ID" kind="presentation" modalPresentationStyle="fullScreen" id="LmY-MB-zY7"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -4616,7 +4627,8 @@ Para realizar esta entrevista, se debe tener claridad de lo que se compartirá p
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Aqm-LV-gzi"/>
+        <segue reference="mbG-0a-ikA"/>
+        <segue reference="8IW-PY-4ne"/>
         <segue reference="Dyi-0r-nrL"/>
     </inferredMetricsTieBreakers>
     <resources>
