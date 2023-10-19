@@ -23,7 +23,7 @@ class RegistroViewController: UIViewController {
     @IBOutlet weak var generoTextField: UITextField!
     @IBOutlet weak var gradoAcademicoTextField: UITextField!
     @IBOutlet weak var fechaNacimientoTextField: UITextField!
-    
+    @IBOutlet weak var paisTextField: UITextField!
     
     @IBOutlet weak var usuarioError: UILabel!
     @IBOutlet weak var contrasenaError: UILabel!
@@ -44,14 +44,19 @@ class RegistroViewController: UIViewController {
     let disciplinas = ["Ingeniería", "Ciencias sociales"]
     let generos = ["Masculino", "Femenino", "Otro", "Prefiero no decirlo"]
     let gradosAcademicos = ["Primaria", "Preparatoria", "Licenciatura", "Maestría", "Doctorado"]
-    
+    let paises = ["Mexico", "USA"]
+    let edades = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+ 
     
     var institucionPickerView = UIPickerView()
     var disciplinaPickerView = UIPickerView()
     var generoPickerView = UIPickerView()
     var gradoAcademicoPickerView = UIPickerView()
+    var paisPickerView = UIPickerView()
+    var edadPickerView = UIPickerView()
     
     var fechaNacimientoDatePicker = UIDatePicker()
+    
     
     var isUsuarioValid = false
     var isContrasenaValid = false
@@ -75,6 +80,8 @@ class RegistroViewController: UIViewController {
         disciplinaTextField.inputView = disciplinaPickerView
         generoTextField.inputView = generoPickerView
         gradoAcademicoTextField.inputView = gradoAcademicoPickerView
+        paisTextField.inputView = paisPickerView
+        fechaNacimientoTextField.inputView = edadPickerView
         
         institucionPickerView.delegate = self
         institucionPickerView.dataSource = self
@@ -88,13 +95,21 @@ class RegistroViewController: UIViewController {
         gradoAcademicoPickerView.delegate = self
         gradoAcademicoPickerView.dataSource = self
         
+        paisPickerView.delegate = self
+        paisPickerView.dataSource = self
         
+        edadPickerView.delegate = self
+        edadPickerView.dataSource = self
+        
+
         institucionPickerView.tag = 1
         disciplinaPickerView.tag = 2
         generoPickerView.tag = 3
         gradoAcademicoPickerView.tag = 4
+        paisPickerView.tag = 5
+        edadPickerView.tag = 6
         
-        createDatePicker()
+        //createDatePicker()
         
         usuarioError.text = " "
         contrasenaError.text = " "
@@ -135,12 +150,12 @@ class RegistroViewController: UIViewController {
         return toolbar
     }
     
-    func createDatePicker(){
+    /*func createDatePicker(){
         fechaNacimientoDatePicker.preferredDatePickerStyle = .wheels
         fechaNacimientoDatePicker.datePickerMode = .date
         fechaNacimientoTextField.inputView = fechaNacimientoDatePicker
         fechaNacimientoTextField.inputAccessoryView = createToolBar()
-    }
+    }*/
     
     @objc func donePressed(){
         let dateFormatter = DateFormatter()
@@ -300,14 +315,14 @@ class RegistroViewController: UIViewController {
     
     @IBAction func registroAction(_ sender: Any) {
         
-        guard let fechaNacimiento = fechaNacimientoTextField.text, !fechaNacimiento.isEmpty, let genero = generoTextField.text, !genero.isEmpty, let grado = gradoAcademicoTextField.text, !grado.isEmpty, let institucion = institucionTextField.text, !institucion.isEmpty, let disciplina = disciplinaTextField.text, !disciplina.isEmpty, isEmailValid == true, isContrasenaValid == true, isConfirmacionValid == true, isEmailValid == true, flag == false else {
+        guard let fechaNacimiento = fechaNacimientoTextField.text, !fechaNacimiento.isEmpty, let pais = paisTextField.text, !pais.isEmpty, let genero = generoTextField.text, !genero.isEmpty, let grado = gradoAcademicoTextField.text, !grado.isEmpty, let institucion = institucionTextField.text, !institucion.isEmpty, let disciplina = disciplinaTextField.text, !disciplina.isEmpty, isEmailValid == true, isContrasenaValid == true, isConfirmacionValid == true, isEmailValid == true, flag == false else {
             
             
             mostrarError(message: "Intente de nuevo")
             return
         }
        
-        let edad = calculateAge()
+        //let edad = calculateAge()
         
         let datosUsuario: [String: Any] = [
             "nombre": usuarioTextField.text!,
@@ -315,8 +330,8 @@ class RegistroViewController: UIViewController {
             "email": emailTextField.text!,
             "avance": -1,
             "genero": generoTextField.text!,
-            "edad": edad,
-            "pais": "Mexico",
+            "edad": fechaNacimientoTextField.text!,
+            "pais": paisTextField.text!,
             "institucion": String(institucionTextField.text!),
             "grado": String(gradoAcademicoTextField.text!),
             "diciplina": String(disciplinaTextField.text!)
@@ -426,6 +441,13 @@ extension RegistroViewController: UIPickerViewDataSource, UIPickerViewDelegate{
             
         case 4:
             return gradosAcademicos.count
+ 
+        case 5:
+            return paises.count
+            
+        case 6:
+            return edades.count
+            
         default:
             return 1
         }
@@ -443,6 +465,13 @@ extension RegistroViewController: UIPickerViewDataSource, UIPickerViewDelegate{
             
         case 4:
             return gradosAcademicos[row]
+        
+        case 5:
+            return paises[row]
+            
+        case 6:
+            return String(edades[row])
+            
         default:
             return "Data not found"
         }
@@ -464,6 +493,15 @@ extension RegistroViewController: UIPickerViewDataSource, UIPickerViewDelegate{
         case 4:
             gradoAcademicoTextField.text = gradosAcademicos[row]
             gradoAcademicoTextField.resignFirstResponder()
+            
+        case 5:
+            paisTextField.text = paises[row]
+            paisTextField.resignFirstResponder()
+            
+        case 6:
+            fechaNacimientoTextField.text = String(edades[row])
+            fechaNacimientoTextField.resignFirstResponder()
+            
         default:
             return
         }
