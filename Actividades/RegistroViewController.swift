@@ -7,6 +7,7 @@
 
 import UIKit
 
+
 class RegistroViewController: UIViewController {
     
     
@@ -39,13 +40,15 @@ class RegistroViewController: UIViewController {
     
     @IBOutlet weak var registroButton: UIButton!
     
-    
+    let listas = Listas()
     let instituciones = ["ITESM", "UNAM", "ITAM", "IPN", "Ibero", "UP", "LaSalle", "Otra"]
-    let disciplinas = ["Ingeniería", "Ciencias sociales"]
+    
+    
     let generos = ["Masculino", "Femenino", "Otro", "Prefiero no decirlo"]
-    let gradosAcademicos = ["Primaria", "Preparatoria", "Licenciatura", "Maestría", "Doctorado"]
-    let paises = ["Mexico", "USA"]
-    let edades = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    var disciplinas = ["disciplinas"]
+    var gradosAcademicos = ["grado"]
+    var paises = ["Mexico", "USA"]
+    let edades = Array(15...80)
  
     
     var institucionPickerView = UIPickerView()
@@ -75,6 +78,11 @@ class RegistroViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        disciplinas = listas.disciplinas
+        gradosAcademicos = listas.gradosAcademico
+        paises = listas.paises
         
         institucionTextField.inputView = institucionPickerView
         disciplinaTextField.inputView = disciplinaPickerView
@@ -334,7 +342,8 @@ class RegistroViewController: UIViewController {
             "pais": paisTextField.text!,
             "institucion": String(institucionTextField.text!),
             "grado": String(gradoAcademicoTextField.text!),
-            "diciplina": String(disciplinaTextField.text!)
+            "diciplina": String(disciplinaTextField.text!),
+            "respuestasI":false
         ]
         
         let rm = RegistroManager()
