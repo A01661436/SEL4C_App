@@ -126,6 +126,15 @@ class HomeViewController: UIViewController {
         //performSegue(withIdentifier: "showDiagInicial", sender: nil)
     }
     
+    
+    @IBAction func onClickPitch(_ sender: Any) {
+        let vistaDestino = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "pitch")
+        vistaDestino.hidesBottomBarWhenPushed = true
+        if let navigationController = self.navigationController {
+            navigationController.pushViewController(vistaDestino, animated: true)
+        }
+    }
+    
     func updateUI(avance: Int){
         DispatchQueue.main.async {
             self.avanceBar.progress = Float(avance)/4
