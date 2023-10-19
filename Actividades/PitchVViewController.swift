@@ -24,7 +24,7 @@ class PitchVViewController: UIViewController ,UIImagePickerControllerDelegate,UI
         
         
         @IBAction func SubirVideo(_ sender: Any) {
-            let requestBody = self.multipartFormDataBodyV(self.boundary,"Socializacion","Completado",UserDefaults.standard.integer(forKey: "usuarioID"), self.VideoToPass!)
+            let requestBody = self.multipartFormDataBodyV(self.boundary,"Pitch Final","Completado",UserDefaults.standard.integer(forKey: "usuarioID"), self.VideoToPass!)
             let request = self.generateRequest(httpBody: requestBody)
             print(requestBody)
             
