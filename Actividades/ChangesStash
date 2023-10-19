@@ -1,0 +1,770 @@
+diff --git a/Actividades.xcodeproj/project.pbxproj b/Actividades.xcodeproj/project.pbxproj
+index 5b8a7c3..26ace77 100644
+--- a/Actividades.xcodeproj/project.pbxproj
++++ b/Actividades.xcodeproj/project.pbxproj
+@@ -25,6 +25,7 @@
+ 		847AAB2A2ADF747300B46DD0 /* Video2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847AAB292ADF747300B46DD0 /* Video2ViewController.swift */; };
+ 		847AAB2C2ADF760C00B46DD0 /* Video3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847AAB2B2ADF760C00B46DD0 /* Video3ViewController.swift */; };
+ 		847AAB2E2ADF796900B46DD0 /* Video4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847AAB2D2ADF796900B46DD0 /* Video4ViewController.swift */; };
++		847AAB302AE0933400B46DD0 /* RutaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847AAB2F2AE0933400B46DD0 /* RutaViewController.swift */; };
+ 		847D34592ADE067D00D11D8A /* ResultadosInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847D34582ADE067D00D11D8A /* ResultadosInfo.swift */; };
+ 		847D345B2ADE18C400D11D8A /* ActividadesInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847D345A2ADE18C400D11D8A /* ActividadesInfo.swift */; };
+ 		848756E22AC63FDE00E4E9CA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848756E12AC63FDE00E4E9CA /* LoginViewController.swift */; };
+@@ -88,6 +89,7 @@
+ 		847AAB292ADF747300B46DD0 /* Video2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video2ViewController.swift; sourceTree = "<group>"; };
+ 		847AAB2B2ADF760C00B46DD0 /* Video3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video3ViewController.swift; sourceTree = "<group>"; };
+ 		847AAB2D2ADF796900B46DD0 /* Video4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video4ViewController.swift; sourceTree = "<group>"; };
++		847AAB2F2AE0933400B46DD0 /* RutaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RutaViewController.swift; sourceTree = "<group>"; };
+ 		847D34582ADE067D00D11D8A /* ResultadosInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultadosInfo.swift; sourceTree = "<group>"; };
+ 		847D345A2ADE18C400D11D8A /* ActividadesInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActividadesInfo.swift; sourceTree = "<group>"; };
+ 		848756E12AC63FDE00E4E9CA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+@@ -187,6 +189,7 @@
+ 				84A057BD2ADB026000D6E4EF /* CuestionarioSCViewController.swift */,
+ 				84EB1A072ACCCD6D00E278AD /* Model */,
+ 				5BA9D9F62AC2578200894329 /* Main.storyboard */,
++				847AAB2F2AE0933400B46DD0 /* RutaViewController.swift */,
+ 				847AAB2D2ADF796900B46DD0 /* Video4ViewController.swift */,
+ 				847AAB2B2ADF760C00B46DD0 /* Video3ViewController.swift */,
+ 				847AAB292ADF747300B46DD0 /* Video2ViewController.swift */,
+@@ -384,6 +387,7 @@
+ 				848D206F2AD0C56500F533DC /* NombreViewController.swift in Sources */,
+ 				84A057E62ADB33F900D6E4EF /* archivosViewController.swift in Sources */,
+ 				847AAB2E2ADF796900B46DD0 /* Video4ViewController.swift in Sources */,
++				847AAB302AE0933400B46DD0 /* RutaViewController.swift in Sources */,
+ 				847D345B2ADE18C400D11D8A /* ActividadesInfo.swift in Sources */,
+ 				848756E42AC64BF100E4E9CA /* RegistroViewController.swift in Sources */,
+ 				5BA9D9F32AC2578200894329 /* SceneDelegate.swift in Sources */,
+diff --git a/Actividades.xcodeproj/project.xcworkspace/xcuserdata/usuario.xcuserdatad/UserInterfaceState.xcuserstate b/Actividades.xcodeproj/project.xcworkspace/xcuserdata/usuario.xcuserdatad/UserInterfaceState.xcuserstate
+index 18527a5..31ab932 100644
+Binary files a/Actividades.xcodeproj/project.xcworkspace/xcuserdata/usuario.xcuserdatad/UserInterfaceState.xcuserstate and b/Actividades.xcodeproj/project.xcworkspace/xcuserdata/usuario.xcuserdatad/UserInterfaceState.xcuserstate differ
+diff --git a/Actividades.xcodeproj/xcuserdata/usuario.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist b/Actividades.xcodeproj/xcuserdata/usuario.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist
+index 597328c..ee4516a 100644
+--- a/Actividades.xcodeproj/xcuserdata/usuario.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist
++++ b/Actividades.xcodeproj/xcuserdata/usuario.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist
+@@ -3,4 +3,114 @@
+    uuid = "3F1AFB0D-2454-4BC4-BE50-1A1F659C191A"
+    type = "1"
+    version = "2.0">
++   <Breakpoints>
++      <BreakpointProxy
++         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
++         <BreakpointContent
++            uuid = "3A085431-BBF2-4332-8215-1C223049703F"
++            shouldBeEnabled = "No"
++            ignoreCount = "0"
++            continueAfterRunningActions = "No"
++            filePath = "Actividades/Video4ViewController.swift"
++            startingColumnNumber = "9223372036854775807"
++            endingColumnNumber = "9223372036854775807"
++            startingLineNumber = "18"
++            endingLineNumber = "18"
++            landmarkName = "Video4ViewController"
++            landmarkType = "3">
++            <Locations>
++               <Location
++                  uuid = "3A085431-BBF2-4332-8215-1C223049703F - df22013d3caaebee"
++                  shouldBeEnabled = "Yes"
++                  ignoreCount = "0"
++                  continueAfterRunningActions = "No"
++                  symbolName = "Actividades.Video4ViewController.SubirVideo.getter : Swift.Optional&lt;__C.UIButton&gt;"
++                  moduleName = "Actividades"
++                  usesParentBreakpointCondition = "Yes"
++                  urlString = "file:///Users/usuario/Documents/SEL4C_AppClean/Actividades/Video4ViewController.swift"
++                  startingColumnNumber = "9223372036854775807"
++                  endingColumnNumber = "9223372036854775807"
++                  startingLineNumber = "18"
++                  endingLineNumber = "18"
++                  offsetFromSymbolStart = "88">
++               </Location>
++               <Location
++                  uuid = "3A085431-BBF2-4332-8215-1C223049703F - a52de46f52091bf2"
++                  shouldBeEnabled = "Yes"
++                  ignoreCount = "0"
++                  continueAfterRunningActions = "No"
++                  symbolName = "Actividades.Video4ViewController.SubirVideo.setter : Swift.Optional&lt;__C.UIButton&gt;"
++                  moduleName = "Actividades"
++                  usesParentBreakpointCondition = "Yes"
++                  urlString = "file:///Users/usuario/Documents/SEL4C_AppClean/Actividades/Video4ViewController.swift"
++                  startingColumnNumber = "9223372036854775807"
++                  endingColumnNumber = "9223372036854775807"
++                  startingLineNumber = "18"
++                  endingLineNumber = "18"
++                  offsetFromSymbolStart = "108">
++               </Location>
++               <Location
++                  uuid = "3A085431-BBF2-4332-8215-1C223049703F - 37f266e222c80fed"
++                  shouldBeEnabled = "Yes"
++                  ignoreCount = "0"
++                  continueAfterRunningActions = "No"
++                  symbolName = "Actividades.Video4ViewController.SubirVideo.modify : Swift.Optional&lt;__C.UIButton&gt;"
++                  moduleName = "Actividades"
++                  usesParentBreakpointCondition = "Yes"
++                  urlString = "file:///Users/usuario/Documents/SEL4C_AppClean/Actividades/Video4ViewController.swift"
++                  startingColumnNumber = "9223372036854775807"
++                  endingColumnNumber = "9223372036854775807"
++                  startingLineNumber = "18"
++                  endingLineNumber = "18"
++                  offsetFromSymbolStart = "0">
++               </Location>
++               <Location
++                  uuid = "3A085431-BBF2-4332-8215-1C223049703F - 5c04814ecdf6f802"
++                  shouldBeEnabled = "Yes"
++                  ignoreCount = "0"
++                  continueAfterRunningActions = "No"
++                  symbolName = "Actividades.Video4ViewController.SubirVideo.modify : Swift.Optional&lt;__C.UIButton&gt; with unmangled suffix &quot;.resume.0&quot;"
++                  moduleName = "Actividades"
++                  usesParentBreakpointCondition = "Yes"
++                  urlString = "file:///Users/usuario/Documents/SEL4C_AppClean/Actividades/Video4ViewController.swift"
++                  startingColumnNumber = "9223372036854775807"
++                  endingColumnNumber = "9223372036854775807"
++                  startingLineNumber = "18"
++                  endingLineNumber = "18"
++                  offsetFromSymbolStart = "28">
++               </Location>
++               <Location
++                  uuid = "3A085431-BBF2-4332-8215-1C223049703F - 32a144efb5dd8d59"
++                  shouldBeEnabled = "Yes"
++                  ignoreCount = "0"
++                  continueAfterRunningActions = "No"
++                  symbolName = "Actividades.Video4ViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; Actividades.Video4ViewController"
++                  moduleName = "Actividades"
++                  usesParentBreakpointCondition = "Yes"
++                  urlString = "file:///Users/usuario/Documents/SEL4C_AppClean/Actividades/Video4ViewController.swift"
++                  startingColumnNumber = "9223372036854775807"
++                  endingColumnNumber = "9223372036854775807"
++                  startingLineNumber = "18"
++                  endingLineNumber = "18"
++                  offsetFromSymbolStart = "436">
++               </Location>
++               <Location
++                  uuid = "3A085431-BBF2-4332-8215-1C223049703F - 3e1b1bb1a0d37f47"
++                  shouldBeEnabled = "Yes"
++                  ignoreCount = "0"
++                  continueAfterRunningActions = "No"
++                  symbolName = "Actividades.Video4ViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Actividades.Video4ViewController&gt;"
++                  moduleName = "Actividades"
++                  usesParentBreakpointCondition = "Yes"
++                  urlString = "file:///Users/usuario/Documents/SEL4C_AppClean/Actividades/Video4ViewController.swift"
++                  startingColumnNumber = "9223372036854775807"
++                  endingColumnNumber = "9223372036854775807"
++                  startingLineNumber = "18"
++                  endingLineNumber = "18"
++                  offsetFromSymbolStart = "400">
++               </Location>
++            </Locations>
++         </BreakpointContent>
++      </BreakpointProxy>
++   </Breakpoints>
+ </Bucket>
+diff --git a/Actividades/Assets.xcassets/checkbox.imageset/Contents.json b/Actividades/Assets.xcassets/checkbox.imageset/Contents.json
+new file mode 100644
+index 0000000..85bf9e8
+--- /dev/null
++++ b/Actividades/Assets.xcassets/checkbox.imageset/Contents.json
+@@ -0,0 +1,23 @@
++{
++  "images" : [
++    {
++      "filename" : "checkbox.png",
++      "idiom" : "universal",
++      "scale" : "1x"
++    },
++    {
++      "filename" : "checkbox 1.png",
++      "idiom" : "universal",
++      "scale" : "2x"
++    },
++    {
++      "filename" : "checkbox 2.png",
++      "idiom" : "universal",
++      "scale" : "3x"
++    }
++  ],
++  "info" : {
++    "author" : "xcode",
++    "version" : 1
++  }
++}
+diff --git a/Actividades/Assets.xcassets/checkbox.imageset/checkbox 1.png b/Actividades/Assets.xcassets/checkbox.imageset/checkbox 1.png
+new file mode 100644
+index 0000000..fb69d02
+Binary files /dev/null and b/Actividades/Assets.xcassets/checkbox.imageset/checkbox 1.png differ
+diff --git a/Actividades/Assets.xcassets/checkbox.imageset/checkbox 2.png b/Actividades/Assets.xcassets/checkbox.imageset/checkbox 2.png
+new file mode 100644
+index 0000000..fb69d02
+Binary files /dev/null and b/Actividades/Assets.xcassets/checkbox.imageset/checkbox 2.png differ
+diff --git a/Actividades/Assets.xcassets/checkbox.imageset/checkbox.png b/Actividades/Assets.xcassets/checkbox.imageset/checkbox.png
+new file mode 100644
+index 0000000..fb69d02
+Binary files /dev/null and b/Actividades/Assets.xcassets/checkbox.imageset/checkbox.png differ
+diff --git a/Actividades/Assets.xcassets/correcto.imageset/Contents.json b/Actividades/Assets.xcassets/correcto.imageset/Contents.json
+new file mode 100644
+index 0000000..a19a549
+--- /dev/null
++++ b/Actividades/Assets.xcassets/correcto.imageset/Contents.json
+@@ -0,0 +1,20 @@
++{
++  "images" : [
++    {
++      "idiom" : "universal",
++      "scale" : "1x"
++    },
++    {
++      "idiom" : "universal",
++      "scale" : "2x"
++    },
++    {
++      "idiom" : "universal",
++      "scale" : "3x"
++    }
++  ],
++  "info" : {
++    "author" : "xcode",
++    "version" : 1
++  }
++}
+diff --git a/Actividades/Base.lproj/Main.storyboard b/Actividades/Base.lproj/Main.storyboard
+index c26236a..0641daf 100644
+--- a/Actividades/Base.lproj/Main.storyboard
++++ b/Actividades/Base.lproj/Main.storyboard
+@@ -1,8 +1,9 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rnC-dx-NnQ">
++<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="f66-cT-olh">
+     <device id="retina6_12" orientation="portrait" appearance="light"/>
+     <dependencies>
+         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
++        <capability name="Map view configurations" minToolsVersion="14.0"/>
+         <capability name="Named colors" minToolsVersion="9.0"/>
+         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+@@ -297,6 +298,9 @@
+                                         <color key="backgroundColor" red="0.18823529780000001" green="0.2941176593" blue="0.49019610879999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                     </backgroundConfiguration>
+                                 </buttonConfiguration>
++                                <connections>
++                                    <segue destination="f66-cT-olh" kind="show" id="bs3-Ae-Q2d"/>
++                                </connections>
+                             </button>
+                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Video" translatesAutoresizingMaskIntoConstraints="NO" id="KNi-ef-RyQ">
+                                 <rect key="frame" x="43" y="143" width="126" height="130"/>
+@@ -334,14 +338,14 @@
+         <scene sceneID="S0e-RP-LlA">
+             <objects>
+                 <viewController storyboardIdentifier="act1VC" id="Lff-cN-hHP" sceneMemberID="viewController">
+-                    <view key="view" contentMode="scaleToFill" id="9M0-aL-Jxk">
++                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="9M0-aL-Jxk">
+                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                         <subviews>
+-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nqc-j7-Kwl">
++                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nqc-j7-Kwl">
+                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                 <subviews>
+-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gf3-7W-R4p">
++                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gf3-7W-R4p">
+                                         <rect key="frame" x="0.0" y="0.0" width="393" height="1000"/>
+                                         <subviews>
+                                             <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cmz-TM-Dt8">
+@@ -498,10 +502,10 @@
+                                                 <nil key="highlightedColor"/>
+                                             </label>
+                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aCO-Xk-2eV">
+-                                                <rect key="frame" x="28" y="727" width="336" height="67"/>
++                                                <rect key="frame" x="28" y="727" width="671" height="67"/>
+                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                 <string key="text">1. Un video de conclusión donde hables acerca de la reflexión inicial, de la entrevista y lo que observaste en tu colonia.
+-2. Una visión del mapa con el recorrido realizado.</string>
++2. O una visión del mapa con el recorrido realizado.</string>
+                                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="12"/>
+                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                 <nil key="highlightedColor"/>
+@@ -3262,25 +3266,43 @@ Para realizar esta entrevista, se debe tener claridad de lo que se compartirá p
+                                 <color key="textColor" red="0.18823529780000001" green="0.2941176593" blue="0.49019610879999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                 <nil key="highlightedColor"/>
+                             </label>
+-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W7l-kM-Yat">
+-                                <rect key="frame" x="63" y="174" width="270" height="35"/>
+-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+-                                <state key="normal" title="Button"/>
+-                                <buttonConfiguration key="configuration" style="plain" title="Abrir biblioteca para elegir video"/>
+-                                <connections>
+-                                    <action selector="playVideo:" destination="YE5-Vb-eUw" eventType="touchUpInside" id="sDk-fw-82J"/>
+-                                </connections>
+-                            </button>
+-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dlN-ox-8iI">
+-                                <rect key="frame" x="167" y="237" width="64" height="35"/>
++                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DPu-Yx-O4B">
++                                <rect key="frame" x="38" y="146" width="322" height="660"/>
+                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+-                                <state key="normal" title="Button"/>
+-                                <buttonConfiguration key="configuration" style="filled" title="Subir"/>
+-                                <connections>
+-                                    <action selector="SubirVideo:" destination="YE5-Vb-eUw" eventType="touchUpInside" id="ZZv-st-nYW"/>
+-                                    <segue destination="3pj-h2-dyn" kind="presentation" modalPresentationStyle="fullScreen" id="z8V-Bh-oep"/>
+-                                </connections>
+-                            </button>
++                                <subviews>
++                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Archivo seleccionado correctamente!!!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D8s-dz-5xt">
++                                        <rect key="frame" x="14" y="359" width="294" height="21"/>
++                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
++                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
++                                        <nil key="textColor"/>
++                                        <nil key="highlightedColor"/>
++                                    </label>
++                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="checkbox" translatesAutoresizingMaskIntoConstraints="NO" id="Q4G-dF-IjP">
++                                        <rect key="frame" x="41" y="438" width="240" height="128"/>
++                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
++                                    </imageView>
++                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dlN-ox-8iI">
++                                        <rect key="frame" x="129" y="227" width="64" height="35"/>
++                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
++                                        <state key="normal" title="Button"/>
++                                        <buttonConfiguration key="configuration" style="filled" title="Subir"/>
++                                        <connections>
++                                            <action selector="SubirVideo:" destination="YE5-Vb-eUw" eventType="touchUpInside" id="ZZv-st-nYW"/>
++                                            <segue destination="3pj-h2-dyn" kind="presentation" modalPresentationStyle="fullScreen" id="z8V-Bh-oep"/>
++                                        </connections>
++                                    </button>
++                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W7l-kM-Yat">
++                                        <rect key="frame" x="26" y="88" width="270" height="35"/>
++                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
++                                        <state key="normal" title="Button"/>
++                                        <buttonConfiguration key="configuration" style="plain" title="Abrir biblioteca para elegir video"/>
++                                        <connections>
++                                            <action selector="playVideo:" destination="YE5-Vb-eUw" eventType="touchUpInside" id="sDk-fw-82J"/>
++                                        </connections>
++                                    </button>
++                                </subviews>
++                                <color key="backgroundColor" systemColor="systemGray6Color"/>
++                            </view>
+                         </subviews>
+                         <viewLayoutGuide key="safeArea" id="WuK-08-4Sh"/>
+                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+@@ -3288,6 +3310,9 @@ Para realizar esta entrevista, se debe tener claridad de lo que se compartirá p
+                     <navigationItem key="navigationItem" id="oge-6u-mQp"/>
+                     <connections>
+                         <outlet property="SubirVideo" destination="dlN-ox-8iI" id="anV-mD-lhz"/>
++                        <outlet property="checkBox" destination="Q4G-dF-IjP" id="JS3-4H-Fcm"/>
++                        <outlet property="rectangle4" destination="DPu-Yx-O4B" id="RbZ-1D-dgP"/>
++                        <outlet property="textCorr" destination="D8s-dz-5xt" id="7fV-YE-r6U"/>
+                     </connections>
+                 </viewController>
+                 <placeholder placeholderIdentifier="IBFirstResponder" id="OIu-wA-y0t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+@@ -4118,23 +4143,44 @@ Para realizar esta entrevista, se debe tener claridad de lo que se compartirá p
+                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                         <subviews>
+-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Video" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tpm-Ku-uYv">
+-                                <rect key="frame" x="173" y="280" width="47" height="21"/>
+-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+-                                <nil key="highlightedColor"/>
+-                            </label>
+-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0cx-fE-PFS">
+-                                <rect key="frame" x="61" y="174" width="270" height="35"/>
++                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Gs-rA-YKW">
++                                <rect key="frame" x="35" y="148" width="322" height="660"/>
+                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+-                                <state key="normal" title="Button"/>
+-                                <buttonConfiguration key="configuration" style="plain" title="Abrir biblioteca para elegir video"/>
+-                                <connections>
+-                                    <action selector="playVideo:" destination="YE5-Vb-eUw" eventType="touchUpInside" id="1iT-K7-4p4"/>
+-                                    <action selector="playVideo:" destination="zv0-b0-OUR" eventType="touchUpInside" id="LRf-5f-zZv"/>
+-                                </connections>
+-                            </button>
++                                <subviews>
++                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0cx-fE-PFS">
++                                        <rect key="frame" x="26" y="112" width="270" height="35"/>
++                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
++                                        <state key="normal" title="Button"/>
++                                        <buttonConfiguration key="configuration" style="plain" title="Abrir biblioteca para elegir video"/>
++                                        <connections>
++                                            <action selector="playVideo:" destination="YE5-Vb-eUw" eventType="touchUpInside" id="1iT-K7-4p4"/>
++                                            <action selector="playVideo:" destination="zv0-b0-OUR" eventType="touchUpInside" id="LRf-5f-zZv"/>
++                                        </connections>
++                                    </button>
++                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Archivo seleccionado correctamente!!!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FjC-oJ-vR0">
++                                        <rect key="frame" x="14" y="359" width="294" height="21"/>
++                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
++                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
++                                        <nil key="textColor"/>
++                                        <nil key="highlightedColor"/>
++                                    </label>
++                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="checkbox" translatesAutoresizingMaskIntoConstraints="NO" id="sdG-Ei-3B7">
++                                        <rect key="frame" x="41" y="436" width="240" height="128"/>
++                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
++                                    </imageView>
++                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bnj-a0-NeD">
++                                        <rect key="frame" x="129" y="232" width="64" height="35"/>
++                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
++                                        <state key="normal" title="Button"/>
++                                        <buttonConfiguration key="configuration" style="filled" title="Subir"/>
++                                        <connections>
++                                            <action selector="SubirVideo:" destination="zv0-b0-OUR" eventType="touchUpInside" id="l4u-PI-koo"/>
++                                            <segue destination="3pj-h2-dyn" kind="presentation" modalPresentationStyle="fullScreen" id="V9v-2K-s5F"/>
++                                        </connections>
++                                    </button>
++                                </subviews>
++                                <color key="backgroundColor" systemColor="systemGray6Color"/>
++                            </view>
+                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="------Selecciona tu archivo de video------" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vrj-sf-d1a">
+                                 <rect key="frame" x="4" y="116" width="385" height="24"/>
+                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+@@ -4142,16 +4188,6 @@ Para realizar esta entrevista, se debe tener claridad de lo que se compartirá p
+                                 <color key="textColor" red="0.18823529780000001" green="0.2941176593" blue="0.49019610879999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                 <nil key="highlightedColor"/>
+                             </label>
+-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bnj-a0-NeD">
+-                                <rect key="frame" x="164" y="253" width="64" height="35"/>
+-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+-                                <state key="normal" title="Button"/>
+-                                <buttonConfiguration key="configuration" style="filled" title="Subir"/>
+-                                <connections>
+-                                    <action selector="SubirVideo:" destination="zv0-b0-OUR" eventType="touchUpInside" id="l4u-PI-koo"/>
+-                                    <segue destination="3pj-h2-dyn" kind="presentation" modalPresentationStyle="fullScreen" id="V9v-2K-s5F"/>
+-                                </connections>
+-                            </button>
+                         </subviews>
+                         <viewLayoutGuide key="safeArea" id="oQJ-L3-s91"/>
+                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+@@ -4159,11 +4195,14 @@ Para realizar esta entrevista, se debe tener claridad de lo que se compartirá p
+                     <navigationItem key="navigationItem" id="6SN-EV-91b"/>
+                     <connections>
+                         <outlet property="SubirVideo" destination="Bnj-a0-NeD" id="B27-Cx-kCw"/>
++                        <outlet property="checkBox" destination="sdG-Ei-3B7" id="43j-8e-Wi5"/>
++                        <outlet property="rectangle4" destination="5Gs-rA-YKW" id="rAZ-WW-Nd5"/>
++                        <outlet property="textCorr" destination="FjC-oJ-vR0" id="Zbo-ya-VfC"/>
+                     </connections>
+                 </viewController>
+                 <placeholder placeholderIdentifier="IBFirstResponder" id="tis-Q2-Ekc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+             </objects>
+-            <point key="canvasLocation" x="1589" y="520"/>
++            <point key="canvasLocation" x="1588.5496183206105" y="519.71830985915494"/>
+         </scene>
+         <!--Video4 View Controller-->
+         <scene sceneID="tTU-IL-dP4">
+@@ -4173,6 +4212,43 @@ Para realizar esta entrevista, se debe tener claridad de lo que se compartirá p
+                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                         <subviews>
++                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dMb-U1-0l2">
++                                <rect key="frame" x="38" y="146" width="322" height="660"/>
++                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
++                                <subviews>
++                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Archivo seleccionado correctamente!!!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bzf-sA-TCO">
++                                        <rect key="frame" x="14" y="359" width="294" height="21"/>
++                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
++                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
++                                        <nil key="textColor"/>
++                                        <nil key="highlightedColor"/>
++                                    </label>
++                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="checkbox" translatesAutoresizingMaskIntoConstraints="NO" id="Rb7-Fc-enK">
++                                        <rect key="frame" x="41" y="438" width="240" height="128"/>
++                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
++                                    </imageView>
++                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8oa-M7-fph">
++                                        <rect key="frame" x="129" y="224" width="64" height="35"/>
++                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
++                                        <state key="normal" title="Button"/>
++                                        <buttonConfiguration key="configuration" style="filled" title="Subir"/>
++                                        <connections>
++                                            <action selector="SubirVideo:" destination="7OJ-2B-tQl" eventType="touchUpInside" id="zu3-QU-fiS"/>
++                                            <segue destination="3pj-h2-dyn" kind="presentation" modalPresentationStyle="fullScreen" id="ohe-ba-Vf6"/>
++                                        </connections>
++                                    </button>
++                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QaG-SP-I0m">
++                                        <rect key="frame" x="26" y="98" width="270" height="35"/>
++                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
++                                        <state key="normal" title="Button"/>
++                                        <buttonConfiguration key="configuration" style="plain" title="Abrir biblioteca para elegir video"/>
++                                        <connections>
++                                            <action selector="playVideo:" destination="7OJ-2B-tQl" eventType="touchUpInside" id="RCx-1s-Dtp"/>
++                                        </connections>
++                                    </button>
++                                </subviews>
++                                <color key="backgroundColor" systemColor="systemGray6Color"/>
++                            </view>
+                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="------Selecciona tu archivo de video------" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qHN-hF-W2w">
+                                 <rect key="frame" x="5" y="114" width="385" height="24"/>
+                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+@@ -4180,25 +4256,6 @@ Para realizar esta entrevista, se debe tener claridad de lo que se compartirá p
+                                 <color key="textColor" red="0.18823529780000001" green="0.2941176593" blue="0.49019610879999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                 <nil key="highlightedColor"/>
+                             </label>
+-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QaG-SP-I0m">
+-                                <rect key="frame" x="63" y="174" width="270" height="35"/>
+-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+-                                <state key="normal" title="Button"/>
+-                                <buttonConfiguration key="configuration" style="plain" title="Abrir biblioteca para elegir video"/>
+-                                <connections>
+-                                    <action selector="playVideo:" destination="7OJ-2B-tQl" eventType="touchUpInside" id="RCx-1s-Dtp"/>
+-                                </connections>
+-                            </button>
+-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8oa-M7-fph">
+-                                <rect key="frame" x="167" y="237" width="64" height="35"/>
+-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+-                                <state key="normal" title="Button"/>
+-                                <buttonConfiguration key="configuration" style="filled" title="Subir"/>
+-                                <connections>
+-                                    <action selector="SubirVideo:" destination="7OJ-2B-tQl" eventType="touchUpInside" id="zu3-QU-fiS"/>
+-                                    <segue destination="3pj-h2-dyn" kind="presentation" modalPresentationStyle="fullScreen" id="ohe-ba-Vf6"/>
+-                                </connections>
+-                            </button>
+                         </subviews>
+                         <viewLayoutGuide key="safeArea" id="uCd-BM-3IO"/>
+                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+@@ -4206,16 +4263,50 @@ Para realizar esta entrevista, se debe tener claridad de lo que se compartirá p
+                     <navigationItem key="navigationItem" id="sIM-Gu-n1t"/>
+                     <connections>
+                         <outlet property="SubirVideo" destination="8oa-M7-fph" id="sgb-0C-ws4"/>
++                        <outlet property="checkBox" destination="Rb7-Fc-enK" id="Rdo-Ax-C7P"/>
++                        <outlet property="rectangle4" destination="dMb-U1-0l2" id="E6X-G0-Gn2"/>
++                        <outlet property="textCorr" destination="Bzf-sA-TCO" id="zK6-fJ-e2i"/>
+                     </connections>
+                 </viewController>
+                 <placeholder placeholderIdentifier="IBFirstResponder" id="mu6-xO-Xc2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+             </objects>
+             <point key="canvasLocation" x="2200.7633587786258" y="-1758.4507042253522"/>
+         </scene>
++        <!--Ruta View Controller-->
++        <scene sceneID="6kQ-BA-7gs">
++            <objects>
++                <viewController id="f66-cT-olh" customClass="RutaViewController" customModule="Mapas" customModuleProvider="target" sceneMemberID="viewController">
++                    <view key="view" contentMode="scaleToFill" id="ltP-gh-WKb">
++                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
++                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
++                        <subviews>
++                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Avz-mb-gbf">
++                                <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
++                                <standardMapConfiguration key="preferredConfiguration"/>
++                            </mapView>
++                        </subviews>
++                        <viewLayoutGuide key="safeArea" id="EH1-OR-aQh"/>
++                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
++                        <constraints>
++                            <constraint firstItem="Avz-mb-gbf" firstAttribute="leading" secondItem="EH1-OR-aQh" secondAttribute="leading" id="2Vt-3s-YGD"/>
++                            <constraint firstAttribute="bottom" secondItem="Avz-mb-gbf" secondAttribute="bottom" id="UBO-bC-Obf"/>
++                            <constraint firstItem="Avz-mb-gbf" firstAttribute="top" secondItem="ltP-gh-WKb" secondAttribute="top" id="Ycx-X0-kR4"/>
++                            <constraint firstItem="Avz-mb-gbf" firstAttribute="trailing" secondItem="EH1-OR-aQh" secondAttribute="trailing" id="f1B-5A-rDV"/>
++                        </constraints>
++                    </view>
++                    <navigationItem key="navigationItem" id="7A4-qe-BGn"/>
++                    <connections>
++                        <outlet property="mapView" destination="Avz-mb-gbf" id="aTS-5R-3Rp"/>
++                    </connections>
++                </viewController>
++                <placeholder placeholderIdentifier="IBFirstResponder" id="Qb7-9P-CHE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
++            </objects>
++            <point key="canvasLocation" x="1360" y="-2446"/>
++        </scene>
+     </scenes>
+     <inferredMetricsTieBreakers>
+-        <segue reference="ohe-ba-Vf6"/>
+-        <segue reference="Oo5-3k-6vs"/>
++        <segue reference="z8V-Bh-oep"/>
++        <segue reference="Dyi-0r-nrL"/>
+     </inferredMetricsTieBreakers>
+     <resources>
+         <image name="Actividad1" width="296.33334350585938" height="296"/>
+@@ -4226,6 +4317,7 @@ Para realizar esta entrevista, se debe tener claridad de lo que se compartirá p
+         <image name="Mapa" width="170.66667175292969" height="170.66667175292969"/>
+         <image name="Texto" width="170.66667175292969" height="170.66667175292969"/>
+         <image name="Video" width="170.66667175292969" height="170.66667175292969"/>
++        <image name="checkbox" width="170.66667175292969" height="170.66667175292969"/>
+         <image name="chevron.right" catalog="system" width="97" height="128"/>
+         <image name="circulo" width="106.33333587646484" height="106.33333587646484"/>
+         <image name="cuestionario" width="90.333335876464844" height="75.333335876464844"/>
+diff --git a/Actividades/RutaViewController.swift b/Actividades/RutaViewController.swift
+new file mode 100644
+index 0000000..67e0ecf
+--- /dev/null
++++ b/Actividades/RutaViewController.swift
+@@ -0,0 +1,83 @@
++//
++//  RutaViewController.swift
++//  Actividades
++//
++//  Created by Usuario on 18/10/23.
++//
++
++import UIKit
++import MapKit
++
++class RutaViewController: UIViewController, CLLocationManagerDelegate {
++    
++    @IBOutlet weak var mapView: MKMapView!
++    var locationManager: CLLocationManager!
++    
++    var distanciaRecorrida = 0.0
++    var posicionInicial: CLLocation? = nil
++    var posicionFinal: CLLocation? = nil
++    let radioRegion: CLLocationDistance = 300
++
++    override func viewDidLoad() {
++        super.viewDidLoad()
++
++        locationManager = CLLocationManager()
++        locationManager.delegate = self
++        locationManager.desiredAccuracy = kCLLocationAccuracyBest
++        locationManager.requestWhenInUseAuthorization()
++    }
++    
++    func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
++        if manager.authorizationStatus == .authorizedWhenInUse {
++            locationManager.startUpdatingLocation()
++            mapView.showsUserLocation = true
++        } else {
++            locationManager.stopUpdatingLocation()
++            mapView.showsUserLocation = false
++        }
++    }
++    
++    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
++        if posicionInicial == nil {
++            posicionInicial = locationManager.location
++            centerMapOnLocation(location: posicionInicial!)
++            posicionFinal = posicionInicial
++            
++            var punto = CLLocationCoordinate2D()
++            punto.latitude = posicionInicial!.coordinate.latitude
++            punto.longitude = posicionInicial!.coordinate.longitude
++            
++            let annotation = MKPointAnnotation()
++            annotation.title = "Longituds: \(posicionInicial!.coordinate.longitude) Latitud: \(posicionInicial!.coordinate.latitude)"
++            annotation.subtitle = "Distancia recorrida: 0 metros"
++            annotation.coordinate = punto
++            
++            mapView.addAnnotation(annotation)
++        } else {
++            posicionInicial = locationManager.location
++            centerMapOnLocation(location: posicionInicial!)
++            let distance = posicionFinal?.distance(from: posicionInicial!)
++            
++            if distance! >= 50{
++                distanciaRecorrida += distance!
++                
++                posicionFinal = posicionInicial
++                var punto = CLLocationCoordinate2D()
++                punto.latitude = posicionInicial!.coordinate.latitude
++                punto.longitude = posicionInicial!.coordinate.longitude
++                
++                let annotation = MKPointAnnotation()
++                annotation.title = "Longitud: \(posicionInicial!.coordinate.longitude) Latitud: \(posicionInicial!.coordinate.latitude)"
++                annotation.subtitle = "Distancia recorrida: \(Int(distanciaRecorrida)) metros"
++                annotation.coordinate = punto
++                
++                mapView.addAnnotation(annotation)
++            }
++        }
++    }
++    
++    func centerMapOnLocation(location: CLLocation) {
++        let coordinateRegion = MKCoordinateRegion(center: location.coordinate,latitudinalMeters: radioRegion * 2.0, longitudinalMeters: radioRegion * 2.0)
++        mapView.setRegion(coordinateRegion, animated: true)
++    }
++}
+diff --git a/Actividades/Video2ViewController.swift b/Actividades/Video2ViewController.swift
+index bc0660b..a287c6d 100644
+--- a/Actividades/Video2ViewController.swift
++++ b/Actividades/Video2ViewController.swift
+@@ -14,6 +14,7 @@ class Video2ViewController: UIViewController, UIImagePickerControllerDelegate,UI
+     var imagePickerController = UIImagePickerController()
+     var videoURL: URL?
+     
++    @IBOutlet weak var rectangle4: UIView!
+     
+     @IBOutlet weak var SubirVideo: UIButton!
+     //Declaraciones necesarias para multiparte ------
+@@ -21,7 +22,9 @@ class Video2ViewController: UIViewController, UIImagePickerControllerDelegate,UI
+     
+     let boundary: String = "Boundary-\(UUID().uuidString)"
+     // --------------------------
++    @IBOutlet weak var textCorr: UILabel!
+     
++    @IBOutlet weak var checkBox: UIImageView!
+     
+     @IBAction func SubirVideo(_ sender: Any) {
+         let requestBody = self.multipartFormDataBodyV(self.boundary,"Ideacion","Completado",UserDefaults.standard.integer(forKey: "usuarioID"), self.VideoToPass!)
+@@ -44,6 +47,9 @@ class Video2ViewController: UIViewController, UIImagePickerControllerDelegate,UI
+     override func viewDidLoad() {
+         super.viewDidLoad()
+         SubirVideo.isHidden = true
++        checkBox.isHidden = true
++        textCorr.isHidden = true
++        rectangle4.layer.cornerRadius = 15
+     }
+     
+     @IBAction func playVideo(_ sender: Any) {
+@@ -68,6 +74,8 @@ class Video2ViewController: UIViewController, UIImagePickerControllerDelegate,UI
+             do {
+                 try? VideoToPass = Data(contentsOf: pickedVideo as URL)//este es el contenido del video
+                 print("El video esta listo en memoria en el objeto VideoToPass")
++                textCorr.isHidden = false
++                checkBox.isHidden = false
+             }
+         }
+         do {
+diff --git a/Actividades/Video3ViewController.swift b/Actividades/Video3ViewController.swift
+index 6d1ea96..6cc8348 100644
+--- a/Actividades/Video3ViewController.swift
++++ b/Actividades/Video3ViewController.swift
+@@ -14,6 +14,12 @@ class Video3ViewController: UIViewController, UIImagePickerControllerDelegate,UI
+     var imagePickerController = UIImagePickerController()
+     var videoURL: URL?
+     
++    @IBOutlet weak var textCorr: UILabel!
++    
++    @IBOutlet weak var checkBox: UIImageView!
++    
++    @IBOutlet weak var rectangle4: UIView!
++    
+     
+     @IBOutlet weak var SubirVideo: UIButton!
+     //Declaraciones necesarias para multiparte ------
+@@ -44,6 +50,9 @@ class Video3ViewController: UIViewController, UIImagePickerControllerDelegate,UI
+     override func viewDidLoad() {
+         super.viewDidLoad()
+         SubirVideo.isHidden = true
++        textCorr.isHidden = true
++        checkBox.isHidden = true
++        rectangle4.layer.cornerRadius = 15
+     }
+     
+     @IBAction func playVideo(_ sender: Any) {
+diff --git a/Actividades/Video4ViewController.swift b/Actividades/Video4ViewController.swift
+index 4354d40..371514b 100644
+--- a/Actividades/Video4ViewController.swift
++++ b/Actividades/Video4ViewController.swift
+@@ -14,6 +14,11 @@ class Video4ViewController: UIViewController, UIImagePickerControllerDelegate,UI
+     var imagePickerController = UIImagePickerController()
+     var videoURL: URL?
+     
++    @IBOutlet weak var checkBox: UIImageView!
++    @IBOutlet weak var textCorr: UILabel!
++    
++    @IBOutlet weak var rectangle4: UIView!
++    
+     
+     @IBOutlet weak var SubirVideo: UIButton!
+     //Declaraciones necesarias para multiparte ------
+@@ -44,6 +49,9 @@ class Video4ViewController: UIViewController, UIImagePickerControllerDelegate,UI
+     override func viewDidLoad() {
+         super.viewDidLoad()
+         SubirVideo.isHidden = true
++        rectangle4.layer.cornerRadius = 15
++        textCorr.isHidden = true
++        checkBox.isHidden = true
+     }
+     
+     @IBAction func playVideo(_ sender: Any) {
+@@ -68,6 +76,8 @@ class Video4ViewController: UIViewController, UIImagePickerControllerDelegate,UI
+             do {
+                 try? VideoToPass = Data(contentsOf: pickedVideo as URL)//este es el contenido del video
+                 print("El video esta listo en memoria en el objeto VideoToPass")
++                textCorr.isHidden = false
++                checkBox.isHidden = false
+             }
+         }
+         do {
