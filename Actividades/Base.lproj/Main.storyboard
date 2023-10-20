@@ -1276,11 +1276,11 @@
             <objects>
                 <viewController storyboardIdentifier="homeVC" id="3pj-h2-dyn" customClass="HomeViewController" customModule="Actividades" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yQ3-h0-wA2">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="1290"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="1300"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="88P-AR-5SW">
-                                <rect key="frame" x="0.0" y="56" width="393" height="1234"/>
+                                <rect key="frame" x="0.0" y="44" width="393" height="1256"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="piV-3j-IrO" customClass="SubView">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="1300"/>
@@ -1663,7 +1663,7 @@
             <objects>
                 <viewController storyboardIdentifier="diagnosticoInicial" id="y3q-re-bw5" customClass="DiagnosticoInicialViewController" customModule="Actividades" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Xrb-Fq-tcG">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zfy-kn-he7">
@@ -1920,11 +1920,11 @@
             <objects>
                 <viewController id="31h-eV-xgm" customClass="PerfilViewController" customModule="Actividades" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OqI-21-dOl">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DaO-4c-Z2e">
-                                <rect key="frame" x="0.0" y="56" width="393" height="786"/>
+                                <rect key="frame" x="0.0" y="44" width="393" height="808"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Lx-OS-jtn">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="1000"/>
@@ -3760,6 +3760,7 @@ Para realizar esta entrevista, se debe tener claridad de lo que se compartirá p
                                 <connections>
                                     <action selector="siguienteAction:" destination="WPb-OP-Er3" eventType="touchUpInside" id="4Q7-iW-7Y9"/>
                                     <action selector="siguienteAction:" destination="RaH-9M-W5r" eventType="touchUpInside" id="COH-PC-m0Z"/>
+                                    <segue destination="z7q-U3-0ID" kind="presentation" modalPresentationStyle="fullScreen" id="1Eb-T0-fI7"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="cuestionario" translatesAutoresizingMaskIntoConstraints="NO" id="hyR-JW-wgG">
@@ -3800,7 +3801,7 @@ Para realizar esta entrevista, se debe tener claridad de lo que se compartirá p
                     <tabBarItem key="tabBarItem" title="Inicio" image="house" catalog="system" id="WIc-DD-YEv"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ycL-03-qfm">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="56"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -3819,7 +3820,7 @@ Para realizar esta entrevista, se debe tener claridad de lo que se compartirá p
                     <tabBarItem key="tabBarItem" title="Perfil" image="person" catalog="system" id="xiC-AV-QwN"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="62d-Kk-g8V">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="56"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -4627,8 +4628,7 @@ Para realizar esta entrevista, se debe tener claridad de lo que se compartirá p
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="4ic-C1-zQK"/>
-        <segue reference="qNc-AA-gY8"/>
+        <segue reference="1Eb-T0-fI7"/>
         <segue reference="Oo5-3k-6vs"/>
     </inferredMetricsTieBreakers>
     <resources>
