@@ -34,9 +34,12 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        print("hola")
         if let usuarioID = UserDefaults.standard.object(forKey: "usuarioID") as? Int {
             id = usuarioID
         }
+        
+
         
         //Diseño
         applyDesign(to: identificaciónView)
@@ -48,7 +51,12 @@ class HomeViewController: UIViewController {
         applyDesign(to: pitchView)
         applyDesign(to: evaluacionView)
         
-        if let progreso = UserDefaults.standard.string(forKey: "avance") {
+        if var progreso = UserDefaults.standard.string(forKey: "avance") {
+            
+            if Int(progreso)! < 0 {
+                progreso = "1"
+            }
+            
             progresoLabel.text = "Actividad \(progreso) de 5 completadas"
             avance = Int(progreso)!
         } else {
@@ -65,6 +73,7 @@ class HomeViewController: UIViewController {
                 
                 
                 updateUI(with: resultadosInfo)
+                saveActividadesInfo(response: resultadosInfo)
                 print(resultadosInfo)
             } catch {
                 print(error)
@@ -89,40 +98,63 @@ class HomeViewController: UIViewController {
     
     @IBAction func onClickAct1(_ sender: UITapGestureRecognizer) {
         
-        let vistaDestino = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "act1VC")
-        vistaDestino.hidesBottomBarWhenPushed = true
-        if let navigationController = self.navigationController {
-            navigationController.pushViewController(vistaDestino, animated: true)
+        if UserDefaults.standard.bool(forKey: "identificacion") {
+            mostrarError(message: "Ya completaste esta actividad")
+
+        } else {
+            let vistaDestino = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "act1VC")
+            vistaDestino.hidesBottomBarWhenPushed = true
+            if let navigationController = self.navigationController {
+                navigationController.pushViewController(vistaDestino, animated: true)
+            }
         }
+        
+
+
         //performSegue(withIdentifier: "showDiagInicial", sender: nil)
     }
     
     @IBAction func onClickAct2(_ sender: UITapGestureRecognizer) {
         
-        let vistaDestino = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "act2VC")
-        vistaDestino.hidesBottomBarWhenPushed = true
-        if let navigationController = self.navigationController {
-            navigationController.pushViewController(vistaDestino, animated: true)
+        if UserDefaults.standard.bool(forKey: "investigacion") {
+            mostrarError(message: "Ya completaste esta actividad")
+
+        } else {
+            let vistaDestino = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "act2VC")
+            vistaDestino.hidesBottomBarWhenPushed = true
+            if let navigationController = self.navigationController {
+                navigationController.pushViewController(vistaDestino, animated: true)
+            }
         }
         //performSegue(withIdentifier: "showDiagInicial", sender: nil)
     }
     
     @IBAction func onClickAct3(_ sender: UITapGestureRecognizer) {
         
-        let vistaDestino = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "act3VC")
-        vistaDestino.hidesBottomBarWhenPushed = true
-        if let navigationController = self.navigationController {
-            navigationController.pushViewController(vistaDestino, animated: true)
+        if UserDefaults.standard.bool(forKey: "ideacion") {
+            mostrarError(message: "Ya completaste esta actividad")
+
+        } else {
+            let vistaDestino = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "act3VC")
+            vistaDestino.hidesBottomBarWhenPushed = true
+            if let navigationController = self.navigationController {
+                navigationController.pushViewController(vistaDestino, animated: true)
+            }
         }
         //performSegue(withIdentifier: "showDiagInicial", sender: nil)
     }
     
     @IBAction func onClickAct4(_ sender: UITapGestureRecognizer) {
         
-        let vistaDestino = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "act4VC")
-        vistaDestino.hidesBottomBarWhenPushed = true
-        if let navigationController = self.navigationController {
-            navigationController.pushViewController(vistaDestino, animated: true)
+        if UserDefaults.standard.bool(forKey: "socializacion") {
+            mostrarError(message: "Ya completaste esta actividad")
+
+        } else {
+            let vistaDestino = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "act4VC")
+            vistaDestino.hidesBottomBarWhenPushed = true
+            if let navigationController = self.navigationController {
+                navigationController.pushViewController(vistaDestino, animated: true)
+            }
         }
         //performSegue(withIdentifier: "showDiagInicial", sender: nil)
     }
@@ -138,12 +170,29 @@ class HomeViewController: UIViewController {
     
     
     @IBAction func onClickDiagFinal(_ sender: Any) {
-        let vistaDestino = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "diagFinal")
-        vistaDestino.hidesBottomBarWhenPushed = true
-        if let navigationController = self.navigationController {
-            navigationController.pushViewController(vistaDestino, animated: true)
-        }
         
+        if UserDefaults.standard.bool(forKey: "identificacion"),
+           UserDefaults.standard.bool(forKey: "investigacion"),
+           UserDefaults.standard.bool(forKey: "ideacion"),
+           UserDefaults.standard.bool(forKey: "socializacion") {
+            
+            let vistaDestino = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "diagFinal")
+            vistaDestino.hidesBottomBarWhenPushed = true
+
+            if let navigationController = self.navigationController {
+                navigationController.pushViewController(vistaDestino, animated: true)
+            }
+        } else {
+            mostrarError(message: "No has completado todas las actividades")
+        }
+ 
+    }
+    
+    func mostrarError(message: String) {
+        let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(okAction)
+        present(alert, animated: true, completion: nil)
     }
     
     func updateUI(avance: Int){
@@ -167,6 +216,14 @@ class HomeViewController: UIViewController {
                 self.socializacionView.backgroundColor = self.UIColorFromHex(hex: "284C81")
             }
         }
+    }
+    
+    func saveActividadesInfo(response: ActividadesInfo) {
+        UserDefaults.standard.set(response.ideacion, forKey: "ideacion")
+        UserDefaults.standard.set(response.investigacion, forKey: "investigacion")
+        UserDefaults.standard.set(response.socializacion, forKey: "socializacion")
+        UserDefaults.standard.set(response.identificacion, forKey: "identificacion")
+        UserDefaults.standard.synchronize()
     }
         
     func UIColorFromHex(hex: String) -> UIColor? {

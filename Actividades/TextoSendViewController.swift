@@ -56,6 +56,17 @@ class TextoSendViewController: UIViewController {
             print("success")
             self.SubirT.isHidden = true
         }.resume()
+        
+        if var progreso = UserDefaults.standard.string(forKey: "avance") {
+            UserDefaults.standard.set((String(Int(progreso)!+1)), forKey: "avance")
+        }
+        
+        sleep(2)
+        self.navigationItem.setHidesBackButton(true, animated: false)
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+        performSegue(withIdentifier: "video2tomain", sender: nil)
+        
+        
     }
     
         // Handle text changes

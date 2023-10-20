@@ -43,6 +43,17 @@ class Video3ViewController: UIViewController, UIImagePickerControllerDelegate,UI
             self.SubirVideo.isHidden = true
         }.resume()
         
+        if var progreso = UserDefaults.standard.string(forKey: "avance") {
+            UserDefaults.standard.set((String(Int(progreso)!+1)), forKey: "avance")
+        }
+        sleep(2)
+        
+        self.navigationItem.setHidesBackButton(true, animated: false)
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+        performSegue(withIdentifier: "video3tomain", sender: nil)
+        
+        
+        
     }
     
     
