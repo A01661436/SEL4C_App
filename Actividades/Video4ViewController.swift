@@ -44,6 +44,11 @@ class Video4ViewController: UIViewController, UIImagePickerControllerDelegate,UI
             self.SubirVideo.isHidden = true
         }.resume()
         
+        self.navigationItem.setHidesBackButton(true, animated: false)
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+        performSegue(withIdentifier: "video4tomain", sender: nil)
+        
+        
 
         
     }
